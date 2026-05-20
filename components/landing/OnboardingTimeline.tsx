@@ -36,12 +36,11 @@ export async function OnboardingTimeline() {
             return (
               <div
                 key={d.title}
-                className="relative grid items-center gap-5 py-4 md:grid-cols-[1fr_64px_1fr] md:gap-0"
-                style={{ gridTemplateColumns: "54px 1fr" }}
+                className="relative grid grid-cols-[54px_1fr] items-center gap-5 py-4 md:grid-cols-[1fr_64px_1fr] md:gap-0"
               >
                 <div
                   className={cn(
-                    "rounded-2xl border p-6 transition-all md:max-w-[380px]",
+                    "rounded-2xl border p-6 transition-all md:w-full md:max-w-[440px]",
                     isFeatured
                       ? "border-secondary-3 bg-gradient-to-b from-secondary-2 to-secondary-3 text-white"
                       : "border-border bg-background hover:-translate-y-0.5 hover:shadow-[0_18px_36px_-18px_rgba(16,27,49,0.18)]",
