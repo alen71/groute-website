@@ -313,6 +313,62 @@
       }
     ]
   },
+  "FuelSavings": {
+    "eyebrow": "Kraftstoff — größter Posten auf der Rechnung",
+    "titleA": "Jeder LKW. Jeder Euro.",
+    "titleB": "An der Zapfsäule gespart.",
+    "subtitle": "Kraftstoff macht 30–40% der Routenkosten aus. Groute liest den Verbrauch direkt aus dem Fahrzeug, verknüpft ihn mit Fahrer und Route und zeigt, wo Geld verloren geht.",
+    "heroTag": "Jährliche Kraftstoffersparnis",
+    "pilotBadge": "Pilot",
+    "heroLead": "Ihre jährliche Ersparnis",
+    "heroAmount": "54.000 €",
+    "heroPeriod": "Jahr",
+    "heroBody": "Bewegen Sie die Regler passend zu Ihrer Flotte. Werte aktualisieren sich live auf Basis des −6% Pilotergebnisses.",
+    "disclaimer": "Pilotergebnis; tatsächliche Einsparungen hängen von Routen, Fahrern und Kraftstoffpreis ab.",
+    "vehiclesLabel": "Flottengröße",
+    "vehiclesUnit": "LKW",
+    "fuelPriceLabel": "Dieselpreis",
+    "kmLabel": "km / LKW / Jahr",
+    "consumptionLabel": "Durchschnittsverbrauch",
+    "resetLabel": "Reset",
+    "formulaA": "Flottengröße",
+    "formulaB": "km / Jahr",
+    "formulaC": "L / 100 km",
+    "formulaD": "€ / L",
+    "formulaResult": "−6% Kraftstoff jährlich",
+    "cards": [
+      {
+        "icon": "gauge",
+        "title": "L/100 km in Echtzeit",
+        "body": "Verbrauch je Fahrzeug, je Fahrer, je Route. Sortierbare Rangliste — bester Fahrer gegen schlechtesten, in Litern.",
+        "metric": "Live"
+      },
+      {
+        "icon": "trendDown",
+        "title": "Leerlauf-Verschwendung",
+        "body": "Motor läuft, LKW steht — Kraftstoff für nichts verbrannt. Tägliche Leerlaufminuten pro Fahrzeug, Alarm bei Überschreitung.",
+        "metric": "Auto"
+      },
+      {
+        "icon": "chart",
+        "title": "Kosten je km und je Route",
+        "body": "Kraftstoffpreis × Verbrauch × Distanz, an jede Tour gekoppelt. Vorab-Schätzung gegen tatsächliche Kosten bei Ankunft.",
+        "metric": "€ / km"
+      },
+      {
+        "icon": "fuel",
+        "title": "Reduktion der Leerkilometer",
+        "body": "Routenoptimierung senkt im Pilot 8,3% der Leerkilometer — Kilometer, für die Sie nie Kraftstoff gezahlt hätten.",
+        "metric": "−8,3%"
+      }
+    ],
+    "assumptions": [
+      { "value": "50", "label": "LKW" },
+      { "value": "40.000 km", "label": "je LKW / Jahr" },
+      { "value": "30 L/100km", "label": "Durchschnittsverbrauch" },
+      { "value": "1,50 € / L", "label": "Dieselpreis" }
+    ]
+  },
   "Compliance": {
     "eyebrow": "Strafen auf dem Balkan",
     "title": "Eine vermiedene Strafe deckt Groute für ein Jahr.",

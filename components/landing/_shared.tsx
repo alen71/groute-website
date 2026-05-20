@@ -10,6 +10,8 @@ import {
   Eye,
   FileText,
   Flag,
+  Fuel,
+  Gauge,
   Globe,
   Lock,
   Mail,
@@ -22,6 +24,7 @@ import {
   Shield,
   Sparkles,
   Star,
+  TrendingDown,
   Truck,
   Wrench,
   X,
@@ -55,7 +58,10 @@ type IconName =
   | "globe"
   | "lock"
   | "menu"
-  | "close";
+  | "close"
+  | "fuel"
+  | "gauge"
+  | "trendDown";
 
 const iconMap: Record<IconName, React.ComponentType<LucideProps>> = {
   arrow: ArrowRight,
@@ -84,6 +90,9 @@ const iconMap: Record<IconName, React.ComponentType<LucideProps>> = {
   lock: Lock,
   menu: Menu,
   close: X,
+  fuel: Fuel,
+  gauge: Gauge,
+  trendDown: TrendingDown,
 };
 
 export function Icon({

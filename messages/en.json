@@ -313,6 +313,62 @@
       }
     ]
   },
+  "FuelSavings": {
+    "eyebrow": "Fuel — biggest line on the invoice",
+    "titleA": "Every truck. Every euro.",
+    "titleB": "Saved at the pump.",
+    "subtitle": "Fuel is 30–40% of route cost. Groute reads consumption straight from the vehicle, ties it to driver and route, and shows where the money leaks.",
+    "heroTag": "Annual fuel savings",
+    "pilotBadge": "Pilot",
+    "heroLead": "Your annual savings",
+    "heroAmount": "€54,000",
+    "heroPeriod": "year",
+    "heroBody": "Drag the sliders to match your fleet. Numbers update live based on the −6% pilot result.",
+    "disclaimer": "Pilot result; actual savings depend on routes, drivers and fuel price.",
+    "vehiclesLabel": "Fleet size",
+    "vehiclesUnit": "trucks",
+    "fuelPriceLabel": "Diesel price",
+    "kmLabel": "km / truck / year",
+    "consumptionLabel": "Average burn",
+    "resetLabel": "Reset",
+    "formulaA": "fleet size",
+    "formulaB": "km / year",
+    "formulaC": "L / 100 km",
+    "formulaD": "€ / L",
+    "formulaResult": "−6% annual fuel",
+    "cards": [
+      {
+        "icon": "gauge",
+        "title": "Real-time L/100 km",
+        "body": "Consumption per vehicle, per driver, per route. Sortable leaderboard — best driver versus worst, in litres.",
+        "metric": "Live"
+      },
+      {
+        "icon": "trendDown",
+        "title": "Idle-fuel waste",
+        "body": "Engine on, truck not moving — fuel burned for nothing. Daily idle minutes per vehicle, flagged when over threshold.",
+        "metric": "Auto"
+      },
+      {
+        "icon": "chart",
+        "title": "Cost per km and per route",
+        "body": "Fuel price × consumption × distance, attached to every trip. Pre-departure estimate vs. actual at arrival.",
+        "metric": "€ / km"
+      },
+      {
+        "icon": "fuel",
+        "title": "Empty-km reduction",
+        "body": "Route optimization cuts 8.3% of empty kilometres in pilot — kilometres you never paid for fuel to drive.",
+        "metric": "−8.3%"
+      }
+    ],
+    "assumptions": [
+      { "value": "50", "label": "trucks" },
+      { "value": "40,000 km", "label": "per truck / year" },
+      { "value": "30 L/100km", "label": "average burn" },
+      { "value": "€1.50 / L", "label": "diesel price" }
+    ]
+  },
   "Compliance": {
     "eyebrow": "Fines in the Balkans",
     "title": "One avoided fine pays for Groute for a year.",

@@ -161,4 +161,55 @@
   .ph.is-dark::after {
     @apply text-[#7B8AAE];
   }
+
+  .fuel-range {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    border-radius: 9999px;
+    outline: none;
+    cursor: pointer;
+  }
+  .fuel-range::-webkit-slider-runnable-track {
+    height: 6px;
+    border-radius: 9999px;
+    background: transparent;
+  }
+  .fuel-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    margin-top: -6px;
+    border-radius: 9999px;
+    background: #ffffff;
+    border: 2px solid var(--color-primary);
+    box-shadow: 0 4px 10px -2px rgba(77, 135, 249, 0.6);
+    cursor: grab;
+    transition: transform 120ms ease;
+  }
+  .fuel-range::-webkit-slider-thumb:active {
+    cursor: grabbing;
+    transform: scale(1.08);
+  }
+  .fuel-range::-moz-range-track {
+    height: 6px;
+    border-radius: 9999px;
+    background: transparent;
+  }
+  .fuel-range::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 9999px;
+    background: #ffffff;
+    border: 2px solid var(--color-primary);
+    box-shadow: 0 4px 10px -2px rgba(77, 135, 249, 0.6);
+    cursor: grab;
+  }
+  .fuel-range:focus-visible::-webkit-slider-thumb {
+    box-shadow: 0 0 0 4px rgba(77, 135, 249, 0.35);
+  }
+  .fuel-range:focus-visible::-moz-range-thumb {
+    box-shadow: 0 0 0 4px rgba(77, 135, 249, 0.35);
+  }
 }

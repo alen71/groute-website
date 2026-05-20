@@ -313,6 +313,62 @@
       }
     ]
   },
+  "FuelSavings": {
+    "eyebrow": "Gorivo — najveća stavka na fakturi",
+    "titleA": "Svaki kamion. Svaki euro.",
+    "titleB": "Ušteđen na pumpi.",
+    "subtitle": "Gorivo je 30–40% troška rute. Groute čita potrošnju direktno iz vozila, veže je za vozača i rutu, i pokazuje gdje novac curi.",
+    "heroTag": "Godišnja ušteda na gorivu",
+    "pilotBadge": "Pilot",
+    "heroLead": "Vaša godišnja ušteda",
+    "heroAmount": "€54.000",
+    "heroPeriod": "god.",
+    "heroBody": "Pomjerite klizače prema vašoj floti. Brojke se mijenjaju uživo na osnovu −6% pilot rezultata.",
+    "disclaimer": "Pilot rezultat; stvarna ušteda zavisi od ruta, vozača i cijene goriva.",
+    "vehiclesLabel": "Veličina flote",
+    "vehiclesUnit": "kamiona",
+    "fuelPriceLabel": "Cijena dizela",
+    "kmLabel": "km / kamion / godina",
+    "consumptionLabel": "Prosječna potrošnja",
+    "resetLabel": "Reset",
+    "formulaA": "broj vozila",
+    "formulaB": "km / godina",
+    "formulaC": "L / 100 km",
+    "formulaD": "€ / L",
+    "formulaResult": "−6% goriva godišnje",
+    "cards": [
+      {
+        "icon": "gauge",
+        "title": "L/100 km u realnom vremenu",
+        "body": "Potrošnja po vozilu, po vozaču, po ruti. Rang lista — najbolji vozač naspram najlošijeg, u litrima.",
+        "metric": "Live"
+      },
+      {
+        "icon": "trendDown",
+        "title": "Gubitak goriva pri stajanju",
+        "body": "Motor radi, kamion stoji — gorivo se troši za ništa. Dnevni minuti praznog hoda po vozilu, alarm kad pređe prag.",
+        "metric": "Auto"
+      },
+      {
+        "icon": "chart",
+        "title": "Trošak po km i po ruti",
+        "body": "Cijena goriva × potrošnja × udaljenost, vezano za svaku turu. Procjena prije polaska naspram stvarnog troška na cilju.",
+        "metric": "€ / km"
+      },
+      {
+        "icon": "fuel",
+        "title": "Smanjenje praznih km",
+        "body": "Optimizacija ruta smanjuje 8,3% praznih kilometara u pilotu — kilometara za koje nikada ne biste platili gorivo.",
+        "metric": "−8,3%"
+      }
+    ],
+    "assumptions": [
+      { "value": "50", "label": "kamiona" },
+      { "value": "40.000 km", "label": "po kamionu / godina" },
+      { "value": "30 L/100km", "label": "prosječna potrošnja" },
+      { "value": "€1,50 / L", "label": "cijena dizela" }
+    ]
+  },
   "Compliance": {
     "eyebrow": "Kazne na Balkanu",
     "title": "Jedna propuštena kazna pokriva Groute na godinu dana.",

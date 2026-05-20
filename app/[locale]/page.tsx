@@ -11,6 +11,7 @@ import { OperativaBlock } from "@/components/landing/OperativaBlock";
 import { Hardware } from "@/components/landing/Hardware";
 import { ForWho } from "@/components/landing/ForWho";
 import { ComplianceBlock } from "@/components/landing/ComplianceBlock";
+import { FuelSavings } from "@/components/landing/FuelSavings";
 import { PlatformBento } from "@/components/landing/PlatformBento";
 import { OnboardingTimeline } from "@/components/landing/OnboardingTimeline";
 import { Testimonials } from "@/components/landing/Testimonials";
@@ -47,6 +48,7 @@ export default async function Home({
       <Hero />
       <StatsTrio />
       <BeforeAfter />
+      <FuelSavings />
       <HowItWorks />
       <OperativaBlock />
       <Hardware />
