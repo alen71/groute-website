@@ -56,7 +56,7 @@ export default async function Home({
       <ComplianceBlock />
       <PlatformBento />
       <OnboardingTimeline />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <PilotBanner />
       <FAQ />
       <FinalCTA />

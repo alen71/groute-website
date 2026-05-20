@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Icon, Logo } from "./_shared";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 const links = [
   { label: "Platforma", href: "#platforma" },
@@ -40,7 +41,8 @@ export function Nav() {
             </a>
           ))}
         </nav>
-        <div className="hidden lg:flex">
+        <div className="hidden items-center gap-3 lg:flex">
+          <LanguageSwitcher />
           <Button variant="primary" size="sm" asChild>
             <a href="#kontakt">Kontaktirajte nas</a>
           </Button>
@@ -56,6 +58,9 @@ export function Nav() {
       </div>
       {open && (
         <div className="border-t border-border bg-background px-6 pb-6 pt-3 lg:hidden">
+          <div className="pb-3">
+            <LanguageSwitcher compact={false} />
+          </div>
           {links.map((l) => (
             <a
               key={l.href}
