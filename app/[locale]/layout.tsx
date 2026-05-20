@@ -1,20 +1,21 @@
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Figtree, JetBrains_Mono } from "next/font/google";
 import { routing } from "@/i18n/routing";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import "../globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const figtree = Figtree({
+  variable: "--font-figtree",
   subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export function generateStaticParams() {
@@ -36,13 +37,11 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${figtree.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full">
         <NextIntlClientProvider messages={messages} locale={locale}>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
+          {children}
         </NextIntlClientProvider>
       </body>
     </html>

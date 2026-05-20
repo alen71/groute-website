@@ -2,25 +2,142 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #101b31;
+  --card: #fbfcfe;
+  --card-foreground: #101b31;
+  --popover: #ffffff;
+  --popover-foreground: #101b31;
+  --primary: #4d87f9;
+  --primary-foreground: #ffffff;
+  --primary-strong: #2f59ab;
+  --primary-soft: #eef3fe;
+  --secondary: #101b31;
+  --secondary-foreground: #ffffff;
+  --secondary-2: #14223d;
+  --secondary-3: #0b1426;
+  --muted: #fbfcfe;
+  --muted-foreground: #5c6785;
+  --muted-2: #8c97b5;
+  --accent: #eef3fe;
+  --accent-foreground: #2f59ab;
+  --destructive: #b91c1c;
+  --destructive-foreground: #ffffff;
+  --border: #e7ecf5;
+  --border-2: #eef2f8;
+  --input: #e7ecf5;
+  --ring: #4d87f9;
+  --paper: #f4f7fc;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --radius: 0.875rem;
 }
 
 @theme inline {
+  --font-sans: var(--font-figtree), "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-strong: var(--primary-strong);
+  --color-primary-soft: var(--primary-soft);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary-2: var(--secondary-2);
+  --color-secondary-3: var(--secondary-3);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted-2: var(--muted-2);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-border-2: var(--border-2);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-paper: var(--paper);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --radius-sm: calc(var(--radius) - 6px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 6px);
+  --radius-2xl: calc(var(--radius) + 10px);
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background: var(--background);
+    color: var(--foreground);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  section[id] {
+    scroll-margin-top: 88px;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-[1240px] px-6;
+  }
+  .ph {
+    @apply relative overflow-hidden rounded-2xl text-muted-foreground;
+    background:
+      linear-gradient(135deg, rgba(16, 27, 49, 0.04) 0 1px, transparent 1px 14px),
+      linear-gradient(45deg, rgba(16, 27, 49, 0.04) 0 1px, transparent 1px 14px),
+      linear-gradient(180deg, #e9eef7 0%, #d7dfee 100%);
+    background-size:
+      14px 14px,
+      14px 14px,
+      100% 100%;
+  }
+  .ph::after {
+    content: attr(data-label);
+    @apply absolute inset-0 flex items-center justify-center p-6 text-center font-mono text-[11.5px] leading-relaxed text-[#6B7896];
+  }
+  .ph.is-dark {
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0 1px, transparent 1px 14px),
+      linear-gradient(45deg, rgba(255, 255, 255, 0.03) 0 1px, transparent 1px 14px),
+      linear-gradient(180deg, #1c2a47 0%, #0b1426 100%);
+    background-size:
+      14px 14px,
+      14px 14px,
+      100% 100%;
+  }
+  .ph.is-dark::after {
+    @apply text-[#7B8AAE];
+  }
 }

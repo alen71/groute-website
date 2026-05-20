@@ -6,8 +6,9 @@ const schema = z.object({
   name: z.string().min(1).max(100),
   email: z.string().email().max(200),
   company: z.string().min(1).max(200),
+  phone: z.string().max(40).optional().default(""),
   fleetSize: z.string().max(50).optional().default(""),
-  message: z.string().min(1).max(2000),
+  message: z.string().max(2000).optional().default(""),
   locale: z.string().max(8).optional().default("en"),
 });
 
@@ -45,11 +46,12 @@ export async function POST(req: Request) {
       text: [
         `Name: ${d.name}`,
         `Email: ${d.email}`,
+        `Phone: ${d.phone || "-"}`,
         `Company: ${d.company}`,
         `Fleet size: ${d.fleetSize || "-"}`,
         `Locale: ${d.locale}`,
         "",
-        d.message,
+        d.message || "(no message)",
       ].join("\n"),
     });
   } catch (err) {

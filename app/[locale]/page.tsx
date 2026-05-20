@@ -1,8 +1,24 @@
-import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
-import { Link } from "@/i18n/navigation";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@/i18n/routing";
+import { Nav } from "@/components/landing/Nav";
+import { Hero } from "@/components/landing/Hero";
+import { StatsTrio } from "@/components/landing/StatsTrio";
+import { BeforeAfter } from "@/components/landing/BeforeAfter";
+import { HowItWorks } from "@/components/landing/HowItWorks";
+import { FunctionBadges } from "@/components/landing/FunctionBadges";
+import { OperativaBlock } from "@/components/landing/OperativaBlock";
+import { Hardware } from "@/components/landing/Hardware";
+import { ForWho } from "@/components/landing/ForWho";
+import { ComplianceBlock } from "@/components/landing/ComplianceBlock";
+import { PlatformBento } from "@/components/landing/PlatformBento";
+import { OnboardingTimeline } from "@/components/landing/OnboardingTimeline";
+import { Testimonials } from "@/components/landing/Testimonials";
+import { PilotBanner } from "@/components/landing/PilotBanner";
+import { FAQ } from "@/components/landing/FAQ";
+import { FinalCTA } from "@/components/landing/FinalCTA";
+import { Footer } from "@/components/landing/Footer";
 
 export async function generateMetadata({
   params,
@@ -26,30 +42,25 @@ export default async function Home({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations("Hero");
-
   return (
-    <section className="mx-auto flex max-w-5xl flex-col items-center px-6 py-24 text-center">
-      <h1 className="max-w-3xl text-balance text-5xl font-semibold tracking-tight sm:text-6xl">
-        {t("title")}
-      </h1>
-      <p className="mt-6 max-w-2xl text-balance text-lg text-zinc-600 dark:text-zinc-400">
-        {t("subtitle")}
-      </p>
-      <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-        <Link
-          href="/contact"
-          className="inline-flex h-12 items-center justify-center rounded-full bg-zinc-900 px-6 text-sm font-medium text-white transition hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300"
-        >
-          {t("ctaPrimary")}
-        </Link>
-        <Link
-          href="/features"
-          className="inline-flex h-12 items-center justify-center rounded-full border border-zinc-300 px-6 text-sm font-medium transition hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-900"
-        >
-          {t("ctaSecondary")}
-        </Link>
-      </div>
-    </section>
+    <>
+      <Nav />
+      <Hero />
+      <StatsTrio />
+      <BeforeAfter />
+      <HowItWorks />
+      <FunctionBadges />
+      <OperativaBlock />
+      <Hardware />
+      <ForWho />
+      <ComplianceBlock />
+      <PlatformBento />
+      <OnboardingTimeline />
+      <Testimonials />
+      <PilotBanner />
+      <FAQ />
+      <FinalCTA />
+      <Footer />
+    </>
   );
 }
