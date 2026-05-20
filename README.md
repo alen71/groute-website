@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# groute marketing website
 
-## Getting Started
+Marketing site for [groute](https://www.mygroute.com) — fleet management software.
 
-First, run the development server:
+## Stack
+
+- **Next.js 16** (App Router) + TypeScript
+- **Tailwind CSS v4**
+- **next-intl** — i18n (`en`, `bs`, `sr`, `de`)
+- **shadcn/ui** primitives + **lucide-react** icons
+- **Resend** — transactional email (contact form)
+- **Netlify** — hosting (`@netlify/plugin-nextjs`)
+- **pnpm** — package manager
+
+## Quick start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
+cp .env.example .env.local       # fill in RESEND_API_KEY etc.
+pnpm dev                          # http://localhost:3000 → /en
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `pnpm dev` — dev server
+- `pnpm build` — production build
+- `pnpm start` — run production build
+- `pnpm lint` — eslint
+- `pnpm typecheck` — `tsc --noEmit`
+- `pnpm format` — prettier write
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Environment variables
 
-## Learn More
+| Var | Purpose |
+|---|---|
+| `RESEND_API_KEY` | Contact form sender (required for `/api/contact`) |
+| `CONTACT_EMAIL_TO` | Inbox for demo requests (default in `.env.example`) |
+| `CONTACT_EMAIL_FROM` | Verified Resend sender. Falls back to `onboarding@resend.dev` for testing. |
+| `SITE_URL` | Public base URL — used by sitemap/robots/canonical. Default `https://www.mygroute.com`. |
 
-To learn more about Next.js, take a look at the following resources:
+Set the same vars in Netlify dashboard for deploys.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## i18n
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Locales live in `messages/{en,bs,sr,de}.json`. URL pattern is `/{locale}/...`.
 
-## Deploy on Vercel
+**Add a translation key:** add it under the same namespace in all four locale files. Don't hardcode user-facing strings in components — use `useTranslations(namespace)`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Add a new locale:**
+1. Add code to `i18n/routing.ts` `locales` array.
+2. Create `messages/<code>.json` mirroring `en.json`.
+3. Add label to `LABELS` in `components/layout/LanguageSwitcher.tsx`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Project structure
+
+```
+app/
+├── [locale]/         # localized pages
+├── api/contact/      # Resend POST handler
+├── sitemap.ts        # auto-generated, includes hreflang
+└── robots.ts
+components/
+├── ui/               # shadcn primitives
+├── layout/           # Header, Footer, LanguageSwitcher
+└── contact/          # ContactForm
+i18n/                 # next-intl routing + navigation + request config
+lib/                  # cn(), seo helper, resend client
+messages/             # locale JSON files
+```
+
+## Deploy
+
+Push to `main` on the connected Netlify site. `netlify.toml` wires the Next.js plugin. Configure env vars in the Netlify UI.

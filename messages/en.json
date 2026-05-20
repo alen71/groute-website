@@ -1,0 +1,46 @@
+{
+  "Site": {
+    "name": "groute",
+    "tagline": "Fleet management made simple"
+  },
+  "Nav": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "requestDemo": "Request demo"
+  },
+  "Hero": {
+    "title": "Run your fleet without the spreadsheets",
+    "subtitle": "Real-time tracking, route optimization, and driver insights — all in one platform built for modern fleets.",
+    "ctaPrimary": "Request demo",
+    "ctaSecondary": "See features"
+  },
+  "Contact": {
+    "title": "Request a demo",
+    "subtitle": "Tell us about your fleet. We will get back within one business day.",
+    "name": "Full name",
+    "email": "Work email",
+    "company": "Company",
+    "fleetSize": "Fleet size",
+    "fleetSizePlaceholder": "e.g. 25 vehicles",
+    "message": "What are you looking to improve?",
+    "submit": "Send request",
+    "submitting": "Sending…",
+    "success": "Thanks — we received your request and will be in touch shortly.",
+    "error": "Something went wrong. Please try again or email office@mygroute.com."
+  },
+  "Meta": {
+    "homeTitle": "groute — Fleet management software",
+    "homeDescription": "Real-time tracking, route optimization, and driver insights for modern fleets.",
+    "contactTitle": "Request a demo — groute",
+    "contactDescription": "Talk to the groute team about fleet management for your business.",
+    "featuresTitle": "Features — groute",
+    "featuresDescription": "Tracking, routing, dispatch, reporting — everything you need to run a fleet.",
+    "pricingTitle": "Pricing — groute",
+    "pricingDescription": "Simple per-vehicle pricing that scales with your fleet."
+  },
+  "Footer": {
+    "rights": "All rights reserved.",
+    "language": "Language"
+  }
+}

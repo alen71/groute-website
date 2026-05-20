@@ -1,0 +1,46 @@
+{
+  "Site": {
+    "name": "groute",
+    "tagline": "Fuhrparkmanagement — einfach gemacht"
+  },
+  "Nav": {
+    "features": "Funktionen",
+    "pricing": "Preise",
+    "contact": "Kontakt",
+    "requestDemo": "Demo anfragen"
+  },
+  "Hero": {
+    "title": "Fuhrpark führen — ohne Tabellenkalkulation",
+    "subtitle": "Echtzeit-Tracking, Routenoptimierung und Fahrer-Insights — alles auf einer Plattform für moderne Flotten.",
+    "ctaPrimary": "Demo anfragen",
+    "ctaSecondary": "Funktionen ansehen"
+  },
+  "Contact": {
+    "title": "Demo anfragen",
+    "subtitle": "Erzählen Sie uns von Ihrem Fuhrpark. Wir melden uns innerhalb eines Werktags.",
+    "name": "Vollständiger Name",
+    "email": "Geschäftliche E-Mail",
+    "company": "Unternehmen",
+    "fleetSize": "Flottengröße",
+    "fleetSizePlaceholder": "z. B. 25 Fahrzeuge",
+    "message": "Was möchten Sie verbessern?",
+    "submit": "Anfrage senden",
+    "submitting": "Wird gesendet…",
+    "success": "Danke — wir haben Ihre Anfrage erhalten und melden uns in Kürze.",
+    "error": "Etwas ist schiefgelaufen. Bitte erneut versuchen oder office@mygroute.com schreiben."
+  },
+  "Meta": {
+    "homeTitle": "groute — Software für Fuhrparkmanagement",
+    "homeDescription": "Echtzeit-Tracking, Routenoptimierung und Fahrer-Insights für moderne Flotten.",
+    "contactTitle": "Demo anfragen — groute",
+    "contactDescription": "Sprechen Sie mit dem groute-Team über Fuhrparkmanagement für Ihr Unternehmen.",
+    "featuresTitle": "Funktionen — groute",
+    "featuresDescription": "Tracking, Routing, Disposition, Reporting — alles für Ihren Fuhrpark.",
+    "pricingTitle": "Preise — groute",
+    "pricingDescription": "Einfacher Preis pro Fahrzeug, der mit Ihrer Flotte wächst."
+  },
+  "Footer": {
+    "rights": "Alle Rechte vorbehalten.",
+    "language": "Sprache"
+  }
+}

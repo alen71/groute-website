@@ -1,0 +1,46 @@
+{
+  "Site": {
+    "name": "groute",
+    "tagline": "Upravljanje voznim parkom — jednostavno"
+  },
+  "Nav": {
+    "features": "Mogućnosti",
+    "pricing": "Cene",
+    "contact": "Kontakt",
+    "requestDemo": "Zatraži demo"
+  },
+  "Hero": {
+    "title": "Vodite vozni park bez tabela",
+    "subtitle": "Praćenje u realnom vremenu, optimizacija ruta i uvidi o vozačima — sve na jednoj platformi za moderne vozne parkove.",
+    "ctaPrimary": "Zatraži demo",
+    "ctaSecondary": "Pogledaj mogućnosti"
+  },
+  "Contact": {
+    "title": "Zatražite demo",
+    "subtitle": "Recite nam nešto o vašem voznom parku. Javićemo se u roku od jednog radnog dana.",
+    "name": "Ime i prezime",
+    "email": "Poslovni email",
+    "company": "Kompanija",
+    "fleetSize": "Veličina voznog parka",
+    "fleetSizePlaceholder": "npr. 25 vozila",
+    "message": "Šta želite da poboljšate?",
+    "submit": "Pošalji zahtev",
+    "submitting": "Slanje…",
+    "success": "Hvala — primili smo vaš zahtev i uskoro ćemo vas kontaktirati.",
+    "error": "Došlo je do greške. Pokušajte ponovo ili pišite na office@mygroute.com."
+  },
+  "Meta": {
+    "homeTitle": "groute — Softver za upravljanje voznim parkom",
+    "homeDescription": "Praćenje u realnom vremenu, optimizacija ruta i uvidi o vozačima za moderne vozne parkove.",
+    "contactTitle": "Zatražite demo — groute",
+    "contactDescription": "Razgovarajte sa groute timom o upravljanju voznim parkom za vaše poslovanje.",
+    "featuresTitle": "Mogućnosti — groute",
+    "featuresDescription": "Praćenje, rutiranje, dispečerstvo, izveštaji — sve za upravljanje voznim parkom.",
+    "pricingTitle": "Cene — groute",
+    "pricingDescription": "Jednostavna cena po vozilu koja raste sa vašim voznim parkom."
+  },
+  "Footer": {
+    "rights": "Sva prava zadržana.",
+    "language": "Jezik"
+  }
+}
