@@ -4,16 +4,389 @@
     "tagline": "Upravljanje voznim parkom — jednostavno"
   },
   "Nav": {
-    "features": "Mogućnosti",
-    "pricing": "Cene",
-    "contact": "Kontakt",
-    "requestDemo": "Zatraži demo"
+    "platforma": "Platforma",
+    "funkcije": "Funkcije",
+    "uredjaji": "Uređaji",
+    "resursi": "Resursi",
+    "faq": "FAQ",
+    "cta": "Kontaktirajte nas",
+    "openMenu": "Otvori meni",
+    "language": "Jezik"
   },
   "Hero": {
-    "title": "Vodite vozni park bez tabela",
-    "subtitle": "Praćenje u realnom vremenu, optimizacija ruta i uvidi o vozačima — sve na jednoj platformi za moderne vozne parkove.",
-    "ctaPrimary": "Zatraži demo",
-    "ctaSecondary": "Pogledaj mogućnosti"
+    "badge": "Fleet management za transportere na Balkanu",
+    "titleA": "Svaki kamion. Svaki evro.",
+    "titleB": "Jedna komandna tabla.",
+    "subtitle": "GPS u realnom vremenu, tahograf na daljinu i dokumenti — sve u jednom sistemu. Napravljeno za transportere u Srbiji, BiH i regionu.",
+    "ctaPrimary": "Zakažite sastanak",
+    "ctaSecondary": "Probajte demo",
+    "trust1": "30 dana pilot",
+    "trust2": "Besplatna ugradnja",
+    "trust3": "GDPR usaglašeno",
+    "imageLabel": "[ FOTO — Hero shot · kamion na otvorenom putu / dispečer ekran ]"
+  },
+  "StatsTrio": {
+    "items": [
+      { "value": "<30s", "label": "GPS update", "note": "Pozicija svakog vozila u realnom vremenu" },
+      { "value": "< 5 dana", "label": "Prosečan onboarding", "note": "Od potpisa do operative uživo" },
+      { "value": "100%", "label": "EU 561/2006 usaglašenost", "note": "Tahograf i HOS po regulativi" }
+    ]
+  },
+  "BeforeAfter": {
+    "eyebrow": "Šta se menja",
+    "title": "Operativa bez Excel tabela i ručnih izveštaja.",
+    "subtitle": "Pet alata, papira i WhatsApp poruka pretvaramo u jedan sistem. Bez kopiranja podataka.",
+    "beforeTitle": "Pre Groute",
+    "afterTitle": "Sa Groute",
+    "before": [
+      "Tahograf skidate ručno u depou",
+      "Dokumenti razbacani po email-ovima i papirima",
+      "Kazne saznajete kad inspektor stigne",
+      "Trošak po vozilu računate naknadno",
+      "Vozač zove dispečera za svaku izmenu rute"
+    ],
+    "after": [
+      "DDD fajlovi se skidaju daljinski po rasporedu",
+      "Sva dokumentacija u jednom skladištu sa alertima",
+      "Auto-upozorenje pre nego inspektor dođe",
+      "Trošak po km, vozaču i ruti u realnom vremenu",
+      "Vozač vidi izmene rute u aplikaciji odmah"
+    ]
+  },
+  "HowItWorks": {
+    "eyebrow": "Kako Groute radi",
+    "title": "Tri modula. Jedan sistem.",
+    "subtitle": "Sve što vaša flota traži, povezano u istom prozoru — bez prebacivanja podataka.",
+    "steps": [
+      {
+        "num": "01",
+        "tag": "Pregled flote",
+        "title": "Vidite svako vozilo uživo.",
+        "body": "GPS pozicija, status motora i potrošnja goriva ažurirani ispod 30 sekundi. Vozilo, vozač i trenutna ruta u istom prozoru.",
+        "bullets": ["GPS update ispod 30 sekundi", "Vozila, vozači i rute u jednoj tabli", "Offline-tolerantna sinhronizacija"],
+        "image": "[ FOTO — Dispečer ispred Groute kontrolne table ]"
+      },
+      {
+        "num": "02",
+        "tag": "Tahograf modul",
+        "title": "Skinete tahograf bez odlaska u depo.",
+        "body": "Automatski raspored skidanja DDD fajlova po vozilu. HOS pravila po EU 561/2006 monitor se uživo, izveštaji za inspekciju u jednom kliku.",
+        "bullets": ["Daljinsko DDD skidanje po rasporedu", "Live HOS monitoring i alerti", "Inspekcijski izveštaji jednim klikom"],
+        "image": "[ FOTO — Tahograf uređaj u kabini kamiona ]"
+      },
+      {
+        "num": "03",
+        "tag": "Rute i dokumenti",
+        "title": "Sve papire držite na jednom mestu.",
+        "body": "CMR, polise, licence i vozačke kartice u centralnom skladištu — povezani sa vozilima i rutama. Alarmi pre nego što dokument istekne.",
+        "bullets": ["Skladište dokumenata sa pristupom po ulozi", "Alarmi pred istek kartica i registracija", "Audit log sa potpisom i datumom"],
+        "image": "[ FOTO — Vozač sa tablet uređajem / dokumentima ]"
+      }
+    ]
+  },
+  "FunctionBadges": {
+    "eyebrow": "Sve funkcije",
+    "title": "Šest modula. Jedna platforma.",
+    "subtitle": "Starter pokriva GPS, rute, servis i telematiku. Professional dodaje ceo tahograf stack i dokumente. Sve u istom prozoru, na 4 jezika.",
+    "starter": "Starter",
+    "professional": "Professional",
+    "items": [
+      {
+        "icon": "map",
+        "tag": "Starter",
+        "title": "GPS u realnom vremenu",
+        "body": "Pozicija svakog vozila ažurirana ispod 30 sekundi, sa kompletnom istorijom ruta.",
+        "bullets": ["Ažuriranje ispod 30 sekundi", "Zone praćenja i upozorenja", "Istorija po vozilu i vozaču"],
+        "accent": "Ažuriranje svakih 28s"
+      },
+      {
+        "icon": "doc",
+        "tag": "Professional",
+        "title": "Tahograf i DDD",
+        "body": "Daljinsko skidanje DDD fajlova po vašem rasporedu, analiza vremena vožnje i izveštaji za inspekciju.",
+        "bullets": ["Automatsko preuzimanje DDD-a", "Praćenje pravila vožnje EU 561/2006", "Izveštaji za inspekciju jednim klikom"],
+        "accent": "EU 561/2006"
+      },
+      {
+        "icon": "shield",
+        "tag": "Professional",
+        "title": "Usaglašenost i upozorenja",
+        "body": "Upozorenja pred istek kartica vozača, registracija, tehničkih pregleda i licenci.",
+        "bullets": ["Upozorenja 30 / 14 / 7 dana ranije", "Evidencija svih izmena", "Ocena po vozaču i ruti"],
+        "accent": "Cilj — nula kazni"
+      },
+      {
+        "icon": "route",
+        "tag": "Starter",
+        "title": "Optimizacija ruta",
+        "body": "Predlog rute sa procenom troška goriva, vremena vožnje i rokova vozačeve kartice.",
+        "bullets": ["Procena troška pre polaska", "Pauze vozača automatski uračunate", "Optimizacija sa više stajališta"],
+        "accent": "−8,3% praznih km"
+      },
+      {
+        "icon": "wrench",
+        "tag": "Starter",
+        "title": "Servis i održavanje",
+        "body": "Praćenje servisnih intervala po vozilu, podsetnici pre rokova i evidencija troškova.",
+        "bullets": ["Intervali po vozilu", "Podsetnici pre roka", "Trošak po vozilu i tipu"],
+        "accent": "Bez iznenadnih kvarova"
+      },
+      {
+        "icon": "chart",
+        "tag": "Starter",
+        "title": "Telematika vozila",
+        "body": "Potrošnja goriva, stil vožnje po vozaču i podaci sa vozila u jednoj tabli.",
+        "bullets": ["Čitanje podataka direktno iz vozila", "Ocena vozača", "Trošak po kilometru i ruti"],
+        "accent": "−6% goriva u pilotu"
+      }
+    ]
+  },
+  "OperativaBlock": {
+    "eyebrow": "Vozač i operativa",
+    "titleA": "Manje papira u depou.",
+    "titleB": "Više vožnje na putu.",
+    "body": "Vozač vidi zadatak na ekranu, dispečer ima evidenciju u tabli. Putni nalozi, CMR i tahograf fajlovi povezani sa rutom — bez prepisivanja između sistema.",
+    "specs": [
+      { "value": "−8.3%", "label": "Praznih km u pilotu" },
+      { "value": "−6%", "label": "Potrošnje goriva po ruti" },
+      { "value": "0", "label": "Manuelnih unosa u Excel" },
+      { "value": "4 jezika", "label": "Platforma i podrška" }
+    ],
+    "imageLabel": "[ FOTO — Vozač u kabini kamiona sa Groute aplikacijom ]"
+  },
+  "Hardware": {
+    "eyebrow": "Hardver",
+    "titleA": "Teltonika FMC650.",
+    "titleB": "Proveren uređaj za vašu flotu.",
+    "body": "Mali uređaj koji se ugrađuje u kamion i sve podatke iz vozila šalje pravo u Groute tablu. Vi vidite gde su vozila, koliko troše i da li je sve u redu — bez odlaska u depo i bez papira.",
+    "imageLabel": "[ FOTO — Teltonika FMC650 uređaj ]",
+    "benefitsHeader": "Šta vi dobijate",
+    "benefits": [
+      {
+        "title": "Stalan signal, gde god kamion ide",
+        "body": "Uređaj se sam povezuje na najjaču dostupnu mrežu. Nema praznih tačaka na karti, ni u udaljenim ruralnim deonicama."
+      },
+      {
+        "title": "Tahograf i podaci iz vozila — automatski",
+        "body": "Tahograf fajlovi, brzina, gorivo i pređeni kilometri šalju se direktno u Groute tablu. Nema ručnog prepisivanja u Excel."
+      },
+      {
+        "title": "Otporan na uslove rada",
+        "body": "Izrađen za vibracije, prašinu, kišu i ekstremne temperature kabine. Bez kvarova nakon prvog leta ili zime."
+      },
+      {
+        "title": "Vozila vidite tačno gde jesu",
+        "body": "Precizna pozicija na celoj ruti od Balkana do EU — i kad vozilo pređe granicu i kad uđe u tunel."
+      }
+    ],
+    "noteTitle": "Uređaj se kupuje jednokratno i ostaje vaše vlasništvo.",
+    "noteBody": "Inicijalni data plan dolazi sa uređajem — dopune finansira Groute."
+  },
+  "ForWho": {
+    "eyebrow": "Za koga je Groute",
+    "titleA": "Za svaku flotu.",
+    "titleB": "Od pet do petsto vozila.",
+    "subtitle": "Radimo sa malim porodičnim prevoznicima jednako kao i sa logističkim centrima i autobuskim kompanijama. Platforma se prilagođava broju vozila — ne obrnuto.",
+    "featured": {
+      "num": "01",
+      "badge": "Najčešći klijenti",
+      "title": "Transportni operateri",
+      "body": "Kamioni i tegljači, domaća i međunarodna distribucija. Fokus na tahograf compliance, optimizaciju goriva i smanjenje praznih kilometara.",
+      "tags": [
+        { "icon": "doc", "text": "Tahograf na daljinu" },
+        { "icon": "route", "text": "Optimizacija ruta" },
+        { "icon": "chart", "text": "Trošak po km" },
+        { "icon": "shield", "text": "EU 561/2006" }
+      ],
+      "footerTitle": "Ključni problemi",
+      "footerBody": "Tahograf, gorivo i prazni kilometri — rešeno na jednom mestu.",
+      "imageLabel": "[ FOTO — Tegljač na međunarodnoj ruti ]"
+    },
+    "small": [
+      {
+        "num": "02",
+        "icon": "map",
+        "title": "Logistički centri",
+        "body": "Mešovita flota i više terminala. Dispečer i operativni timovi koji koordiniraju dolaske, utovare i isporuke u realnom vremenu.",
+        "metaA": "Više terminala",
+        "metaB": "Realtime koordinacija"
+      },
+      {
+        "num": "03",
+        "icon": "truck",
+        "title": "Autobuski prevoznici",
+        "body": "Linijski i turistički prevoz putnika kroz više zemalja. Praćenje vozila, vozača, kartica i sati vožnje po EU regulativi.",
+        "metaA": "Linijski + turistički",
+        "metaB": "EU regulativa"
+      }
+    ]
+  },
+  "Compliance": {
+    "eyebrow": "Kazne na Balkanu",
+    "title": "Jedna propuštena kazna pokriva Groute na godinu dana.",
+    "subtitle": "Tahograf prekršaji nisu šala. Groute uživo monitoriše HOS pravila i alarmira pre nego što inspektor zaustavi vozilo — preventiva, ne reakcija.",
+    "specs": [
+      { "value": "100%", "label": "EU 561/2006 usaglašenost" },
+      { "value": "0", "label": "Manuelnih izveštaja" }
+    ],
+    "tableTitle": "Pregled kazni · regionalni izvori",
+    "tableNote": "Procene — proverite kod nadležnih organa pri ugovaranju.",
+    "colCountry": "Zemlja",
+    "colMissed": "Propušten DDD download",
+    "colHos": "HOS prekršaj",
+    "colManip": "Manipulacija",
+    "rows": [
+      { "country": "Srbija", "missed": "€1.700", "hos": "€4.300", "manip": "€7.000" },
+      { "country": "Hrvatska", "missed": "€6.630", "hos": "€6.630", "manip": "€6.630" },
+      { "country": "Slovenija", "missed": "€2.000", "hos": "€2.000", "manip": "€14.500+" },
+      { "country": "BiH", "missed": "€5.100", "hos": "€10.200", "manip": "€10.200" }
+    ]
+  },
+  "Bento": {
+    "title": "Snaga Groute platforme",
+    "subtitle": "Svi alati za fleet manager-a — povezani u jednu komandnu tablu, bez prebacivanja između sistema.",
+    "gpsTitle": "GPS u realnom vremenu",
+    "gpsBody": "Pozicija svakog vozila ažurirana ispod 30 sekundi. Geofence zone, alarmi na ulazak/izlazak, kompletna istorija ruta po vozaču i vozilu.",
+    "gpsTag": "Geofence zone",
+    "langTitle": "Platforma na 4 jezika",
+    "langBody": "Interfejs, dokumentacija i podrška na srpskom, bosanskom, engleskom i nemačkom.",
+    "fuelTitle": "Ušteda na gorivu",
+    "fuelNote": "Pilot rezultat 30 dana po vozilu",
+    "fuelTag": "Pilot",
+    "fuelStat": "−6%",
+    "speedStat": "5×",
+    "speedTitle": "Brža operativa",
+    "speedBody": "Pet puta brži administrativni rad u poređenju sa ručnim tahograf procesom i Excel evidencijom.",
+    "alertsTitle": "Brzi alarmi",
+    "alertsBody": "Notifikacije pred istek dokumenata i HOS prekršaja.",
+    "alertCards": "Kartice",
+    "alertRegs": "Registracije",
+    "alertHos": "HOS"
+  },
+  "Onboarding": {
+    "eyebrow": "Putokaz pokretanja",
+    "titleA": "Spremni za rad",
+    "titleB": "za 5 dana.",
+    "subtitle": "Od potpisa do operative — bez čekanja na uređaje nedeljama, bez konsultantskih projekata. Ako prelazi 8 dana, eskalira u prioritet.",
+    "days": [
+      {
+        "dur": "30 min",
+        "title": "Ugovor potpisan",
+        "items": ["Naručujemo Teltonika uređaje", "Otvaramo WhatsApp/Viber kanal", "Zakazujemo uvodni poziv"]
+      },
+      {
+        "dur": "45 min",
+        "title": "Uvodni poziv",
+        "items": ["Popis flote — vozila i brojevi šasije", "Tip uređaja po vozilu", "Zone praćenja i upozorenja"]
+      },
+      {
+        "dur": "2 dana",
+        "title": "Dolazak uređaja",
+        "items": ["Uređaji stižu na adresu", "Dogovaramo termin ugradnje", "Pripremamo platformu"]
+      },
+      {
+        "dur": "3h / vozilo",
+        "title": "Ugradnja u vozila",
+        "items": ["Provera GPS-a po vozilu", "Povezivanje tahografa", "Provera prenosa podataka"]
+      },
+      {
+        "dur": "45 min",
+        "title": "Sve radi",
+        "items": ["Obuka za vaš tim", "30 min obuke + 15 min pitanja", "Sistem u punoj upotrebi"]
+      }
+    ]
+  },
+  "Pilot": {
+    "eyebrow": "Pilot program",
+    "titleA": "30 dana pilot. €100 povratan depozit.",
+    "titleB": "Nula obaveza.",
+    "body": "Instaliramo do 2 vozila, podešavamo platformu, pratimo 30 dana. Ako vam ne donosimo merljiv ROI, depozit vraćamo bez pitanja.",
+    "ctaPrimary": "Pokrenite pilot",
+    "ctaSecondary": "Pogledajte funkcije",
+    "benefits": [
+      "Garantovan merljiv ROI u pilotu",
+      "Besplatna instalacija i podrška uživo",
+      "Bez dugoročnog ugovora — otkažete kad želite",
+      "Povrat €100 depozita bez pitanja",
+      "Direktna podrška preko WhatsApp/Viber 24h"
+    ]
+  },
+  "Faq": {
+    "eyebrow": "Često postavljana pitanja",
+    "title": "Pitanja koja čujemo svaki dan.",
+    "subtitle": "Ako ne nađete odgovor, pišite — javljamo se istog dana.",
+    "items": [
+      { "q": "Koliko košta Groute?", "a": "Cenu ne objavljujemo na sajtu — zavisi od veličine flote i izabranog paketa. Pošaljite upit, vraćamo personalizovanu ponudu u 24 sata." },
+      { "q": "Koliko traje implementacija?", "a": "Cilj je pun onboarding ispod 5 radnih dana. Ugradnja po vozilu traje oko 3 sata — naši podizvođači rade na terenu u Srbiji i BiH." },
+      { "q": "Šta ako tokom pilota nismo zadovoljni?", "a": "Vraćamo €100 depozit po uređaju u potpunosti, bez pitanja. Pilot je 30 dana, do 2 vozila, sa besplatnom instalacijom." },
+      { "q": "Da li radite sa malim flotama?", "a": "Naš sweet spot je 10–500 vozila. Ispod 10 vozila ne radimo, osim ako postoji jasna strateška vrednost — javite se, razgovaraćemo." },
+      { "q": "Koje hardvere koristite?", "a": "Teltonika FMC650 (teška vozila), FMC150 (laka vozila) i FMC234 (prikolice). Uređaji se kupuju jednokratno i ostaju vlasništvo klijenta." },
+      { "q": "Da li ste GDPR usaglašeni?", "a": "Da. Groute je data processor po GDPR-u. Klijent je vlasnik svojih podataka i može ih eksportovati u svakom trenutku." },
+      { "q": "Koje jezike platforma podržava?", "a": "Interfejs i podrška na srpskom, bosanskom, engleskom i nemačkom. Ugovori i dokumentacija u jeziku koji odaberete." }
+    ]
+  },
+  "Cta": {
+    "eyebrow": "Kontakt",
+    "titleA": "15 minuta razgovora.",
+    "titleB": "Konkretne brojke za vašu flotu.",
+    "body": "Pokazaćemo platformu uživo na vašoj operativi i pripremićemo procenu uštede prilagođenu broju vozila i tipu prevoza.",
+    "tags": [
+      { "value": "< 24h", "label": "Odgovor na upit" },
+      { "value": "Bez slajdova", "label": "Razgovor o operativi" },
+      { "value": "Bez obaveza", "label": "Ne ugovaramo na pozivu" }
+    ],
+    "formTitle": "Zakažite razgovor",
+    "formSubtitle": "Ostavite kontakt — javljamo se istog dana, najkasnije za 24 sata.",
+    "name": "Ime i prezime",
+    "namePh": "Vaše ime",
+    "company": "Naziv firme",
+    "companyPh": "Firma d.o.o.",
+    "email": "Email",
+    "emailPh": "vi@firma.com",
+    "phone": "Telefon",
+    "phonePh": "+381 / +387 …",
+    "fleet": "Veličina flote",
+    "fleetPh": "Izaberite",
+    "fleet1": "10 – 30 vozila",
+    "fleet2": "30 – 100 vozila",
+    "fleet3": "100 – 500 vozila",
+    "fleet4": "500+ vozila",
+    "message": "Šta vam je trenutno najveći izazov? (opciono)",
+    "messagePh": "npr. tahograf nam ide ručno, dokumenti po Excel-ima…",
+    "submit": "Zakaži razgovor",
+    "submitting": "Slanje…",
+    "error": "Došlo je do greške. Pokušajte ponovo ili pišite na office@mygroute.com.",
+    "successTitle": "Hvala — javljamo se za 24h.",
+    "successBody": "Pripremićemo agendu prilagođenu vašoj floti i potvrditi termin razgovora.",
+    "privacy": "Podatke koristimo isključivo za zakazivanje razgovora. GDPR usaglašeno.",
+    "imageLabel": "[ FOTO — Kamion na otvorenom putu / industrijski portret ]"
+  },
+  "Footer": {
+    "tagline": "Groute je osnovan sa ciljem da <strong>operativu flote</strong> podigne na sledeći nivo. Spajamo planiranje ruta, tahograf i tok dokumenata u jednu platformu — izgrađenu za prevoznike na Balkanu.",
+    "contactTitle": "Kontakt",
+    "navTitle": "Navigacija",
+    "socialsTitle": "Društvene mreže",
+    "navHome": "Početna",
+    "navPlatform": "Platforma",
+    "navModules": "Moduli",
+    "navIntegrations": "Integracije",
+    "navAbout": "O nama",
+    "addressLine1": "Brčko Distrikt",
+    "addressLine2": "Bosna i Hercegovina",
+    "rights": "Sva prava zadržana.",
+    "privacy": "Politika privatnosti",
+    "cookies": "Politika kolačića",
+    "terms": "Uslovi korišćenja"
+  },
+  "Meta": {
+    "homeTitle": "groute — Cela flota. Tahograf. Dokumenti. Jedna platforma.",
+    "homeDescription": "Praćenje u realnom vremenu, optimizacija ruta i uvidi o vozačima za moderne vozne parkove.",
+    "contactTitle": "Zatražite demo — groute",
+    "contactDescription": "Razgovarajte sa groute timom o upravljanju voznim parkom za vaše poslovanje.",
+    "featuresTitle": "Mogućnosti — groute",
+    "featuresDescription": "Praćenje, rutiranje, dispečerstvo, izveštaji — sve za upravljanje voznim parkom.",
+    "pricingTitle": "Cene — groute",
+    "pricingDescription": "Jednostavna cena po vozilu koja raste sa vašim voznim parkom."
   },
   "Contact": {
     "title": "Zatražite demo",
@@ -28,19 +401,5 @@
     "submitting": "Slanje…",
     "success": "Hvala — primili smo vaš zahtev i uskoro ćemo vas kontaktirati.",
     "error": "Došlo je do greške. Pokušajte ponovo ili pišite na office@mygroute.com."
-  },
-  "Meta": {
-    "homeTitle": "groute — Softver za upravljanje voznim parkom",
-    "homeDescription": "Praćenje u realnom vremenu, optimizacija ruta i uvidi o vozačima za moderne vozne parkove.",
-    "contactTitle": "Zatražite demo — groute",
-    "contactDescription": "Razgovarajte sa groute timom o upravljanju voznim parkom za vaše poslovanje.",
-    "featuresTitle": "Mogućnosti — groute",
-    "featuresDescription": "Praćenje, rutiranje, dispečerstvo, izveštaji — sve za upravljanje voznim parkom.",
-    "pricingTitle": "Cene — groute",
-    "pricingDescription": "Jednostavna cena po vozilu koja raste sa vašim voznim parkom."
-  },
-  "Footer": {
-    "rights": "Sva prava zadržana.",
-    "language": "Jezik"
   }
 }

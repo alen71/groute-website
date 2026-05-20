@@ -1,20 +1,22 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Icon, Logo } from "./_shared";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
-const links = [
-  { label: "Platforma", href: "#platforma" },
-  { label: "Funkcije", href: "#funkcije" },
-  { label: "Uređaji", href: "#uredjaji" },
-  { label: "Resursi", href: "#resursi" },
-  { label: "FAQ", href: "#faq" },
-];
-
 export function Nav() {
+  const t = useTranslations("Nav");
   const [open, setOpen] = useState(false);
+
+  const links = [
+    { label: t("platforma"), href: "#platforma" },
+    { label: t("funkcije"), href: "#funkcije" },
+    { label: t("uredjaji"), href: "#uredjaji" },
+    { label: t("resursi"), href: "#resursi" },
+    { label: t("faq"), href: "#faq" },
+  ];
 
   useEffect(() => {
     function onResize() {
@@ -44,12 +46,12 @@ export function Nav() {
         <div className="hidden items-center gap-3 lg:flex">
           <LanguageSwitcher />
           <Button variant="primary" size="sm" asChild>
-            <a href="#kontakt">Kontaktirajte nas</a>
+            <a href="#kontakt">{t("cta")}</a>
           </Button>
         </div>
         <button
           type="button"
-          aria-label="Otvori meni"
+          aria-label={t("openMenu")}
           onClick={() => setOpen((v) => !v)}
           className="flex size-10 items-center justify-center rounded-lg border border-border bg-background lg:hidden"
         >
@@ -78,7 +80,7 @@ export function Nav() {
             asChild
             onClick={() => setOpen(false)}
           >
-            <a href="#kontakt">Kontaktirajte nas</a>
+            <a href="#kontakt">{t("cta")}</a>
           </Button>
         </div>
       )}

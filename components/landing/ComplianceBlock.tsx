@@ -1,31 +1,29 @@
+import { getTranslations } from "next-intl/server";
 import { Card } from "@/components/ui/card";
 import { Eyebrow, Icon, Spec } from "./_shared";
 
-const rows = [
-  { country: "Srbija", missed: "€1.700", hos: "€4.300", manip: "€7.000" },
-  { country: "Hrvatska", missed: "€6.630", hos: "€6.630", manip: "€6.630" },
-  { country: "Slovenija", missed: "€2.000", hos: "€2.000", manip: "€14.500+" },
-  { country: "BiH", missed: "€5.100", hos: "€10.200", manip: "€10.200" },
-];
+type Row = { country: string; missed: string; hos: string; manip: string };
 
-export function ComplianceBlock() {
+export async function ComplianceBlock() {
+  const t = await getTranslations("Compliance");
+  const specs = t.raw("specs") as Array<{ value: string; label: string }>;
+  const rows = t.raw("rows") as Row[];
+
   return (
     <section className="py-24">
       <div className="container-page">
         <div className="mb-12 flex flex-col items-start justify-between gap-8 md:flex-row">
           <div className="max-w-[640px]">
-            <Eyebrow>Kazne na Balkanu</Eyebrow>
-            <h2 className="mt-3.5 text-[clamp(28px,3.2vw,42px)] font-semibold tracking-tight">
-              Jedna propuštena kazna pokriva Groute na godinu dana.
-            </h2>
+            <Eyebrow>{t("eyebrow")}</Eyebrow>
+            <h2 className="mt-3.5">{t("title")}</h2>
             <p className="mt-4 max-w-[640px] text-[17px] leading-relaxed text-muted-foreground">
-              Tahograf prekršaji nisu šala. Groute uživo monitoriše HOS pravila i alarmira
-              prije nego što inspektor stane vozilo — preventiva, ne reakcija.
+              {t("subtitle")}
             </p>
           </div>
           <div className="flex shrink-0 gap-9 pt-2">
-            <Spec value="100%" label="EU 561/2006 usklađenost" large />
-            <Spec value="0" label="Manuelnih izvještaja" large />
+            {specs.map((s) => (
+              <Spec key={s.label} value={s.value} label={s.label} large />
+            ))}
           </div>
         </div>
 
@@ -33,26 +31,24 @@ export function ComplianceBlock() {
           <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border px-6 py-4">
             <div className="flex items-center gap-2.5">
               <Icon name="shield" size={16} className="text-primary" />
-              <span className="text-sm font-semibold">Pregled kazni · regionalni izvori</span>
+              <span className="text-sm font-semibold">{t("tableTitle")}</span>
             </div>
-            <span className="text-xs text-muted-foreground">
-              Procjene — provjerite kod nadležnih organa pri ugovaranju.
-            </span>
+            <span className="text-xs text-muted-foreground">{t("tableNote")}</span>
           </div>
           <table className="w-full text-sm">
             <thead>
               <tr className="bg-[#FBFCFE] text-muted-foreground">
                 <th className="px-6 py-3.5 text-left text-[11px] font-medium uppercase tracking-[0.06em]">
-                  Zemlja
+                  {t("colCountry")}
                 </th>
                 <th className="px-6 py-3.5 text-right text-[11px] font-medium uppercase tracking-[0.06em]">
-                  Propušten DDD download
+                  {t("colMissed")}
                 </th>
                 <th className="px-6 py-3.5 text-right text-[11px] font-medium uppercase tracking-[0.06em]">
-                  HOS prekršaj
+                  {t("colHos")}
                 </th>
                 <th className="px-6 py-3.5 text-right text-[11px] font-medium uppercase tracking-[0.06em]">
-                  Manipulacija
+                  {t("colManip")}
                 </th>
               </tr>
             </thead>

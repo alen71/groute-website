@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import { Logo } from "./_shared";
 
 function FooterCol({
@@ -15,23 +16,26 @@ function FooterCol({
   );
 }
 
-export function Footer() {
+export async function Footer() {
+  const t = await getTranslations("Footer");
+  const site = await getTranslations("Site");
   const year = new Date().getFullYear();
+
+  const taglineHtml = { __html: t.raw("tagline") as string };
+
   return (
     <footer className="border-t border-border bg-background">
       <div className="w-full">
         <div className="border-b border-border px-8 pb-6 pt-8">
           <Logo height={28} />
-          <p className="mt-4 max-w-[540px] text-sm leading-[1.55] text-muted-foreground">
-            Groute je osnovan sa ciljem da{" "}
-            <strong className="font-semibold text-foreground">operativu flote</strong> podigne
-            na sljedeći nivo. Spajamo planiranje ruta, tahograf i tok dokumenata u jednu
-            platformu — izgrađenu za prevoznike na Balkanu.
-          </p>
+          <p
+            className="mt-4 max-w-[540px] text-sm leading-[1.55] text-muted-foreground [&_strong]:font-semibold [&_strong]:text-foreground"
+            dangerouslySetInnerHTML={taglineHtml}
+          />
         </div>
 
         <div className="grid border-b border-border md:grid-cols-3">
-          <FooterCol title="Kontakt">
+          <FooterCol title={t("contactTitle")}>
             <a href="mailto:hello@groute.app" className="transition-colors hover:text-primary">
               hello@groute.app
             </a>
@@ -39,30 +43,30 @@ export function Footer() {
               +387 65 000 000
             </a>
             <span className="flex flex-col gap-0.5">
-              <span>Brčko Distrikt</span>
-              <span>Bosna i Hercegovina</span>
+              <span>{t("addressLine1")}</span>
+              <span>{t("addressLine2")}</span>
             </span>
           </FooterCol>
 
-          <FooterCol title="Navigacija">
+          <FooterCol title={t("navTitle")}>
             <a href="#top" className="transition-colors hover:text-primary">
-              Početna
+              {t("navHome")}
             </a>
             <a href="#platforma" className="transition-colors hover:text-primary">
-              Platforma
+              {t("navPlatform")}
             </a>
             <a href="#funkcije" className="transition-colors hover:text-primary">
-              Moduli
+              {t("navModules")}
             </a>
             <a href="#uredjaji" className="transition-colors hover:text-primary">
-              Integracije
+              {t("navIntegrations")}
             </a>
             <a href="#zasto" className="transition-colors hover:text-primary">
-              O nama
+              {t("navAbout")}
             </a>
           </FooterCol>
 
-          <FooterCol title="Društvene mreže">
+          <FooterCol title={t("socialsTitle")}>
             <a href="#" className="transition-colors hover:text-primary">
               LinkedIn
             </a>
@@ -79,16 +83,18 @@ export function Footer() {
         </div>
 
         <div className="flex flex-wrap items-center justify-between gap-6 px-8 py-5 text-[13.5px] text-muted-foreground">
-          <div>© {year} Groute Fleet Management. Sva prava zadržana.</div>
+          <div>
+            © {year} {site("name")} Fleet Management. {t("rights")}
+          </div>
           <div className="flex flex-wrap gap-6">
             <a href="#" className="transition-colors hover:text-foreground">
-              Politika privatnosti
+              {t("privacy")}
             </a>
             <a href="#" className="transition-colors hover:text-foreground">
-              Politika kolačića
+              {t("cookies")}
             </a>
             <a href="#" className="transition-colors hover:text-foreground">
-              Uslovi korištenja
+              {t("terms")}
             </a>
           </div>
         </div>

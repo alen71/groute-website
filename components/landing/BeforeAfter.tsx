@@ -1,31 +1,18 @@
+import { getTranslations } from "next-intl/server";
 import { Badge } from "@/components/ui/badge";
 import { Eyebrow, Icon } from "./_shared";
 import { cn } from "@/lib/utils";
-
-const before = [
-  "Tahograf skidate ručno u depou",
-  "Dokumenti razasuti po emailovima i papirima",
-  "Kazne saznajete kad inspektor stigne",
-  "Trošak po vozilu računate naknadno",
-  "Vozač zove dispečera za svaku izmjenu rute",
-];
-
-const after = [
-  "DDD fajlovi se skidaju daljinski po rasporedu",
-  "Sva dokumentacija u jednom skladištu sa alertima",
-  "Auto-upozorenje prije nego inspektor dođe",
-  "Trošak po km, vozaču i ruti u realnom vremenu",
-  "Vozač vidi izmjene rute u aplikaciji odmah",
-];
 
 function CompareCol({
   title,
   items,
   variant,
+  groute,
 }: {
   title: string;
   items: string[];
   variant: "before" | "after";
+  groute: string;
 }) {
   const isAfter = variant === "after";
   return (
@@ -40,18 +27,15 @@ function CompareCol({
       <div className="mb-6 flex items-center justify-between">
         <span
           className={cn(
-            "text-[13px] font-semibold tracking-[0.04em] uppercase",
+            "text-[13px] font-semibold uppercase tracking-[0.04em]",
             isAfter ? "text-primary-strong" : "text-muted-foreground",
           )}
         >
           {title}
         </span>
         {isAfter && (
-          <Badge
-            variant="default"
-            className="bg-primary border-primary text-white"
-          >
-            Groute
+          <Badge variant="default" className="bg-primary border-primary text-white">
+            {groute}
           </Badge>
         )}
       </div>
@@ -60,8 +44,7 @@ function CompareCol({
           <li
             key={it}
             className={cn(
-              "flex items-start gap-3.5 py-3.5",
-              "border-b",
+              "flex items-start gap-3.5 py-3.5 border-b",
               i === 0 && "border-t",
               isAfter
                 ? "text-foreground border-[#E1ECFD] font-medium"
@@ -91,24 +74,35 @@ function CompareCol({
   );
 }
 
-export function BeforeAfter() {
+export async function BeforeAfter() {
+  const t = await getTranslations("BeforeAfter");
+  const site = await getTranslations("Site");
+  const before = t.raw("before") as string[];
+  const after = t.raw("after") as string[];
   return (
     <section id="platforma" className="py-24">
       <div className="container-page">
         <div className="mx-auto mb-14 max-w-[700px] text-center">
-          <Eyebrow className="justify-center">Šta se mijenja</Eyebrow>
-          <h2 className="mt-3.5">
-            Operativa bez Excel tabela i ručnih izvještaja.
-          </h2>
+          <Eyebrow className="justify-center">{t("eyebrow")}</Eyebrow>
+          <h2 className="mt-3.5">{t("title")}</h2>
           <p className="text-muted-foreground mx-auto mt-4 max-w-[540px] text-[17px] leading-relaxed">
-            Pet alata, papira i WhatsApp poruka pretvaramo u jedan sistem. Bez
-            kopiranja podataka.
+            {t("subtitle")}
           </p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
-          <CompareCol title="Prije Groute" items={before} variant="before" />
-          <CompareCol title="Sa Groute" items={after} variant="after" />
+          <CompareCol
+            title={t("beforeTitle")}
+            items={before}
+            variant="before"
+            groute={site("name")}
+          />
+          <CompareCol
+            title={t("afterTitle")}
+            items={after}
+            variant="after"
+            groute={site("name")}
+          />
         </div>
       </div>
     </section>

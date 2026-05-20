@@ -4,16 +4,389 @@
     "tagline": "Fuhrparkmanagement — einfach gemacht"
   },
   "Nav": {
-    "features": "Funktionen",
-    "pricing": "Preise",
-    "contact": "Kontakt",
-    "requestDemo": "Demo anfragen"
+    "platforma": "Plattform",
+    "funkcije": "Funktionen",
+    "uredjaji": "Hardware",
+    "resursi": "Ressourcen",
+    "faq": "FAQ",
+    "cta": "Kontakt aufnehmen",
+    "openMenu": "Menü öffnen",
+    "language": "Sprache"
   },
   "Hero": {
-    "title": "Fuhrpark führen — ohne Tabellenkalkulation",
-    "subtitle": "Echtzeit-Tracking, Routenoptimierung und Fahrer-Insights — alles auf einer Plattform für moderne Flotten.",
-    "ctaPrimary": "Demo anfragen",
-    "ctaSecondary": "Funktionen ansehen"
+    "badge": "Fuhrparkmanagement für Spediteure auf dem Balkan",
+    "titleA": "Jeder LKW. Jeder Euro.",
+    "titleB": "Ein Kommandozentrum.",
+    "subtitle": "Echtzeit-GPS, Fern-Tachograph und Dokumente — alles in einem System. Gebaut für Spediteure in BiH, Serbien und der Region.",
+    "ctaPrimary": "Termin buchen",
+    "ctaSecondary": "Demo testen",
+    "trust1": "30-Tage-Pilot",
+    "trust2": "Kostenlose Installation",
+    "trust3": "DSGVO-konform",
+    "imageLabel": "[ FOTO — Hero · LKW auf offener Straße / Disponentenbildschirm ]"
+  },
+  "StatsTrio": {
+    "items": [
+      { "value": "<30s", "label": "GPS-Update", "note": "Position jedes Fahrzeugs in Echtzeit" },
+      { "value": "< 5 Tage", "label": "Durchschnittliches Onboarding", "note": "Vom Vertrag bis zum Live-Betrieb" },
+      { "value": "100%", "label": "EU 561/2006 konform", "note": "Tachograph und HOS nach Vorschrift" }
+    ]
+  },
+  "BeforeAfter": {
+    "eyebrow": "Was sich ändert",
+    "title": "Betrieb ohne Excel-Tabellen und manuelle Berichte.",
+    "subtitle": "Fünf Tools, Papierberge und WhatsApp-Threads — zusammengeführt in ein System. Ohne Datenduplikate.",
+    "beforeTitle": "Vor Groute",
+    "afterTitle": "Mit Groute",
+    "before": [
+      "Tachograph wird manuell im Depot ausgelesen",
+      "Dokumente verstreut in E-Mails und Ordnern",
+      "Strafen erfahren Sie erst, wenn der Inspektor kommt",
+      "Kosten pro Fahrzeug werden nachträglich berechnet",
+      "Fahrer ruft den Disponenten bei jeder Routenänderung an"
+    ],
+    "after": [
+      "DDD-Dateien werden geplant remote heruntergeladen",
+      "Gesamte Dokumentation in einem Repository mit Warnungen",
+      "Auto-Warnung, bevor der Inspektor eintrifft",
+      "Kosten pro km, Fahrer und Route in Echtzeit",
+      "Fahrer sieht Routenänderungen sofort in der App"
+    ]
+  },
+  "HowItWorks": {
+    "eyebrow": "So funktioniert Groute",
+    "title": "Drei Module. Ein System.",
+    "subtitle": "Alles, was Ihre Flotte braucht — verbunden in einem Fenster, ohne Datenwechsel zwischen Tools.",
+    "steps": [
+      {
+        "num": "01",
+        "tag": "Flottenübersicht",
+        "title": "Sehen Sie jedes Fahrzeug live.",
+        "body": "GPS-Position, Motorstatus und Kraftstoffverbrauch unter 30 Sekunden aktualisiert. Fahrzeug, Fahrer und aktuelle Route im selben Fenster.",
+        "bullets": ["GPS-Updates unter 30 Sekunden", "Fahrzeuge, Fahrer und Routen in einer Konsole", "Offline-tolerante Synchronisation"],
+        "image": "[ FOTO — Disponent vor dem Groute-Kontrollpult ]"
+      },
+      {
+        "num": "02",
+        "tag": "Tachograph-Modul",
+        "title": "Tachograph ohne Depotfahrt auslesen.",
+        "body": "Automatischer DDD-Downloadplan pro Fahrzeug. HOS-Regeln nach EU 561/2006 live überwacht, Inspektionsberichte mit einem Klick.",
+        "bullets": ["Geplante Remote-DDD-Downloads", "Live-HOS-Überwachung und Alerts", "Inspektionsberichte mit einem Klick"],
+        "image": "[ FOTO — Tachograph-Gerät in der LKW-Kabine ]"
+      },
+      {
+        "num": "03",
+        "tag": "Routen und Dokumente",
+        "title": "Alle Papiere an einem Ort.",
+        "body": "CMR, Policen, Lizenzen und Fahrerkarten in einem zentralen Repository — verknüpft mit Fahrzeugen und Routen. Alarme, bevor ein Dokument abläuft.",
+        "bullets": ["Rollenbasiertes Dokumenten-Repository", "Warnungen vor Karten- und Zulassungsablauf", "Audit-Log mit Signatur und Datum"],
+        "image": "[ FOTO — Fahrer mit Tablet / Dokumenten ]"
+      }
+    ]
+  },
+  "FunctionBadges": {
+    "eyebrow": "Alle Funktionen",
+    "title": "Sechs Module. Eine Plattform.",
+    "subtitle": "Starter deckt GPS, Routing, Service und Telematik ab. Professional ergänzt den vollen Tachograph-Stack und Dokumente. Alles in einem Fenster, in 4 Sprachen.",
+    "starter": "Starter",
+    "professional": "Professional",
+    "items": [
+      {
+        "icon": "map",
+        "tag": "Starter",
+        "title": "Echtzeit-GPS",
+        "body": "Position jedes Fahrzeugs unter 30 Sekunden aktualisiert, mit vollständiger Routenhistorie.",
+        "bullets": ["Aktualisierung unter 30 Sekunden", "Geofence-Zonen und Alerts", "Historie pro Fahrzeug und Fahrer"],
+        "accent": "Aktualisierung alle 28s"
+      },
+      {
+        "icon": "doc",
+        "tag": "Professional",
+        "title": "Tachograph & DDD",
+        "body": "Remote-DDD-Downloads nach Ihrem Plan, Lenkzeitanalyse und Berichte für die Inspektion.",
+        "bullets": ["Automatischer DDD-Abruf", "EU 561/2006-Lenkzeitregeln überwacht", "Inspektionsberichte mit einem Klick"],
+        "accent": "EU 561/2006"
+      },
+      {
+        "icon": "shield",
+        "tag": "Professional",
+        "title": "Compliance & Alerts",
+        "body": "Warnungen vor Ablauf von Fahrerkarten, Zulassungen, Hauptuntersuchungen und Lizenzen.",
+        "bullets": ["Warnungen 30 / 14 / 7 Tage im Voraus", "Vollständiges Änderungsprotokoll", "Score pro Fahrer und Route"],
+        "accent": "Ziel — null Strafen"
+      },
+      {
+        "icon": "route",
+        "tag": "Starter",
+        "title": "Routenoptimierung",
+        "body": "Routenvorschläge mit Kraftstoffkosten-, Lenkzeit- und Kartenfristschätzungen.",
+        "bullets": ["Kostenschätzung vor Abfahrt", "Fahrerpausen automatisch berücksichtigt", "Mehrstopp-Optimierung"],
+        "accent": "−8,3% Leerkilometer"
+      },
+      {
+        "icon": "wrench",
+        "tag": "Starter",
+        "title": "Service & Wartung",
+        "body": "Service-Intervalle pro Fahrzeug, Erinnerungen vor Fristen und Kostenerfassung.",
+        "bullets": ["Intervalle pro Fahrzeug", "Erinnerungen vor Frist", "Kosten pro Fahrzeug und Typ"],
+        "accent": "Keine bösen Pannen"
+      },
+      {
+        "icon": "chart",
+        "tag": "Starter",
+        "title": "Fahrzeug-Telematik",
+        "body": "Kraftstoffverbrauch, Fahrstil pro Fahrer und Fahrzeugdaten in einer Konsole.",
+        "bullets": ["Direktauslesung der Fahrzeugdaten", "Fahrerbewertung", "Kosten pro km und Route"],
+        "accent": "−6% Kraftstoff im Pilot"
+      }
+    ]
+  },
+  "OperativaBlock": {
+    "eyebrow": "Fahrer und Betrieb",
+    "titleA": "Weniger Papier im Depot.",
+    "titleB": "Mehr Fahrt auf der Straße.",
+    "body": "Der Fahrer sieht die Aufgabe am Bildschirm, der Disponent hat die Aufzeichnung in der Konsole. Frachtbriefe, CMR und Tachograph-Dateien an die Route gekoppelt — ohne Umwege zwischen Systemen.",
+    "specs": [
+      { "value": "−8,3%", "label": "Leerkilometer im Pilot" },
+      { "value": "−6%", "label": "Kraftstoffverbrauch pro Route" },
+      { "value": "0", "label": "Manuelle Excel-Eingaben" },
+      { "value": "4 Sprachen", "label": "Plattform und Support" }
+    ],
+    "imageLabel": "[ FOTO — Fahrer in LKW-Kabine mit der Groute-App ]"
+  },
+  "Hardware": {
+    "eyebrow": "Hardware",
+    "titleA": "Teltonika FMC650.",
+    "titleB": "Bewährtes Gerät für Ihre Flotte.",
+    "body": "Ein kleines Gerät, das in den LKW eingebaut wird und alle Fahrzeugdaten direkt in die Groute-Konsole sendet. Sie sehen, wo die Fahrzeuge sind, wie viel sie verbrauchen und ob alles in Ordnung ist — ohne Depotbesuch, ohne Papier.",
+    "imageLabel": "[ FOTO — Teltonika FMC650 Gerät ]",
+    "benefitsHeader": "Das bekommen Sie",
+    "benefits": [
+      {
+        "title": "Stabiles Signal, egal wohin der LKW fährt",
+        "body": "Das Gerät verbindet sich automatisch mit dem stärksten verfügbaren Netz. Keine weißen Flecken auf der Karte, auch nicht in abgelegenen ländlichen Strecken."
+      },
+      {
+        "title": "Tachograph und Fahrzeugdaten — automatisch",
+        "body": "Tachograph-Dateien, Geschwindigkeit, Kraftstoff und gefahrene Kilometer fließen direkt in die Groute-Konsole. Keine manuellen Excel-Übertragungen."
+      },
+      {
+        "title": "Widerstandsfähig im Arbeitseinsatz",
+        "body": "Gebaut für Vibration, Staub, Regen und extreme Kabinen-Temperaturen. Keine Ausfälle nach dem ersten Sommer oder Winter."
+      },
+      {
+        "title": "Fahrzeuge exakt dort, wo sie sind",
+        "body": "Präzise Ortung auf der gesamten Route vom Balkan bis in die EU — über Grenzen hinweg und durch Tunnel."
+      }
+    ],
+    "noteTitle": "Das Gerät wird einmal gekauft und bleibt Ihr Eigentum.",
+    "noteBody": "Der Initialdatenplan wird mit dem Gerät geliefert — Aufladungen übernimmt Groute."
+  },
+  "ForWho": {
+    "eyebrow": "Für wen Groute ist",
+    "titleA": "Für jede Flotte.",
+    "titleB": "Von fünf bis fünfhundert Fahrzeugen.",
+    "subtitle": "Wir arbeiten mit kleinen Familienspediteuren genauso wie mit Logistikzentren und Busunternehmen. Die Plattform passt sich der Flottengröße an — nicht umgekehrt.",
+    "featured": {
+      "num": "01",
+      "badge": "Häufigste Kunden",
+      "title": "Transportunternehmen",
+      "body": "LKW und Sattelzüge, nationale und internationale Distribution. Fokus auf Tachograph-Compliance, Kraftstoffoptimierung und Reduktion von Leerkilometern.",
+      "tags": [
+        { "icon": "doc", "text": "Tachograph remote" },
+        { "icon": "route", "text": "Routenoptimierung" },
+        { "icon": "chart", "text": "Kosten pro km" },
+        { "icon": "shield", "text": "EU 561/2006" }
+      ],
+      "footerTitle": "Schlüsselprobleme",
+      "footerBody": "Tachograph, Kraftstoff und Leerkilometer — an einem Ort gelöst.",
+      "imageLabel": "[ FOTO — Sattelzug auf internationaler Route ]"
+    },
+    "small": [
+      {
+        "num": "02",
+        "icon": "map",
+        "title": "Logistikzentren",
+        "body": "Gemischte Flotten und mehrere Terminals. Disponenten und Operations-Teams koordinieren Ankünfte, Beladung und Auslieferungen in Echtzeit.",
+        "metaA": "Mehrere Terminals",
+        "metaB": "Echtzeit-Koordination"
+      },
+      {
+        "num": "03",
+        "icon": "truck",
+        "title": "Busunternehmen",
+        "body": "Linien- und Touristikverkehr über mehrere Länder. Erfassung von Fahrzeugen, Fahrern, Karten und Lenkzeiten nach EU-Verordnung.",
+        "metaA": "Linien + Touristik",
+        "metaB": "EU-Verordnung"
+      }
+    ]
+  },
+  "Compliance": {
+    "eyebrow": "Strafen auf dem Balkan",
+    "title": "Eine vermiedene Strafe deckt Groute für ein Jahr.",
+    "subtitle": "Tachograph-Verstöße sind kein Spaß. Groute überwacht HOS-Regeln live und warnt, bevor der Inspektor das Fahrzeug anhält — Prävention statt Reaktion.",
+    "specs": [
+      { "value": "100%", "label": "EU 561/2006 konform" },
+      { "value": "0", "label": "Manuelle Berichte" }
+    ],
+    "tableTitle": "Strafenübersicht · regionale Quellen",
+    "tableNote": "Schätzungen — bei Vertragsschluss bei den zuständigen Behörden prüfen.",
+    "colCountry": "Land",
+    "colMissed": "Versäumter DDD-Download",
+    "colHos": "HOS-Verstoß",
+    "colManip": "Manipulation",
+    "rows": [
+      { "country": "Serbien", "missed": "€1.700", "hos": "€4.300", "manip": "€7.000" },
+      { "country": "Kroatien", "missed": "€6.630", "hos": "€6.630", "manip": "€6.630" },
+      { "country": "Slowenien", "missed": "€2.000", "hos": "€2.000", "manip": "€14.500+" },
+      { "country": "BiH", "missed": "€5.100", "hos": "€10.200", "manip": "€10.200" }
+    ]
+  },
+  "Bento": {
+    "title": "Die Stärke der Groute-Plattform",
+    "subtitle": "Alle Werkzeuge eines Flottenmanagers — verbunden in einem Kommandozentrum, ohne Wechsel zwischen Systemen.",
+    "gpsTitle": "Echtzeit-GPS",
+    "gpsBody": "Position jedes Fahrzeugs unter 30 Sekunden aktualisiert. Geofence-Zonen, Ein-/Ausfahrtalarme, vollständige Routenhistorie pro Fahrer und Fahrzeug.",
+    "gpsTag": "Geofence-Zonen",
+    "langTitle": "Plattform in 4 Sprachen",
+    "langBody": "Oberfläche, Dokumentation und Support auf Serbisch, Bosnisch, Englisch und Deutsch.",
+    "fuelTitle": "Kraftstoffersparnis",
+    "fuelNote": "30-Tage-Pilotergebnis pro Fahrzeug",
+    "fuelTag": "Pilot",
+    "fuelStat": "−6%",
+    "speedStat": "5×",
+    "speedTitle": "Schnellerer Betrieb",
+    "speedBody": "Fünfmal schnellere Verwaltungsarbeit im Vergleich zu manuellem Tachograph-Handling und Excel-Erfassung.",
+    "alertsTitle": "Schnelle Alerts",
+    "alertsBody": "Benachrichtigungen vor Dokumentablauf und HOS-Verstößen.",
+    "alertCards": "Karten",
+    "alertRegs": "Zulassungen",
+    "alertHos": "HOS"
+  },
+  "Onboarding": {
+    "eyebrow": "Startfahrplan",
+    "titleA": "Einsatzbereit",
+    "titleB": "in 5 Tagen.",
+    "subtitle": "Von der Unterschrift bis zum Betrieb — keine wochenlange Wartezeit auf Geräte, keine Beratungsprojekte. Über 8 Tage hinaus eskaliert es zur Priorität.",
+    "days": [
+      {
+        "dur": "30 Min.",
+        "title": "Vertrag unterzeichnet",
+        "items": ["Wir bestellen die Teltonika-Geräte", "Wir öffnen einen WhatsApp/Viber-Kanal", "Wir terminieren das Intro-Gespräch"]
+      },
+      {
+        "dur": "45 Min.",
+        "title": "Intro-Gespräch",
+        "items": ["Flottenaufnahme — Fahrzeuge und VIN", "Gerätetyp pro Fahrzeug", "Ortungszonen und Alerts"]
+      },
+      {
+        "dur": "2 Tage",
+        "title": "Geräte treffen ein",
+        "items": ["Geräte werden an Ihre Adresse versandt", "Wir vereinbaren den Einbau-Termin", "Wir richten die Plattform ein"]
+      },
+      {
+        "dur": "3h / Fahrzeug",
+        "title": "Einbau in Fahrzeuge",
+        "items": ["GPS-Prüfung pro Fahrzeug", "Anschluss des Tachographen", "Prüfung des Datenflusses"]
+      },
+      {
+        "dur": "45 Min.",
+        "title": "Alles läuft",
+        "items": ["Schulung für Ihr Team", "30 Min. Schulung + 15 Min. Fragen", "System im Vollbetrieb"]
+      }
+    ]
+  },
+  "Pilot": {
+    "eyebrow": "Pilotprogramm",
+    "titleA": "30-Tage-Pilot. €100 rückzahlbare Kaution.",
+    "titleB": "Null Verpflichtung.",
+    "body": "Wir installieren bis zu 2 Fahrzeuge, richten die Plattform ein und begleiten 30 Tage. Bringen wir keinen messbaren ROI, erstatten wir die Kaution — ohne Rückfragen.",
+    "ctaPrimary": "Pilot starten",
+    "ctaSecondary": "Funktionen ansehen",
+    "benefits": [
+      "Garantierter messbarer ROI im Pilot",
+      "Kostenlose Installation und Live-Support",
+      "Kein Langzeitvertrag — jederzeit kündbar",
+      "€100 Kautionserstattung ohne Rückfragen",
+      "Direkter WhatsApp/Viber-Support 24h"
+    ]
+  },
+  "Faq": {
+    "eyebrow": "Häufig gestellte Fragen",
+    "title": "Fragen, die wir jeden Tag hören.",
+    "subtitle": "Keine Antwort dabei? Schreiben Sie uns — wir melden uns am selben Tag.",
+    "items": [
+      { "q": "Was kostet Groute?", "a": "Wir veröffentlichen Preise nicht auf der Seite — sie hängen von Flottengröße und Paket ab. Senden Sie eine Anfrage, wir antworten mit einem maßgeschneiderten Angebot binnen 24 Stunden." },
+      { "q": "Wie lange dauert die Implementierung?", "a": "Ziel ist ein vollständiges Onboarding unter 5 Werktagen. Einbau pro Fahrzeug dauert rund 3 Stunden — unsere Subunternehmer arbeiten vor Ort in BiH und Serbien." },
+      { "q": "Was, wenn wir im Pilot nicht zufrieden sind?", "a": "Wir erstatten die €100 Kaution pro Gerät vollständig, ohne Rückfragen. Der Pilot läuft 30 Tage, bis zu 2 Fahrzeuge, mit kostenloser Installation." },
+      { "q": "Arbeiten Sie mit kleinen Flotten?", "a": "Unser Sweet Spot liegt bei 10–500 Fahrzeugen. Unter 10 arbeiten wir nicht, außer es gibt klaren strategischen Mehrwert — melden Sie sich, wir besprechen es." },
+      { "q": "Welche Hardware nutzen Sie?", "a": "Teltonika FMC650 (schwere Fahrzeuge), FMC150 (leichte Fahrzeuge) und FMC234 (Anhänger). Geräte werden einmalig gekauft und bleiben Eigentum des Kunden." },
+      { "q": "Sind Sie DSGVO-konform?", "a": "Ja. Groute ist DSGVO-Auftragsverarbeiter. Der Kunde ist Eigentümer seiner Daten und kann sie jederzeit exportieren." },
+      { "q": "Welche Sprachen unterstützt die Plattform?", "a": "Oberfläche und Support auf Serbisch, Bosnisch, Englisch und Deutsch. Verträge und Dokumentation in der gewünschten Sprache." }
+    ]
+  },
+  "Cta": {
+    "eyebrow": "Kontakt",
+    "titleA": "15 Minuten Gespräch.",
+    "titleB": "Konkrete Zahlen für Ihre Flotte.",
+    "body": "Wir zeigen die Plattform live an Ihrem Betrieb und bereiten eine Einsparungsschätzung passend zu Flottengröße und Transportart vor.",
+    "tags": [
+      { "value": "< 24h", "label": "Antwort auf Anfrage" },
+      { "value": "Keine Folien", "label": "Gespräch über Operations" },
+      { "value": "Unverbindlich", "label": "Kein Vertragsabschluss am Telefon" }
+    ],
+    "formTitle": "Termin buchen",
+    "formSubtitle": "Hinterlassen Sie Kontakt — wir melden uns am selben Tag, spätestens binnen 24 Stunden.",
+    "name": "Vollständiger Name",
+    "namePh": "Ihr Name",
+    "company": "Firmenname",
+    "companyPh": "Firma GmbH",
+    "email": "E-Mail",
+    "emailPh": "sie@firma.de",
+    "phone": "Telefon",
+    "phonePh": "+49 / +387 …",
+    "fleet": "Flottengröße",
+    "fleetPh": "Wählen",
+    "fleet1": "10 – 30 Fahrzeuge",
+    "fleet2": "30 – 100 Fahrzeuge",
+    "fleet3": "100 – 500 Fahrzeuge",
+    "fleet4": "500+ Fahrzeuge",
+    "message": "Was ist gerade Ihre größte Herausforderung? (optional)",
+    "messagePh": "z. B. Tachograph läuft manuell, Dokumente in Excel…",
+    "submit": "Termin buchen",
+    "submitting": "Wird gesendet…",
+    "error": "Etwas ist schiefgelaufen. Bitte erneut versuchen oder office@mygroute.com schreiben.",
+    "successTitle": "Danke — wir melden uns binnen 24h.",
+    "successBody": "Wir bereiten eine Agenda passend zu Ihrer Flotte vor und bestätigen den Termin.",
+    "privacy": "Wir nutzen Ihre Daten ausschließlich zur Terminbuchung. DSGVO-konform.",
+    "imageLabel": "[ FOTO — LKW auf offener Straße / Industrieportrait ]"
+  },
+  "Footer": {
+    "tagline": "Groute wurde gegründet, um <strong>den Flottenbetrieb</strong> auf das nächste Niveau zu heben. Wir vereinen Routenplanung, Tachograph und Dokumentenfluss in einer Plattform — gebaut für Spediteure auf dem Balkan.",
+    "contactTitle": "Kontakt",
+    "navTitle": "Navigation",
+    "socialsTitle": "Soziale Netzwerke",
+    "navHome": "Start",
+    "navPlatform": "Plattform",
+    "navModules": "Module",
+    "navIntegrations": "Integrationen",
+    "navAbout": "Über uns",
+    "addressLine1": "Brčko-Distrikt",
+    "addressLine2": "Bosnien und Herzegowina",
+    "rights": "Alle Rechte vorbehalten.",
+    "privacy": "Datenschutz",
+    "cookies": "Cookie-Richtlinie",
+    "terms": "Nutzungsbedingungen"
+  },
+  "Meta": {
+    "homeTitle": "groute — Gesamte Flotte. Tachograph. Dokumente. Eine Plattform.",
+    "homeDescription": "Echtzeit-Tracking, Routenoptimierung und Fahrer-Insights für moderne Flotten.",
+    "contactTitle": "Demo anfragen — groute",
+    "contactDescription": "Sprechen Sie mit dem groute-Team über Fuhrparkmanagement für Ihr Unternehmen.",
+    "featuresTitle": "Funktionen — groute",
+    "featuresDescription": "Tracking, Routing, Disposition, Reporting — alles für Ihren Fuhrpark.",
+    "pricingTitle": "Preise — groute",
+    "pricingDescription": "Einfacher Preis pro Fahrzeug, der mit Ihrer Flotte wächst."
   },
   "Contact": {
     "title": "Demo anfragen",
@@ -28,19 +401,5 @@
     "submitting": "Wird gesendet…",
     "success": "Danke — wir haben Ihre Anfrage erhalten und melden uns in Kürze.",
     "error": "Etwas ist schiefgelaufen. Bitte erneut versuchen oder office@mygroute.com schreiben."
-  },
-  "Meta": {
-    "homeTitle": "groute — Software für Fuhrparkmanagement",
-    "homeDescription": "Echtzeit-Tracking, Routenoptimierung und Fahrer-Insights für moderne Flotten.",
-    "contactTitle": "Demo anfragen — groute",
-    "contactDescription": "Sprechen Sie mit dem groute-Team über Fuhrparkmanagement für Ihr Unternehmen.",
-    "featuresTitle": "Funktionen — groute",
-    "featuresDescription": "Tracking, Routing, Disposition, Reporting — alles für Ihren Fuhrpark.",
-    "pricingTitle": "Preise — groute",
-    "pricingDescription": "Einfacher Preis pro Fahrzeug, der mit Ihrer Flotte wächst."
-  },
-  "Footer": {
-    "rights": "Alle Rechte vorbehalten.",
-    "language": "Sprache"
   }
 }

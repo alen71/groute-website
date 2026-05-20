@@ -1,59 +1,28 @@
+import { getTranslations } from "next-intl/server";
 import { Eyebrow, Icon, PhotoPlaceholder } from "./_shared";
 import { cn } from "@/lib/utils";
 
-const steps = [
-  {
-    num: "01",
-    tag: "Pregled flote",
-    title: "Vidite svako vozilo uživo.",
-    body:
-      "GPS pozicija, status motora i potrošnja goriva ažurirani ispod 30 sekundi. Vozilo, vozač i trenutna ruta u istom prozoru.",
-    bullets: [
-      "GPS update ispod 30 sekundi",
-      "Vozila, vozači i rute u jednoj tabli",
-      "Offline-tolerantna sinhronizacija",
-    ],
-    image: "[ FOTO — Dispečer ispred Groute kontrolne table ]",
-  },
-  {
-    num: "02",
-    tag: "Tahograf modul",
-    title: "Skinete tahograf bez odlaska u depo.",
-    body:
-      "Automatski raspored skidanja DDD fajlova po vozilu. HOS pravila po EU 561/2006 monitor se uživo, izvještaji za inspekciju u jednom kliku.",
-    bullets: [
-      "Daljinsko DDD skidanje po rasporedu",
-      "Live HOS monitoring i alerti",
-      "Inspekcijski izvještaji jednim klikom",
-    ],
-    image: "[ FOTO — Tahograf uređaj u kabini kamiona ]",
-  },
-  {
-    num: "03",
-    tag: "Rute i dokumenti",
-    title: "Sve papire držite na jednom mjestu.",
-    body:
-      "CMR, polise, licence i vozačke kartice u centralnom skladištu — povezani sa vozilima i rutama. Alarmi prije nego što dokument istekne.",
-    bullets: [
-      "Skladište dokumenata sa pristupom po ulozi",
-      "Alarmi pred istek kartica i registracija",
-      "Audit log sa potpisom i datumom",
-    ],
-    image: "[ FOTO — Vozač sa tablet uređajem / dokumentima ]",
-  },
-];
+type Step = {
+  num: string;
+  tag: string;
+  title: string;
+  body: string;
+  bullets: string[];
+  image: string;
+};
 
-export function HowItWorks() {
+export async function HowItWorks() {
+  const t = await getTranslations("HowItWorks");
+  const steps = t.raw("steps") as Step[];
+
   return (
     <section className="bg-muted py-24">
       <div className="container-page">
         <div className="mx-auto mb-16 max-w-[680px] text-center">
-          <Eyebrow className="justify-center">Kako Groute radi</Eyebrow>
-          <h2 className="mt-3.5 text-[clamp(28px,3.2vw,42px)] font-semibold tracking-tight">
-            Tri modula. Jedan sistem.
-          </h2>
-          <p className="mx-auto mt-4 max-w-[540px] text-[17px] leading-relaxed text-muted-foreground">
-            Sve što vaša flota traži, povezano u istom prozoru — bez prebacivanja podataka.
+          <Eyebrow className="justify-center">{t("eyebrow")}</Eyebrow>
+          <h2 className="mt-3.5">{t("title")}</h2>
+          <p className="text-muted-foreground mx-auto mt-4 max-w-[540px] text-[17px] leading-relaxed">
+            {t("subtitle")}
           </p>
         </div>
 

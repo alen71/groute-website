@@ -28,10 +28,10 @@ export default async function FeaturesPage({
   const t = await getTranslations("Nav");
 
   return (
-    <section className="mx-auto max-w-5xl px-6 py-24">
-      <h1 className="text-4xl font-semibold tracking-tight">{t("features")}</h1>
-      <p className="mt-4 text-zinc-600 dark:text-zinc-400">
-        Paste the Claude design feature sections here.
+    <section className="container-page py-24">
+      <h1 className="text-4xl font-semibold tracking-tight">{t("funkcije")}</h1>
+      <p className="mt-4 text-muted-foreground">
+        Coming soon.
       </p>
     </section>
   );

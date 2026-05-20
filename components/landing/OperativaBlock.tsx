@@ -1,30 +1,32 @@
+import { getTranslations } from "next-intl/server";
 import { Eyebrow, PhotoPlaceholder, Spec } from "./_shared";
 
-export function OperativaBlock() {
+export async function OperativaBlock() {
+  const t = await getTranslations("OperativaBlock");
+  const specs = t.raw("specs") as Array<{ value: string; label: string }>;
+
   return (
     <section className="bg-muted py-24">
       <div className="container-page">
         <div className="grid items-center gap-10 lg:gap-16 lg:grid-cols-[1fr_1.1fr]">
           <div>
-            <Eyebrow>Vozač i operativa</Eyebrow>
-            <h2 className="mt-3.5 text-[clamp(28px,3.2vw,42px)] font-semibold tracking-tight">
-              Manje papira u depou.
+            <Eyebrow>{t("eyebrow")}</Eyebrow>
+            <h2 className="mt-3.5">
+              {t("titleA")}
               <br />
-              Više vožnje na putu.
+              {t("titleB")}
             </h2>
             <p className="mt-4 max-w-[480px] text-[17px] leading-relaxed text-muted-foreground">
-              Vozač vidi zadatak na ekranu, dispečer ima evidenciju u tabli. Putni nalozi, CMR
-              i tahograf fajlovi povezani sa rutom — bez prepisivanja između sistema.
+              {t("body")}
             </p>
             <div className="mt-8 grid grid-cols-2 gap-6 border-t border-border pt-6">
-              <Spec value="−8.3%" label="Praznih km u pilotu" />
-              <Spec value="−6%" label="Potrošnje goriva po ruti" />
-              <Spec value="0" label="Manuelnih unosa u Excel" />
-              <Spec value="4 jezika" label="Platforma i podrška" />
+              {specs.map((s) => (
+                <Spec key={s.label} value={s.value} label={s.label} />
+              ))}
             </div>
           </div>
           <PhotoPlaceholder
-            label="[ FOTO — Vozač u kabini kamiona sa Groute aplikacijom ]"
+            label={t("imageLabel")}
             className="min-h-[480px] rounded-2xl"
           />
         </div>

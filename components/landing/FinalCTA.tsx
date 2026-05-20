@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -16,21 +16,15 @@ import {
 } from "@/components/ui/select";
 import { Eyebrow, Icon, PhotoPlaceholder } from "./_shared";
 
-function Tag({ value, label }: { value: string; label: string }) {
-  return (
-    <div className="flex flex-col">
-      <div className="text-lg font-semibold tracking-tight text-white">{value}</div>
-      <div className="mt-0.5 text-[11.5px] text-[#A6B1CD]">{label}</div>
-    </div>
-  );
-}
-
 type Status = "idle" | "submitting" | "success" | "error";
 
 export function FinalCTA() {
+  const t = useTranslations("Cta");
   const locale = useLocale();
   const [status, setStatus] = useState<Status>("idle");
   const [fleet, setFleet] = useState("");
+
+  const tags = t.raw("tags") as Array<{ value: string; label: string }>;
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -68,7 +62,7 @@ export function FinalCTA() {
         <div className="grid items-stretch gap-12 lg:grid-cols-[1fr_1.1fr]">
           <div className="relative flex min-h-[540px] flex-col justify-end overflow-hidden rounded-2xl">
             <PhotoPlaceholder
-              label="[ FOTO — Kamion na otvorenom putu / industrijski portret ]"
+              label={t("imageLabel")}
               className="absolute inset-0 rounded-none"
             />
             <div
@@ -76,20 +70,24 @@ export function FinalCTA() {
               className="absolute inset-0 bg-gradient-to-b from-secondary-3/15 via-secondary-3/60 to-secondary-3/90"
             />
             <div className="relative p-9 text-white">
-              <Eyebrow light>Kontakt</Eyebrow>
-              <h2 className="mt-3.5 text-[32px] font-semibold leading-[1.15] tracking-tight text-white">
-                15 minuta razgovora.
+              <Eyebrow light>{t("eyebrow")}</Eyebrow>
+              <h2 className="mt-3.5 text-[32px] leading-[1.15] tracking-tight text-white">
+                {t("titleA")}
                 <br />
-                Konkretne brojke za vašu flotu.
+                {t("titleB")}
               </h2>
               <p className="mt-3.5 max-w-[380px] text-[15px] leading-relaxed text-[#D6DEEC]">
-                Pokazaćemo platformu uživo na vašoj operativi i pripremićemo procjenu uštede
-                prilagođenu broju vozila i tipu prevoza.
+                {t("body")}
               </p>
               <div className="mt-7 flex flex-wrap gap-6">
-                <Tag value="< 24h" label="Odgovor na upit" />
-                <Tag value="Bez slajdova" label="Razgovor o operativi" />
-                <Tag value="Bez obaveza" label="Ne ugovaramo na pozivu" />
+                {tags.map((tg) => (
+                  <div key={tg.value} className="flex flex-col">
+                    <div className="text-lg font-semibold tracking-tight text-white">
+                      {tg.value}
+                    </div>
+                    <div className="mt-0.5 text-[11.5px] text-[#A6B1CD]">{tg.label}</div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -100,68 +98,73 @@ export function FinalCTA() {
                 <div className="mx-auto flex size-16 items-center justify-center rounded-full bg-success/12 text-success">
                   <Icon name="check" size={28} strokeWidth={2.5} className="text-success" />
                 </div>
-                <h3 className="mt-4 text-xl font-semibold">Hvala — javljamo se za 24h.</h3>
+                <h3 className="mt-4 text-xl font-semibold">{t("successTitle")}</h3>
                 <p className="mx-auto mt-2.5 max-w-[380px] text-sm text-muted-foreground">
-                  Pripremićemo agendu prilagođenu vašoj floti i potvrditi termin razgovora.
+                  {t("successBody")}
                 </p>
               </div>
             ) : (
               <form onSubmit={onSubmit}>
-                <h3 className="text-[26px] font-semibold tracking-tight">Zakažite razgovor</h3>
+                <h3 className="text-[26px] font-semibold tracking-tight">{t("formTitle")}</h3>
                 <p className="mt-2.5 max-w-[440px] text-sm text-muted-foreground">
-                  Ostavite kontakt — javljamo se istog dana, najkasnije za 24 sata.
+                  {t("formSubtitle")}
                 </p>
 
                 <div className="mt-6 grid gap-3.5">
                   <div className="grid gap-3 sm:grid-cols-2">
                     <div className="flex flex-col gap-1.5">
-                      <Label htmlFor="name">Ime i prezime</Label>
-                      <Input id="name" name="name" required placeholder="Vaše ime" />
+                      <Label htmlFor="name">{t("name")}</Label>
+                      <Input id="name" name="name" required placeholder={t("namePh")} />
                     </div>
                     <div className="flex flex-col gap-1.5">
-                      <Label htmlFor="company">Naziv firme</Label>
-                      <Input id="company" name="company" required placeholder="Firma d.o.o." />
+                      <Label htmlFor="company">{t("company")}</Label>
+                      <Input
+                        id="company"
+                        name="company"
+                        required
+                        placeholder={t("companyPh")}
+                      />
                     </div>
                   </div>
                   <div className="grid gap-3 sm:grid-cols-2">
                     <div className="flex flex-col gap-1.5">
-                      <Label htmlFor="email">Email</Label>
-                      <Input id="email" name="email" type="email" required placeholder="vi@firma.com" />
+                      <Label htmlFor="email">{t("email")}</Label>
+                      <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        required
+                        placeholder={t("emailPh")}
+                      />
                     </div>
                     <div className="flex flex-col gap-1.5">
-                      <Label htmlFor="phone">Telefon</Label>
-                      <Input id="phone" name="phone" required placeholder="+387 / +381 …" />
+                      <Label htmlFor="phone">{t("phone")}</Label>
+                      <Input id="phone" name="phone" required placeholder={t("phonePh")} />
                     </div>
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <Label htmlFor="fleet">Veličina flote</Label>
+                    <Label htmlFor="fleet">{t("fleet")}</Label>
                     <Select value={fleet} onValueChange={setFleet} name="fleetSize" required>
                       <SelectTrigger id="fleet">
-                        <SelectValue placeholder="Izaberite" />
+                        <SelectValue placeholder={t("fleetPh")} />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="10-30">10 – 30 vozila</SelectItem>
-                        <SelectItem value="30-100">30 – 100 vozila</SelectItem>
-                        <SelectItem value="100-500">100 – 500 vozila</SelectItem>
-                        <SelectItem value="500+">500+ vozila</SelectItem>
+                        <SelectItem value="10-30">{t("fleet1")}</SelectItem>
+                        <SelectItem value="30-100">{t("fleet2")}</SelectItem>
+                        <SelectItem value="100-500">{t("fleet3")}</SelectItem>
+                        <SelectItem value="500+">{t("fleet4")}</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <Label htmlFor="message">
-                      Šta vam je trenutno najveći izazov? (opciono)
-                    </Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      placeholder="npr. tahograf nam ide ručno, dokumenti po Excel-ima…"
-                    />
+                    <Label htmlFor="message">{t("message")}</Label>
+                    <Textarea id="message" name="message" placeholder={t("messagePh")} />
                   </div>
                 </div>
 
                 {status === "error" && (
                   <p role="alert" className="mt-4 text-sm text-destructive">
-                    Došlo je do greške. Pokušajte ponovo ili pišite na office@mygroute.com.
+                    {t("error")}
                   </p>
                 )}
 
@@ -172,13 +175,11 @@ export function FinalCTA() {
                   disabled={status === "submitting"}
                   className="mt-5 w-full"
                 >
-                  {status === "submitting" ? "Slanje…" : "Zakaži razgovor"}
+                  {status === "submitting" ? t("submitting") : t("submit")}
                 </Button>
                 <div className="mt-3.5 flex items-center gap-2 text-xs text-muted-foreground">
                   <Icon name="lock" size={13} />
-                  <span>
-                    Podatke koristimo isključivo za zakazivanje razgovora. GDPR usklađeno.
-                  </span>
+                  <span>{t("privacy")}</span>
                 </div>
               </form>
             )}

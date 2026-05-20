@@ -1,107 +1,40 @@
+import { getTranslations } from "next-intl/server";
 import { Badge } from "@/components/ui/badge";
 import { Eyebrow, Icon } from "./_shared";
 import { cn } from "@/lib/utils";
 
-const features = [
-  {
-    icon: "map" as const,
-    tag: "Starter" as const,
-    title: "GPS u realnom vremenu",
-    body:
-      "Pozicija svakog vozila ažurirana ispod 30 sekundi, sa kompletnom istorijom ruta.",
-    bullets: [
-      "Ažuriranje ispod 30 sekundi",
-      "Zone praćenja i upozorenja",
-      "Istorija po vozilu i vozaču",
-    ],
-    accent: "Ažuriranje svakih 28s",
-  },
-  {
-    icon: "doc" as const,
-    tag: "Professional" as const,
-    title: "Tahograf i DDD",
-    body:
-      "Daljinsko skidanje DDD fajlova po vašem rasporedu, analiza vremena vožnje i izvještaji za inspekciju.",
-    bullets: [
-      "Automatsko preuzimanje DDD-a",
-      "Praćenje pravila vožnje EU 561/2006",
-      "Izvještaji za inspekciju jednim klikom",
-    ],
-    accent: "EU 561/2006",
-  },
-  {
-    icon: "shield" as const,
-    tag: "Professional" as const,
-    title: "Usklađenost i upozorenja",
-    body:
-      "Upozorenja pred istek kartica vozača, registracija, tehničkih pregleda i licenci.",
-    bullets: [
-      "Upozorenja 30 / 14 / 7 dana ranije",
-      "Evidencija svih izmjena",
-      "Ocjena po vozaču i ruti",
-    ],
-    accent: "Cilj — nula kazni",
-  },
-  {
-    icon: "route" as const,
-    tag: "Starter" as const,
-    title: "Optimizacija ruta",
-    body:
-      "Predlog rute sa procjenom troška goriva, vremena vožnje i rokova vozačeve kartice.",
-    bullets: [
-      "Procjena troška prije polaska",
-      "Pauze vozača automatski uračunate",
-      "Optimizacija sa više stajališta",
-    ],
-    accent: "−8,3% praznih km",
-  },
-  {
-    icon: "wrench" as const,
-    tag: "Starter" as const,
-    title: "Servis i održavanje",
-    body:
-      "Praćenje servisnih intervala po vozilu, podsjetnici prije rokova i evidencija troškova.",
-    bullets: ["Intervali po vozilu", "Podsjetnici prije roka", "Trošak po vozilu i tipu"],
-    accent: "Bez iznenadnih kvarova",
-  },
-  {
-    icon: "chart" as const,
-    tag: "Starter" as const,
-    title: "Telematika vozila",
-    body:
-      "Potrošnja goriva, stil vožnje po vozaču i podaci sa vozila u jednoj tabli.",
-    bullets: [
-      "Čitanje podataka direktno iz vozila",
-      "Ocjena vozača",
-      "Trošak po kilometru i ruti",
-    ],
-    accent: "−6% goriva u pilotu",
-  },
-];
+type Item = {
+  icon: "map" | "doc" | "shield" | "route" | "wrench" | "chart";
+  tag: "Starter" | "Professional";
+  title: string;
+  body: string;
+  bullets: string[];
+  accent: string;
+};
 
-export function FunctionBadges() {
+export async function FunctionBadges() {
+  const t = await getTranslations("FunctionBadges");
+  const features = t.raw("items") as Item[];
+
   return (
     <section id="funkcije" className="py-24">
       <div className="container-page">
         <div className="mb-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div className="max-w-[640px]">
-            <Eyebrow>Sve funkcije</Eyebrow>
-            <h2 className="mt-3.5 text-[clamp(28px,3.2vw,42px)] font-semibold tracking-tight">
-              Šest modula. Jedna platforma.
-            </h2>
-            <p className="mt-4 max-w-[520px] text-[17px] leading-relaxed text-muted-foreground">
-              Starter pokriva GPS, rute, servis i telematiku. Professional dodaje cijeli
-              tahograf stack i dokumente. Sve u istom prozoru, na 4 jezika.
+            <Eyebrow>{t("eyebrow")}</Eyebrow>
+            <h2 className="mt-3.5">{t("title")}</h2>
+            <p className="text-muted-foreground mt-4 max-w-[520px] text-[17px] leading-relaxed">
+              {t("subtitle")}
             </p>
           </div>
           <div className="flex shrink-0 flex-wrap gap-2">
             <Badge variant="outline" className="bg-white">
               <span className="size-1.5 rounded-full bg-primary" />
-              Starter
+              {t("starter")}
             </Badge>
             <Badge variant="dark">
               <span className="size-1.5 rounded-full bg-[#9DB7F2]" />
-              Professional
+              {t("professional")}
             </Badge>
           </div>
         </div>
