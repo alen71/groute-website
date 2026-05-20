@@ -9,7 +9,7 @@ Marketing site for [groute](https://www.mygroute.com) — fleet management softw
 - **next-intl** — i18n (`en`, `bs`, `sr`, `de`)
 - **shadcn/ui** primitives + **lucide-react** icons
 - **Resend** — transactional email (contact form)
-- **Netlify** — hosting (`@netlify/plugin-nextjs`)
+- **Vercel** — hosting
 - **pnpm** — package manager
 
 ## Quick start
@@ -38,7 +38,7 @@ pnpm dev                          # http://localhost:3000 → /en
 | `CONTACT_EMAIL_FROM` | Verified Resend sender. Falls back to `onboarding@resend.dev` for testing. |
 | `SITE_URL` | Public base URL — used by sitemap/robots/canonical. Default `https://www.mygroute.com`. |
 
-Set the same vars in Netlify dashboard for deploys.
+Set the same vars in Vercel project settings for deploys.
 
 ## i18n
 
@@ -70,4 +70,20 @@ messages/             # locale JSON files
 
 ## Deploy
 
-Push to `main` on the connected Netlify site. `netlify.toml` wires the Next.js plugin. Configure env vars in the Netlify UI.
+### One-time setup
+
+```bash
+pnpm i -g vercel
+vercel login
+vercel link        # link to existing project, or create new
+vercel env add RESEND_API_KEY production
+vercel env add CONTACT_EMAIL_TO production
+vercel env add SITE_URL production
+```
+
+Or via UI: `vercel.com/new` → import GitHub repo → Vercel auto-detects Next.js → add env vars → Deploy.
+
+### Recurring
+
+- Connected to Git: `git push origin main` → auto-build + deploy.
+- Manual: `vercel --prod`.
