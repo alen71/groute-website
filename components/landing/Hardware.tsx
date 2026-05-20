@@ -8,7 +8,7 @@ export async function Hardware() {
   const benefits = t.raw("benefits") as Benefit[];
 
   return (
-    <section id="uredjaji" className="relative py-24">
+    <section id="uredjaji" className="relative bg-muted py-24">
       <div className="container-page">
         <div className="mb-12 max-w-[640px]">
           <Eyebrow>{t("eyebrow")}</Eyebrow>

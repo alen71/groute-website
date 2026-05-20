@@ -6,7 +6,7 @@ export async function OperativaBlock() {
   const specs = t.raw("specs") as Array<{ value: string; label: string }>;
 
   return (
-    <section className="bg-muted py-24">
+    <section className="bg-background py-24">
       <div className="container-page">
         <div className="grid items-center gap-10 lg:gap-16 lg:grid-cols-[1fr_1.1fr]">
           <div>

@@ -7,7 +7,6 @@ import { Hero } from "@/components/landing/Hero";
 import { StatsTrio } from "@/components/landing/StatsTrio";
 import { BeforeAfter } from "@/components/landing/BeforeAfter";
 import { HowItWorks } from "@/components/landing/HowItWorks";
-import { FunctionBadges } from "@/components/landing/FunctionBadges";
 import { OperativaBlock } from "@/components/landing/OperativaBlock";
 import { Hardware } from "@/components/landing/Hardware";
 import { ForWho } from "@/components/landing/ForWho";
@@ -49,7 +48,6 @@ export default async function Home({
       <StatsTrio />
       <BeforeAfter />
       <HowItWorks />
-      <FunctionBadges />
       <OperativaBlock />
       <Hardware />
       <ForWho />

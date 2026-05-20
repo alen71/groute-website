@@ -14,7 +14,6 @@ export function Nav() {
     { label: t("platforma"), href: "#platforma" },
     { label: t("funkcije"), href: "#funkcije" },
     { label: t("uredjaji"), href: "#uredjaji" },
-    { label: t("resursi"), href: "#resursi" },
     { label: t("faq"), href: "#faq" },
   ];
 
