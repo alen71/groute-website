@@ -1,24 +1,21 @@
 "use client";
 
-import { useTransition } from "react";
+import { useEffect, useRef, useState, useTransition } from "react";
 import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
-import { routing, type Locale } from "@/i18n/routing";
+import { type Locale } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 
-const LABELS: Record<Locale, string> = {
-  en: "EN",
-  bs: "BS",
-  sr: "SR",
-  de: "DE",
-};
+type LangMeta = { locale: Locale; code: string; full: string; soon?: boolean };
 
-const FULL: Record<Locale, string> = {
-  en: "English",
-  bs: "Bosanski",
-  sr: "Srpski",
-  de: "Deutsch",
-};
+const LANGS: LangMeta[] = [
+  { locale: "en", code: "EN", full: "English" },
+  { locale: "sr", code: "SR", full: "Srpski" },
+  { locale: "bs", code: "BS", full: "Bosanski" },
+  { locale: "de", code: "DE", full: "Deutsch" },
+];
+
+const SOON_SUFFIX = " — uskoro";
 
 export function LanguageSwitcher({
   compact = true,
@@ -31,44 +28,128 @@ export function LanguageSwitcher({
   const pathname = usePathname();
   const router = useRouter();
   const [pending, startTransition] = useTransition();
+  const [open, setOpen] = useState(false);
+  const rootRef = useRef<HTMLDivElement>(null);
 
-  function onChange(e: React.ChangeEvent<HTMLSelectElement>) {
-    const next = e.target.value as Locale;
+  useEffect(() => {
+    if (!open) return;
+    function onDocMouse(e: MouseEvent) {
+      if (!rootRef.current?.contains(e.target as Node)) setOpen(false);
+    }
+    function onKey(e: KeyboardEvent) {
+      if (e.key === "Escape") setOpen(false);
+    }
+    document.addEventListener("mousedown", onDocMouse);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("mousedown", onDocMouse);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
+
+  function pick(next: Locale) {
+    setOpen(false);
+    if (next === locale) return;
     startTransition(() => {
       router.replace(pathname, { locale: next });
     });
   }
 
+  const current = LANGS.find((l) => l.locale === locale) ?? LANGS[0];
+
+  const list = (
+    <ul className="flex flex-col gap-0.5">
+      {LANGS.map((lang) => {
+        const active = lang.locale === locale;
+        const soon = lang.soon === true;
+        return (
+          <li key={lang.locale}>
+            <button
+              type="button"
+              role="menuitemradio"
+              aria-checked={active}
+              onClick={() => pick(lang.locale)}
+              disabled={soon || pending}
+              className={cn(
+                "flex w-full items-center justify-between gap-6 rounded-xl px-3.5 py-2.5 text-left transition-colors",
+                active && "bg-muted",
+                !active && !soon && "hover:bg-muted",
+                soon && "cursor-not-allowed opacity-70",
+              )}
+            >
+              <span className="flex items-center gap-2.5">
+                {active && (
+                  <span className="size-1.5 rounded-full bg-primary" />
+                )}
+                <span
+                  className={cn(
+                    "text-[14.5px] text-foreground",
+                    active ? "font-semibold" : "font-medium",
+                  )}
+                >
+                  {lang.full}
+                </span>
+              </span>
+              <span className="text-[12px] font-medium tracking-[0.04em] text-muted-foreground">
+                {lang.code}
+                {soon ? SOON_SUFFIX : ""}
+              </span>
+            </button>
+          </li>
+        );
+      })}
+    </ul>
+  );
+
+  if (!compact) {
+    return (
+      <div className={cn("rounded-2xl border border-border bg-background p-2", className)}>
+        {list}
+      </div>
+    );
+  }
+
   return (
-    <label className={cn("relative inline-flex items-center", className)}>
-      <span className="sr-only">Jezik</span>
-      <select
-        value={locale}
-        onChange={onChange}
+    <div ref={rootRef} className={cn("relative", className)}>
+      <button
+        type="button"
+        aria-haspopup="menu"
+        aria-expanded={open}
+        onClick={() => setOpen((o) => !o)}
         disabled={pending}
         className={cn(
-          "appearance-none rounded-lg border border-border bg-background pl-3 pr-8 text-[13px] font-medium text-foreground transition-colors focus-visible:border-ring focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/25",
-          compact ? "h-9" : "h-11 w-full",
+          "inline-flex h-9 items-center gap-2 rounded-full border border-border bg-background px-2.5 text-[13px] font-semibold text-foreground transition-colors",
+          "hover:border-[#D6E2FB] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/25",
+          open && "border-[#D6E2FB] bg-muted",
         )}
       >
-        {routing.locales.map((l) => (
-          <option key={l} value={l}>
-            {compact ? LABELS[l] : FULL[l]}
-          </option>
-        ))}
-      </select>
-      <svg
-        aria-hidden
-        viewBox="0 0 10 6"
-        className="pointer-events-none absolute right-2.5 size-2.5 text-muted-foreground"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="m1 1 4 4 4-4" />
-      </svg>
-    </label>
+        <span className="size-1.5 rounded-full bg-primary" />
+        <span className="tracking-[0.04em]">{current.code}</span>
+        <svg
+          aria-hidden
+          viewBox="0 0 10 6"
+          className={cn(
+            "size-2.5 text-muted-foreground transition-transform",
+            open && "rotate-180",
+          )}
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.6"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="m1 1 4 4 4-4" />
+        </svg>
+      </button>
+
+      {open && (
+        <div
+          role="menu"
+          className="absolute right-0 top-full z-50 mt-2 w-[240px] rounded-2xl border border-border bg-background p-2 shadow-[0_24px_48px_-20px_rgba(16,27,49,0.18)]"
+        >
+          {list}
+        </div>
+      )}
+    </div>
   );
 }

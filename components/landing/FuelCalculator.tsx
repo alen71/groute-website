@@ -4,12 +4,31 @@ import { useMemo, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Icon } from "./_shared";
 
-const LOCALE_TAG: Record<string, string> = {
-  en: "en-US",
-  bs: "bs-BA",
-  sr: "sr-RS",
-  de: "de-DE",
+type Sep = { decimal: string; group: string; eurBefore: boolean };
+
+const LOCALE_SEP: Record<string, Sep> = {
+  en: { decimal: ".", group: ",", eurBefore: true },
+  bs: { decimal: ",", group: ".", eurBefore: true },
+  sr: { decimal: ",", group: ".", eurBefore: true },
+  de: { decimal: ",", group: ".", eurBefore: false },
 };
+
+function formatWithSep(n: number, sep: Sep, decimals: number) {
+  const fixed = Math.abs(n).toFixed(decimals);
+  const [i, d] = fixed.split(".");
+  const grouped = i.replace(/\B(?=(\d{3})+(?!\d))/g, sep.group);
+  return d ? `${grouped}${sep.decimal}${d}` : grouped;
+}
+
+function formatNumber(n: number, locale: string, decimals = 0) {
+  return formatWithSep(n, LOCALE_SEP[locale] ?? LOCALE_SEP.en, decimals);
+}
+
+function formatEUR(n: number, locale: string, decimals = 0) {
+  const sep = LOCALE_SEP[locale] ?? LOCALE_SEP.en;
+  const body = formatWithSep(n, sep, decimals);
+  return sep.eurBefore ? `€${body}` : `${body} €`;
+}
 
 const KM_PER_YEAR = 40_000;
 const L_PER_100KM = 30;
@@ -29,31 +48,9 @@ const PRICE_STEP = 0.05;
 export function FuelCalculator() {
   const t = useTranslations("FuelSavings");
   const locale = useLocale();
-  const tag = LOCALE_TAG[locale] ?? "en-US";
 
   const [fleet, setFleet] = useState(DEFAULT_FLEET);
   const [price, setPrice] = useState(DEFAULT_PRICE);
-
-  const fmtCurrency0 = useMemo(
-    () =>
-      new Intl.NumberFormat(tag, {
-        style: "currency",
-        currency: "EUR",
-        maximumFractionDigits: 0,
-      }),
-    [tag],
-  );
-  const fmtPrice = useMemo(
-    () =>
-      new Intl.NumberFormat(tag, {
-        style: "currency",
-        currency: "EUR",
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2,
-      }),
-    [tag],
-  );
-  const fmtNum = useMemo(() => new Intl.NumberFormat(tag), [tag]);
 
   const savings = useMemo(
     () => fleet * KM_PER_YEAR * (L_PER_100KM / 100) * price * SAVINGS_PCT,
@@ -100,7 +97,7 @@ export function FuelCalculator() {
           </div>
           <div className="mt-3 flex flex-wrap items-baseline gap-x-2 gap-y-1 text-[clamp(48px,6.4vw,88px)] font-bold leading-[1.02] tracking-[-0.04em] tabular-nums">
             <span className="text-primary">−</span>
-            <span>{fmtCurrency0.format(savings)}</span>
+            <span>{formatEUR(savings, locale, 0)}</span>
             <span className="text-[clamp(16px,1.6vw,22px)] font-semibold text-[#9DB7F2]">
               / {t("heroPeriod")}
             </span>
@@ -113,7 +110,7 @@ export function FuelCalculator() {
         <div className="mt-8 grid gap-6 sm:grid-cols-2">
           <Slider
             label={t("vehiclesLabel")}
-            value={`${fmtNum.format(fleet)} ${t("vehiclesUnit")}`}
+            value={`${formatNumber(fleet, locale)} ${t("vehiclesUnit")}`}
             min={FLEET_MIN}
             max={FLEET_MAX}
             step={FLEET_STEP}
@@ -123,7 +120,7 @@ export function FuelCalculator() {
           />
           <Slider
             label={t("fuelPriceLabel")}
-            value={`${fmtPrice.format(price)} / L`}
+            value={`${formatEUR(price, locale, 2)} / L`}
             min={PRICE_MIN}
             max={PRICE_MAX}
             step={PRICE_STEP}
@@ -135,7 +132,7 @@ export function FuelCalculator() {
 
         <div className="mt-7 grid grid-cols-2 gap-6 border-t border-white/10 pt-6">
           <Cell
-            value={`${fmtNum.format(KM_PER_YEAR)} km`}
+            value={`${formatNumber(KM_PER_YEAR, locale)} km`}
             label={t("kmLabel")}
           />
           <Cell value={`${L_PER_100KM} L/100km`} label={t("consumptionLabel")} />
