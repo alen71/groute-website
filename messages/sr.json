@@ -486,7 +486,8 @@
   },
   "Pilot": {
     "eyebrow": "Pilot program",
-    "titleA": "30 dana pilot. €100 povratan depozit.",
+    "titleA": "30 dana pilot.",
+    "titlePrice": "€100 povratan depozit.",
     "titleB": "Nula obaveza.",
     "body": "Instaliramo do 2 vozila, podešavamo platformu, pratimo 30 dana. Ako vam ne donosimo merljiv ROI, depozit vraćamo bez pitanja.",
     "ctaPrimary": "Pokrenite pilot",

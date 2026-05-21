@@ -10,7 +10,7 @@ export async function ComplianceBlock() {
   const rows = t.raw("rows") as Row[];
 
   return (
-    <section className="py-24">
+    <section className="pb-24">
       <div className="container-page">
         <div className="mb-12 flex flex-col items-start justify-between gap-8 md:flex-row">
           <div className="max-w-[640px]">

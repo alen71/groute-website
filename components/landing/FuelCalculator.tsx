@@ -57,7 +57,8 @@ export function FuelCalculator() {
     [fleet, price],
   );
 
-  const isDefault = fleet === DEFAULT_FLEET && Math.abs(price - DEFAULT_PRICE) < 1e-9;
+  const isDefault =
+    fleet === DEFAULT_FLEET && Math.abs(price - DEFAULT_PRICE) < 1e-9;
 
   function reset() {
     setFleet(DEFAULT_FLEET);
@@ -65,19 +66,19 @@ export function FuelCalculator() {
   }
 
   return (
-    <div className="relative overflow-hidden rounded-2xl bg-secondary p-8 text-white sm:p-10">
+    <div className="bg-secondary relative overflow-hidden rounded-2xl p-8 text-white sm:p-10">
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-20 -top-24 h-[320px] w-[320px] rounded-full bg-primary/35 blur-[110px]"
+        className="bg-primary/35 pointer-events-none absolute -top-24 -right-20 h-[320px] w-[320px] rounded-full blur-[110px]"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -bottom-32 -left-10 h-[260px] w-[260px] rounded-full bg-primary/20 blur-[110px]"
+        className="bg-primary/20 pointer-events-none absolute -bottom-32 -left-10 h-[260px] w-[260px] rounded-full blur-[110px]"
       />
 
       <div className="relative">
         <div className="flex items-center justify-between">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[12px] font-medium text-[#9DB7F2]">
+          <span className="text-primary-accent inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[12px] font-medium">
             <Icon name="fuel" size={13} />
             {t("heroTag")}
           </span>
@@ -85,24 +86,26 @@ export function FuelCalculator() {
             type="button"
             onClick={reset}
             disabled={isDefault}
-            className="text-[11.5px] font-semibold uppercase tracking-[0.08em] text-[#9DB7F2] transition-opacity hover:text-white disabled:cursor-not-allowed disabled:opacity-50"
+            className="text-primary-accent text-[11.5px] font-semibold tracking-[0.08em] uppercase transition-opacity hover:text-white disabled:cursor-not-allowed disabled:opacity-50"
           >
             {t("resetLabel")}
           </button>
         </div>
 
         <div className="mt-8">
-          <div className="text-[13px] uppercase tracking-[0.08em] text-[#A6B1CD]">
+          <div className="text-secondary-foreground-4 text-[13px] tracking-[0.08em] uppercase">
             {t("heroLead")}
           </div>
-          <div className="mt-3 flex flex-wrap items-baseline gap-x-2 gap-y-1 text-[clamp(48px,6.4vw,88px)] font-bold leading-[1.02] tracking-[-0.04em] tabular-nums">
+          <div className="mt-3 flex flex-wrap items-baseline gap-x-2 gap-y-1 text-[clamp(48px,6.4vw,80px)] leading-[1.02] font-bold tabular-nums">
             <span className="text-primary">−</span>
-            <span>{formatEUR(savings, locale, 0)}</span>
-            <span className="text-[clamp(16px,1.6vw,22px)] font-semibold text-[#9DB7F2]">
+            <span className="tracking-[-0.04em]">
+              {formatEUR(savings, locale, 0)}
+            </span>
+            <span className="text-primary-accent text-[clamp(16px,1.6vw,22px)] font-semibold">
               / {t("heroPeriod")}
             </span>
           </div>
-          <p className="mt-4 max-w-[440px] text-[14px] leading-relaxed text-[#C8D2E8]">
+          <p className="text-secondary-foreground-3 mt-4 max-w-[440px] text-[14px] leading-relaxed">
             {t("heroBody")}
           </p>
         </div>
@@ -135,10 +138,15 @@ export function FuelCalculator() {
             value={`${formatNumber(KM_PER_YEAR, locale)} km`}
             label={t("kmLabel")}
           />
-          <Cell value={`${L_PER_100KM} L/100km`} label={t("consumptionLabel")} />
+          <Cell
+            value={`${L_PER_100KM} L/100km`}
+            label={t("consumptionLabel")}
+          />
         </div>
 
-        <div className="mt-5 text-[11.5px] text-[#7B89A8]">{t("disclaimer")}</div>
+        <div className="text-secondary-foreground-6 mt-5 text-[11.5px]">
+          {t("disclaimer")}
+        </div>
       </div>
     </div>
   );
@@ -167,7 +175,7 @@ function Slider({
   return (
     <div>
       <div className="flex items-baseline justify-between gap-3">
-        <span className="text-[11.5px] font-semibold uppercase tracking-[0.08em] text-[#A6B1CD]">
+        <span className="text-secondary-foreground-4 text-[11.5px] font-semibold tracking-[0.08em] uppercase">
           {label}
         </span>
         <span className="text-[15px] font-semibold text-white tabular-nums">
@@ -185,7 +193,7 @@ function Slider({
         className="fuel-range mt-3 w-full"
         style={
           {
-            background: `linear-gradient(to right, var(--color-primary) 0%, var(--color-primary) ${pct}%, rgba(255,255,255,0.12) ${pct}%, rgba(255,255,255,0.12) 100%)`,
+            background: `linear-gradient(to right, var(--color-primary) 0%, var(--color-primary) ${pct}%, var(--track-on-dark) ${pct}%, var(--track-on-dark) 100%)`,
           } as React.CSSProperties
         }
       />
@@ -199,7 +207,7 @@ function Cell({ value, label }: { value: string; label: string }) {
       <div className="text-[17px] font-semibold tracking-tight text-white tabular-nums">
         {value}
       </div>
-      <div className="mt-1 text-[12px] text-[#9DB7F2]">{label}</div>
+      <div className="text-primary-accent mt-1 text-[12px]">{label}</div>
     </div>
   );
 }

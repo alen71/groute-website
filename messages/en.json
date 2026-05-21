@@ -486,7 +486,8 @@
   },
   "Pilot": {
     "eyebrow": "Pilot program",
-    "titleA": "30-day pilot. €100 refundable deposit.",
+    "titleA": "30-day pilot.",
+    "titlePrice": "€100 refundable deposit.",
     "titleB": "Zero obligation.",
     "body": "We install up to 2 vehicles, set up the platform, monitor for 30 days. If we don't deliver measurable ROI, we refund the deposit — no questions asked.",
     "ctaPrimary": "Start the pilot",

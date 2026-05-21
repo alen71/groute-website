@@ -40,23 +40,23 @@ export async function FuelSavings() {
               <article
                 key={c.icon}
                 className={cn(
-                  "relative flex items-start gap-4 rounded-2xl border border-border bg-background p-6 transition-colors hover:border-[#D6E2FB]",
-                  i === 0 && "bg-gradient-to-br from-white to-[#F4F8FF]",
+                  "border-border bg-background hover:border-primary-edge relative flex items-start gap-4 rounded-2xl border p-6 transition-colors",
+                  i === 0 && "from-background to-primary-tint bg-linear-to-br",
                 )}
               >
-                <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary-strong">
+                <span className="bg-primary/10 text-primary-strong flex size-12 shrink-0 items-center justify-center rounded-xl">
                   <Icon name={c.icon} size={22} />
                 </span>
                 <div className="flex-1">
                   <div className="flex items-start justify-between gap-4">
-                    <h3 className="text-[18px] font-semibold tracking-tight text-foreground">
+                    <h3 className="text-foreground text-[18px] font-semibold tracking-tight">
                       {c.title}
                     </h3>
-                    <span className="shrink-0 rounded-md bg-primary/10 px-2 py-0.5 text-[12px] font-semibold text-primary-strong">
+                    <span className="bg-primary/10 text-primary-strong shrink-0 rounded-md px-2 py-0.5 text-[12px] font-semibold">
                       {c.metric}
                     </span>
                   </div>
-                  <p className="mt-2 text-[14.5px] leading-[1.6] text-muted-foreground">
+                  <p className="text-muted-foreground mt-2 text-[14.5px] leading-[1.6]">
                     {c.body}
                   </p>
                 </div>
@@ -65,15 +65,17 @@ export async function FuelSavings() {
           </div>
         </div>
 
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 rounded-2xl border border-dashed border-border bg-muted px-6 py-5 text-[13.5px] text-muted-foreground">
+        <div className="border-border bg-muted text-muted-foreground mt-6 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 rounded-2xl border border-dashed px-6 py-5 text-[13.5px]">
           {FORMULA_KEYS.map((key, i) => (
             <Fragment key={key}>
               {i > 0 && <span className="text-muted-2">×</span>}
-              <span className="font-mono font-medium text-foreground">{t(key)}</span>
+              <span className="text-foreground font-mono font-medium">
+                {t(key)}
+              </span>
             </Fragment>
           ))}
           <span className="text-muted-2">→</span>
-          <span className="inline-flex items-center gap-1.5 rounded-md bg-primary/10 px-2.5 py-1 font-mono font-semibold text-primary-strong">
+          <span className="bg-primary/10 text-primary-strong inline-flex items-center gap-1.5 rounded-md px-2.5 py-1 font-mono font-semibold">
             <Icon name="trendDown" size={13} />
             {t("formulaResult")}
           </span>

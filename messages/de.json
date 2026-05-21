@@ -486,7 +486,8 @@
   },
   "Pilot": {
     "eyebrow": "Pilotprogramm",
-    "titleA": "30-Tage-Pilot. €100 rückzahlbare Kaution.",
+    "titleA": "30-Tage-Pilot.",
+    "titlePrice": "€100 rückzahlbare Kaution.",
     "titleB": "Null Verpflichtung.",
     "body": "Wir installieren bis zu 2 Fahrzeuge, richten die Plattform ein und begleiten 30 Tage. Bringen wir keinen messbaren ROI, erstatten wir die Kaution — ohne Rückfragen.",
     "ctaPrimary": "Pilot starten",

@@ -11,16 +11,14 @@ export async function OnboardingTimeline() {
   return (
     <section className="bg-muted py-24">
       <div className="container-page">
-        <div className="mb-16 grid items-end gap-8 md:grid-cols-2">
+        <div className="mb-16 grid grid-cols-[60fr_40fr] items-end gap-8 md:grid-cols-2">
           <div>
             <Eyebrow>{t("eyebrow")}</Eyebrow>
-            <h2 className="mt-3.5 text-[clamp(32px,4.4vw,54px)] leading-none tracking-[-0.03em]">
-              {t("titleA")}
-              <br />
-              {t("titleB")}
+            <h2 className="mt-3.5 text-[clamp(32px,4.8vw,50px)] leading-none tracking-[-0.03em]">
+              {t("titleA")} {t("titleB")}
             </h2>
           </div>
-          <p className="max-w-[380px] justify-self-start text-[15px] leading-[1.6] text-muted-foreground md:justify-self-end">
+          <p className="text-muted-foreground max-w-[380px] justify-self-start text-[15px] leading-[1.6] md:justify-self-end">
             {t("subtitle")}
           </p>
         </div>
@@ -28,7 +26,7 @@ export async function OnboardingTimeline() {
         <div className="relative mx-auto max-w-[1080px]">
           <div
             aria-hidden
-            className="absolute left-[27px] top-6 bottom-6 w-px bg-border md:left-1/2 md:-translate-x-px"
+            className="bg-border absolute top-6 bottom-6 left-[27px] w-px md:left-1/2 md:-translate-x-px"
           />
           {days.map((d, i) => {
             const isFeatured = i === days.length - 1;
@@ -42,7 +40,7 @@ export async function OnboardingTimeline() {
                   className={cn(
                     "rounded-2xl border p-6 transition-all md:w-full md:max-w-[440px]",
                     isFeatured
-                      ? "border-secondary-3 bg-gradient-to-b from-secondary-2 to-secondary-3 text-white"
+                      ? "border-secondary-3 from-secondary-2 to-secondary-3 bg-gradient-to-b text-white"
                       : "border-border bg-background hover:-translate-y-0.5 hover:shadow-[0_18px_36px_-18px_rgba(16,27,49,0.18)]",
                     side === "left"
                       ? "col-start-2 md:col-start-1 md:justify-self-end md:text-left"
@@ -94,7 +92,7 @@ export async function OnboardingTimeline() {
                   </ul>
                 </div>
 
-                <div className="relative z-10 col-start-1 row-start-1 flex size-[54px] items-center justify-center self-center rounded-full border border-border bg-background text-lg font-semibold tracking-tight text-foreground md:col-start-2 md:row-start-auto md:justify-self-center">
+                <div className="border-border bg-background text-foreground relative z-10 col-start-1 row-start-1 flex size-[54px] items-center justify-center self-center rounded-full border text-lg font-semibold tracking-tight md:col-start-2 md:row-start-auto md:justify-self-center">
                   {i + 1}
                 </div>
               </div>

@@ -30,6 +30,8 @@ export async function PilotBanner() {
             <h2 className="mt-3.5 text-[clamp(30px,3.4vw,42px)] leading-tight tracking-tight text-white">
               {t("titleA")}
               <br />
+              {t("titlePrice")}
+              <br />
               <span className="text-[#9DB7F2]">{t("titleB")}</span>
             </h2>
             <p className="mt-4 max-w-[540px] text-[17px] leading-relaxed text-[#A6B1CD]">
