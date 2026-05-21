@@ -1,7 +1,10 @@
+import { Fragment } from "react";
 import { getTranslations } from "next-intl/server";
 import { Eyebrow, Icon } from "./_shared";
 import { cn } from "@/lib/utils";
 import { FuelCalculator } from "./FuelCalculator";
+
+const FORMULA_KEYS = ["formulaA", "formulaB", "formulaC", "formulaD"] as const;
 
 type Card = {
   icon: "gauge" | "trendDown" | "chart" | "fuel";
@@ -35,9 +38,9 @@ export async function FuelSavings() {
           <div className="grid gap-4">
             {cards.map((c, i) => (
               <article
-                key={c.title}
+                key={c.icon}
                 className={cn(
-                  "group relative flex items-start gap-4 rounded-2xl border border-border bg-background p-6 transition-colors hover:border-[#D6E2FB]",
+                  "relative flex items-start gap-4 rounded-2xl border border-border bg-background p-6 transition-colors hover:border-[#D6E2FB]",
                   i === 0 && "bg-gradient-to-br from-white to-[#F4F8FF]",
                 )}
               >
@@ -63,13 +66,12 @@ export async function FuelSavings() {
         </div>
 
         <div className="mt-6 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 rounded-2xl border border-dashed border-border bg-muted px-6 py-5 text-[13.5px] text-muted-foreground">
-          <span className="font-mono font-medium text-foreground">{t("formulaA")}</span>
-          <span className="text-muted-2">×</span>
-          <span className="font-mono font-medium text-foreground">{t("formulaB")}</span>
-          <span className="text-muted-2">×</span>
-          <span className="font-mono font-medium text-foreground">{t("formulaC")}</span>
-          <span className="text-muted-2">×</span>
-          <span className="font-mono font-medium text-foreground">{t("formulaD")}</span>
+          {FORMULA_KEYS.map((key, i) => (
+            <Fragment key={key}>
+              {i > 0 && <span className="text-muted-2">×</span>}
+              <span className="font-mono font-medium text-foreground">{t(key)}</span>
+            </Fragment>
+          ))}
           <span className="text-muted-2">→</span>
           <span className="inline-flex items-center gap-1.5 rounded-md bg-primary/10 px-2.5 py-1 font-mono font-semibold text-primary-strong">
             <Icon name="trendDown" size={13} />
