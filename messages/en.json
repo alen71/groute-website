@@ -15,7 +15,7 @@
   },
   "Hero": {
     "badge": "Fleet management for Balkan transporters",
-    "titleA": "Every truck. Every euro.",
+    "titleA": "Every vehicle. Every euro.",
     "titleB": "One platform.",
     "subtitle": "Real-time GPS, remote tachograph and documents — all in one system. Built for transporters in BiH, Serbia and the wider region.",
     "ctaPrimary": "Book a call",
@@ -315,7 +315,7 @@
   },
   "FuelSavings": {
     "eyebrow": "Fuel — biggest line on the invoice",
-    "titleA": "Every truck. Every euro.",
+    "titleA": "Every vehicle. Every euro.",
     "titleB": "Saved at the pump.",
     "subtitle": "Fuel is 30–40% of route cost. Groute reads consumption straight from the vehicle, ties it to driver and route, and shows where the money leaks.",
     "heroTag": "Annual fuel savings",

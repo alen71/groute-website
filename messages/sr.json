@@ -15,7 +15,7 @@
   },
   "Hero": {
     "badge": "Fleet management za transportere na Balkanu",
-    "titleA": "Svaki kamion. Svaki evro.",
+    "titleA": "Svako vozilo. Svaki evro.",
     "titleB": "Jedna platforma.",
     "subtitle": "GPS u realnom vremenu, tahograf na daljinu i dokumenti — sve u jednom sistemu. Napravljeno za transportere u Srbiji, BiH i regionu.",
     "ctaPrimary": "Zakažite sastanak",
@@ -315,7 +315,7 @@
   },
   "FuelSavings": {
     "eyebrow": "Gorivo — najveća stavka na fakturi",
-    "titleA": "Svaki kamion. Svaki evro.",
+    "titleA": "Svako vozilo. Svaki evro.",
     "titleB": "Ušteđen na pumpi.",
     "subtitle": "Gorivo je 30–40% troška rute. Groute čita potrošnju direktno iz vozila, vezuje je za vozača i rutu, i pokazuje gde novac curi.",
     "heroTag": "Godišnja ušteda na gorivu",
