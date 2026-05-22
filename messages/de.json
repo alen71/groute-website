@@ -15,9 +15,9 @@
   },
   "Hero": {
     "badge": "Fuhrparkmanagement für Spediteure auf dem Balkan",
-    "titleA": "Jedes Fahrzeug. Jeder Euro.",
-    "titleB": "Eine Plattform.",
-    "subtitle": "Echtzeit-GPS, Fern-Tachograph und Dokumente — alles in einem System. Gebaut für Spediteure in BiH, Serbien und der Region.",
+    "titleA": "Jedes Fahrzeug und jeden Euro verfolgen",
+    "titleB": "auf einer Plattform",
+    "subtitle": "Echtzeit-GPS, Fern-Download und -Überwachung des Tachographen sowie Dokumentenablage — alles in einem System. Gebaut für Spediteure in Serbien, BiH und der Region.",
     "ctaPrimary": "Termin buchen",
     "ctaSecondary": "Demo testen",
     "trust1": "30-Tage-Pilot",
@@ -507,7 +507,7 @@
     "items": [
       {
         "q": "Was kostet Groute?",
-        "a": "Wir veröffentlichen Preise nicht auf der Seite — sie hängen von Flottengröße und Paket ab. Senden Sie eine Anfrage, wir antworten mit einem maßgeschneiderten Angebot binnen 24 Stunden."
+        "a": "Hängt von Flottengröße und gewähltem Paket ab. Senden Sie eine Anfrage, wir antworten mit einem maßgeschneiderten Angebot binnen 24 Stunden."
       },
       {
         "q": "Wie lange dauert die Implementierung?",

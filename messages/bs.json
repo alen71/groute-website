@@ -15,9 +15,9 @@
   },
   "Hero": {
     "badge": "Fleet management za transportere na Balkanu",
-    "titleA": "Svako vozilo. Svaki euro.",
-    "titleB": "Jedna platforma.",
-    "subtitle": "GPS u realnom vremenu, tahograf na daljinu i dokumenti — sve u jednom sistemu. Napravljeno za transportere u BiH, Srbiji i regionu.",
+    "titleA": "Prati svako vozilo i svaki euro",
+    "titleB": "na jednoj platformi",
+    "subtitle": "GPS u realnom vremenu, skidanje i praćenje tahografa na daljinu i čuvanje dokumentacije — sve u jednom sistemu. Napravljeno za transportere u BiH, Srbiji i regionu.",
     "ctaPrimary": "Zakažite sastanak",
     "ctaSecondary": "Probajte demo",
     "trust1": "30 dana pilot",
@@ -507,7 +507,7 @@
     "items": [
       {
         "q": "Koliko košta Groute?",
-        "a": "Cijenu ne objavljujemo na sajtu — zavisi od veličine flote i izabranog paketa. Pošaljite upit, vraćamo personalizovanu ponudu u 24 sata."
+        "a": "Zavisi od veličine flote i izabranog paketa. Pošaljite upit, vraćamo personalizovanu ponudu u 24 sata."
       },
       {
         "q": "Koliko traje implementacija?",

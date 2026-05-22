@@ -15,9 +15,9 @@
   },
   "Hero": {
     "badge": "Fleet management for Balkan transporters",
-    "titleA": "Every vehicle. Every euro.",
-    "titleB": "One platform.",
-    "subtitle": "Real-time GPS, remote tachograph and documents — all in one system. Built for transporters in BiH, Serbia and the wider region.",
+    "titleA": "Track every vehicle and every euro",
+    "titleB": "on one platform",
+    "subtitle": "Real-time GPS, remote tachograph downloads and monitoring, and document storage — all in one system. Built for transporters in Serbia, BiH and the wider region.",
     "ctaPrimary": "Book a call",
     "ctaSecondary": "Try the demo",
     "trust1": "30-day pilot",
@@ -507,7 +507,7 @@
     "items": [
       {
         "q": "How much does Groute cost?",
-        "a": "We don't publish prices on the site — it depends on fleet size and the chosen package. Send a request and we return a personalised quote within 24 hours."
+        "a": "It depends on fleet size and the chosen package. Send a request and we return a personalised quote within 24 hours."
       },
       {
         "q": "How long does implementation take?",
