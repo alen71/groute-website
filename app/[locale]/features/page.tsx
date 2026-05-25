@@ -30,9 +30,7 @@ export default async function FeaturesPage({
   return (
     <section className="container-page py-24">
       <h1 className="text-4xl font-semibold tracking-tight">{t("funkcije")}</h1>
-      <p className="mt-4 text-muted-foreground">
-        Coming soon.
-      </p>
+      <p className="text-muted-foreground mt-4">Coming soon.</p>
     </section>
   );
 }

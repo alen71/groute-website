@@ -16,7 +16,7 @@ export async function ComplianceBlock() {
           <div className="max-w-[640px]">
             <Eyebrow>{t("eyebrow")}</Eyebrow>
             <h2 className="mt-3.5">{t("title")}</h2>
-            <p className="mt-4 max-w-[640px] text-[17px] leading-relaxed text-muted-foreground">
+            <p className="text-muted-foreground mt-4 max-w-[640px] text-[17px] leading-relaxed">
               {t("subtitle")}
             </p>
           </div>
@@ -28,40 +28,46 @@ export async function ComplianceBlock() {
         </div>
 
         <Card className="overflow-hidden p-0">
-          <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border px-6 py-4">
+          <div className="border-border flex flex-wrap items-center justify-between gap-3 border-b px-6 py-4">
             <div className="flex items-center gap-2.5">
               <Icon name="shield" size={16} className="text-primary" />
               <span className="text-sm font-semibold">{t("tableTitle")}</span>
             </div>
-            <span className="text-xs text-muted-foreground">{t("tableNote")}</span>
+            <span className="text-muted-foreground text-xs">
+              {t("tableNote")}
+            </span>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[560px] text-sm">
               <thead>
-                <tr className="bg-[#FBFCFE] text-muted-foreground">
-                  <th className="whitespace-nowrap px-6 py-3.5 text-left text-[11px] font-medium uppercase tracking-[0.06em]">
+                <tr className="bg-muted text-muted-foreground">
+                  <th className="px-6 py-3.5 text-left text-[11px] font-medium tracking-[0.06em] whitespace-nowrap uppercase">
                     {t("colCountry")}
                   </th>
-                  <th className="whitespace-nowrap px-6 py-3.5 text-right text-[11px] font-medium uppercase tracking-[0.06em]">
+                  <th className="px-6 py-3.5 text-right text-[11px] font-medium tracking-[0.06em] whitespace-nowrap uppercase">
                     {t("colMissed")}
                   </th>
-                  <th className="whitespace-nowrap px-6 py-3.5 text-right text-[11px] font-medium uppercase tracking-[0.06em]">
+                  <th className="px-6 py-3.5 text-right text-[11px] font-medium tracking-[0.06em] whitespace-nowrap uppercase">
                     {t("colHos")}
                   </th>
-                  <th className="whitespace-nowrap px-6 py-3.5 text-right text-[11px] font-medium uppercase tracking-[0.06em]">
+                  <th className="px-6 py-3.5 text-right text-[11px] font-medium tracking-[0.06em] whitespace-nowrap uppercase">
                     {t("colManip")}
                   </th>
                 </tr>
               </thead>
               <tbody>
                 {rows.map((r) => (
-                  <tr key={r.country} className="border-t border-border-2">
-                    <td className="whitespace-nowrap px-6 py-4.5 text-[15px] font-semibold text-foreground">
+                  <tr key={r.country} className="border-border-2 border-t">
+                    <td className="text-foreground px-6 py-4.5 text-[15px] font-semibold whitespace-nowrap">
                       {r.country}
                     </td>
-                    <td className="whitespace-nowrap px-6 py-4.5 text-right text-foreground">{r.missed}</td>
-                    <td className="whitespace-nowrap px-6 py-4.5 text-right text-foreground">{r.hos}</td>
-                    <td className="whitespace-nowrap px-6 py-4.5 text-right font-semibold text-[#B91C1C]">
+                    <td className="text-foreground px-6 py-4.5 text-right whitespace-nowrap">
+                      {r.missed}
+                    </td>
+                    <td className="text-foreground px-6 py-4.5 text-right whitespace-nowrap">
+                      {r.hos}
+                    </td>
+                    <td className="text-destructive px-6 py-4.5 text-right font-semibold whitespace-nowrap">
                       {r.manip}
                     </td>
                   </tr>

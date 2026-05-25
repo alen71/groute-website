@@ -11,7 +11,6 @@ export async function AboutGroute() {
   return (
     <section className="bg-background py-24">
       <div className="container-page">
-        {/* Top: intro + photo */}
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div>
             <Eyebrow>{t("eyebrow")}</Eyebrow>
@@ -20,10 +19,10 @@ export async function AboutGroute() {
               <br />
               {t("titleB")}
             </h2>
-            <p className="mt-5 max-w-[520px] text-[17px] leading-relaxed text-muted-foreground">
+            <p className="text-muted-foreground mt-5 max-w-[520px] text-[17px] leading-relaxed">
               {t("body1")}
             </p>
-            <p className="mt-4 max-w-[520px] text-[17px] leading-relaxed text-muted-foreground">
+            <p className="text-muted-foreground mt-4 max-w-[520px] text-[17px] leading-relaxed">
               {t("body2")}
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -41,7 +40,6 @@ export async function AboutGroute() {
           />
         </div>
 
-        {/* Bottom: reasons grid */}
         <div className="mt-20 lg:mt-24">
           <div className="mb-12 flex flex-col items-center text-center">
             <Eyebrow>{t("reasonsEyebrow")}</Eyebrow>
@@ -58,7 +56,7 @@ export async function AboutGroute() {
                     {r.num}
                   </span>
                   <div>
-                    <h3 className="text-[20px] font-semibold tracking-tight text-foreground">
+                    <h3 className="text-foreground text-[20px] font-semibold tracking-tight">
                       {r.title}
                     </h3>
                     <p className="text-muted-foreground mt-2.5 text-[15px] leading-[1.55]">

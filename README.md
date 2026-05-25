@@ -31,12 +31,12 @@ pnpm dev                          # http://localhost:3000 → /en
 
 ## Environment variables
 
-| Var | Purpose |
-|---|---|
-| `RESEND_API_KEY` | Contact form sender (required for `/api/contact`) |
-| `CONTACT_EMAIL_TO` | Inbox for demo requests (default in `.env.example`) |
-| `CONTACT_EMAIL_FROM` | Verified Resend sender. Falls back to `onboarding@resend.dev` for testing. |
-| `SITE_URL` | Public base URL — used by sitemap/robots/canonical. Default `https://www.mygroute.com`. |
+| Var                  | Purpose                                                                                 |
+| -------------------- | --------------------------------------------------------------------------------------- |
+| `RESEND_API_KEY`     | Contact form sender (required for `/api/contact`)                                       |
+| `CONTACT_EMAIL_TO`   | Inbox for demo requests (default in `.env.example`)                                     |
+| `CONTACT_EMAIL_FROM` | Verified Resend sender. Falls back to `onboarding@resend.dev` for testing.              |
+| `SITE_URL`           | Public base URL — used by sitemap/robots/canonical. Default `https://www.mygroute.com`. |
 
 Set the same vars in Vercel project settings for deploys.
 
@@ -47,6 +47,7 @@ Locales live in `messages/{en,bs,sr,de}.json`. URL pattern is `/{locale}/...`.
 **Add a translation key:** add it under the same namespace in all four locale files. Don't hardcode user-facing strings in components — use `useTranslations(namespace)`.
 
 **Add a new locale:**
+
 1. Add code to `i18n/routing.ts` `locales` array.
 2. Create `messages/<code>.json` mirroring `en.json`.
 3. Add label to `LABELS` in `components/layout/LanguageSwitcher.tsx`.

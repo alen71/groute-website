@@ -1,12 +1,15 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 
-export function Card({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
+export function Card({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
       data-slot="card"
       className={cn(
-        "rounded-2xl border border-border bg-card text-card-foreground",
+        "border-border bg-card text-card-foreground rounded-2xl border",
         className,
       )}
       {...props}
@@ -34,7 +37,7 @@ export function CardTitle({
   return (
     <div
       data-slot="card-title"
-      className={cn("text-base font-semibold leading-tight", className)}
+      className={cn("text-base leading-tight font-semibold", className)}
       {...props}
     />
   );
@@ -47,7 +50,7 @@ export function CardDescription({
   return (
     <div
       data-slot="card-description"
-      className={cn("text-sm text-muted-foreground", className)}
+      className={cn("text-muted-foreground text-sm", className)}
       {...props}
     />
   );

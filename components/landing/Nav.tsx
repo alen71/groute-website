@@ -26,17 +26,17 @@ export function Nav() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-white/85 backdrop-blur-lg backdrop-saturate-150">
+    <header className="border-border sticky top-0 z-50 border-b bg-white/85 backdrop-blur-lg backdrop-saturate-150">
       <div className="container-page flex h-[72px] items-center justify-between gap-6">
         <a href="#top" className="flex items-center">
           <Logo height={22} />
         </a>
-        <nav className="hidden items-center gap-8 text-sm font-medium text-foreground/85 lg:flex">
+        <nav className="text-foreground/85 hidden items-center gap-8 text-sm font-medium lg:flex">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="transition-colors hover:text-primary hover:opacity-100"
+              className="hover:text-primary transition-colors hover:opacity-100"
             >
               {l.label}
             </a>
@@ -52,13 +52,13 @@ export function Nav() {
           type="button"
           aria-label={t("openMenu")}
           onClick={() => setOpen((v) => !v)}
-          className="flex size-10 items-center justify-center rounded-lg border border-border bg-background lg:hidden"
+          className="border-border bg-background flex size-10 items-center justify-center rounded-lg border lg:hidden"
         >
           <Icon name={open ? "close" : "menu"} size={18} />
         </button>
       </div>
       {open && (
-        <div className="border-t border-border bg-background px-6 pb-6 pt-3 lg:hidden">
+        <div className="border-border bg-background border-t px-6 pt-3 pb-6 lg:hidden">
           <div className="pb-3">
             <LanguageSwitcher compact={false} />
           </div>
@@ -67,7 +67,7 @@ export function Nav() {
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="block border-b border-border-2 py-3.5 text-base font-medium text-foreground"
+              className="border-border-2 text-foreground block border-b py-3.5 text-base font-medium"
             >
               {l.label}
             </a>

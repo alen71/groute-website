@@ -28,9 +28,7 @@ export default async function PricingPage({
   return (
     <section className="container-page py-24">
       <h1 className="text-4xl font-semibold tracking-tight">—</h1>
-      <p className="mt-4 text-muted-foreground">
-        Contact us for pricing.
-      </p>
+      <p className="text-muted-foreground mt-4">Contact us for pricing.</p>
     </section>
   );
 }
