@@ -96,8 +96,8 @@ export function FuelCalculator() {
           <div className="text-secondary-foreground-4 text-[13px] tracking-[0.08em] uppercase">
             {t("heroLead")}
           </div>
-          <div className="mt-3 flex flex-wrap items-baseline gap-x-2 gap-y-1 text-[clamp(48px,6.4vw,80px)] leading-[1.02] font-bold tabular-nums">
-            <span className="text-primary">−</span>
+          <div className="mt-3 flex flex-wrap items-baseline gap-x-2 gap-y-1 text-[clamp(34px,5.2vw,64px)] leading-[1.02] font-bold tabular-nums">
+            <span className="text-white">−</span>
             <span className="tracking-[-0.04em]">
               {formatEUR(savings, locale, 0)}
             </span>

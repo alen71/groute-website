@@ -103,7 +103,7 @@ export async function ForWho() {
                 </span>
               </div>
               <h3 className="mt-4 text-[20px] font-semibold tracking-tight">{c.title}</h3>
-              <p className="mt-2.5 text-sm leading-[1.55] text-muted-foreground">{c.body}</p>
+              <p className="mt-2.5 mb-6 text-sm leading-[1.55] text-muted-foreground">{c.body}</p>
               <div className="mt-auto flex items-center justify-between border-t border-border-2 pt-4 text-[13px] text-muted-foreground">
                 <span>{c.metaA}</span>
                 <span className="font-semibold text-primary">{c.metaB}</span>

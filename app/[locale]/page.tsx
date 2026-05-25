@@ -6,6 +6,7 @@ import { Nav } from "@/components/landing/Nav";
 import { Hero } from "@/components/landing/Hero";
 import { StatsTrio } from "@/components/landing/StatsTrio";
 import { BeforeAfter } from "@/components/landing/BeforeAfter";
+import { AboutGroute } from "@/components/landing/AboutGroute";
 import { HowItWorks } from "@/components/landing/HowItWorks";
 import { OperativaBlock } from "@/components/landing/OperativaBlock";
 import { Hardware } from "@/components/landing/Hardware";
@@ -48,6 +49,7 @@ export default async function Home({
       <Hero />
       <StatsTrio />
       <BeforeAfter />
+      <AboutGroute />
       <FuelSavings />
       <HowItWorks />
       <OperativaBlock />

@@ -44,7 +44,7 @@ function CompareCol({
           <li
             key={it}
             className={cn(
-              "flex items-start gap-3.5 py-3.5 border-b",
+              "flex items-start gap-3.5 py-3.5 border-b last:border-b-0",
               i === 0 && "border-t",
               isAfter
                 ? "text-foreground border-[#E1ECFD] font-medium"

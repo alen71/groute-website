@@ -134,7 +134,7 @@
 
 @layer components {
   .container-page {
-    @apply mx-auto w-full max-w-[1240px] px-6;
+    @apply mx-auto w-full max-w-[1240px] px-4 md:px-6;
   }
   .ph {
     @apply text-muted-foreground relative overflow-hidden rounded-2xl;

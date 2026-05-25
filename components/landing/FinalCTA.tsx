@@ -92,7 +92,7 @@ export function FinalCTA() {
             </div>
           </div>
 
-          <Card className="rounded-2xl p-10 shadow-[0_1px_2px_rgba(16,27,49,0.04)]">
+          <Card className="rounded-2xl p-6 shadow-[0_1px_2px_rgba(16,27,49,0.04)] md:p-10">
             {status === "success" ? (
               <div className="px-3 py-14 text-center">
                 <div className="mx-auto flex size-16 items-center justify-center rounded-full bg-success/12 text-success">

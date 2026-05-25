@@ -65,6 +65,40 @@
       "Driver sees route changes in the app immediately"
     ]
   },
+  "AboutGroute": {
+    "eyebrow": "About Groute",
+    "titleA": "A local platform for",
+    "titleB": "fleet management.",
+    "body1": "Groute was built out of the real needs of Balkan hauliers. We unified GPS tracking, tachograph and document management into a single, simple dashboard — no manual work, no foreign systems that don't understand our regulations.",
+    "body2": "Everything you see in the platform is the result of conversations with drivers, dispatchers and fleet owners who deal with the same problems every day, on the same roads.",
+    "ctaPrimary": "Book a call",
+    "ctaSecondary": "See what we offer",
+    "imageLabel": "[ PHOTO — Groute team or truck in operation ]",
+    "reasonsEyebrow": "Why Groute",
+    "reasonsTitle": "Why hauliers choose us",
+    "reasons": [
+      {
+        "num": "01",
+        "title": "Everything in one place",
+        "body": "Vehicle tracking, tachograph, documents, routes and costs — in one dashboard. No switching between five tools and no Excel sheets nobody keeps up to date."
+      },
+      {
+        "num": "02",
+        "title": "Built for our regulations",
+        "body": "Tachograph per EU 561/2006, documents per local law, reports inspectors accept. All included — no extra modules to buy."
+      },
+      {
+        "num": "03",
+        "title": "Support you can talk to",
+        "body": "Message us on WhatsApp or Viber and a person who knows your fleet replies. No auto-responses, no ticket systems, no three-tier handoffs."
+      },
+      {
+        "num": "04",
+        "title": "Visible results in a few weeks",
+        "body": "Within the first month you see where fuel, time and money leak. Numbers you can show in a meeting — not marketing promises."
+      }
+    ]
+  },
   "HowItWorks": {
     "eyebrow": "All features",
     "title": "Six modules. One system.",

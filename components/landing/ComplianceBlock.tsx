@@ -35,38 +35,40 @@ export async function ComplianceBlock() {
             </div>
             <span className="text-xs text-muted-foreground">{t("tableNote")}</span>
           </div>
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="bg-[#FBFCFE] text-muted-foreground">
-                <th className="px-6 py-3.5 text-left text-[11px] font-medium uppercase tracking-[0.06em]">
-                  {t("colCountry")}
-                </th>
-                <th className="px-6 py-3.5 text-right text-[11px] font-medium uppercase tracking-[0.06em]">
-                  {t("colMissed")}
-                </th>
-                <th className="px-6 py-3.5 text-right text-[11px] font-medium uppercase tracking-[0.06em]">
-                  {t("colHos")}
-                </th>
-                <th className="px-6 py-3.5 text-right text-[11px] font-medium uppercase tracking-[0.06em]">
-                  {t("colManip")}
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {rows.map((r) => (
-                <tr key={r.country} className="border-t border-border-2">
-                  <td className="px-6 py-4.5 text-[15px] font-semibold text-foreground">
-                    {r.country}
-                  </td>
-                  <td className="px-6 py-4.5 text-right text-foreground">{r.missed}</td>
-                  <td className="px-6 py-4.5 text-right text-foreground">{r.hos}</td>
-                  <td className="px-6 py-4.5 text-right font-semibold text-[#B91C1C]">
-                    {r.manip}
-                  </td>
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[560px] text-sm">
+              <thead>
+                <tr className="bg-[#FBFCFE] text-muted-foreground">
+                  <th className="whitespace-nowrap px-6 py-3.5 text-left text-[11px] font-medium uppercase tracking-[0.06em]">
+                    {t("colCountry")}
+                  </th>
+                  <th className="whitespace-nowrap px-6 py-3.5 text-right text-[11px] font-medium uppercase tracking-[0.06em]">
+                    {t("colMissed")}
+                  </th>
+                  <th className="whitespace-nowrap px-6 py-3.5 text-right text-[11px] font-medium uppercase tracking-[0.06em]">
+                    {t("colHos")}
+                  </th>
+                  <th className="whitespace-nowrap px-6 py-3.5 text-right text-[11px] font-medium uppercase tracking-[0.06em]">
+                    {t("colManip")}
+                  </th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {rows.map((r) => (
+                  <tr key={r.country} className="border-t border-border-2">
+                    <td className="whitespace-nowrap px-6 py-4.5 text-[15px] font-semibold text-foreground">
+                      {r.country}
+                    </td>
+                    <td className="whitespace-nowrap px-6 py-4.5 text-right text-foreground">{r.missed}</td>
+                    <td className="whitespace-nowrap px-6 py-4.5 text-right text-foreground">{r.hos}</td>
+                    <td className="whitespace-nowrap px-6 py-4.5 text-right font-semibold text-[#B91C1C]">
+                      {r.manip}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </Card>
       </div>
     </section>

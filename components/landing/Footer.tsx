@@ -9,7 +9,7 @@ function FooterCol({
   children: React.ReactNode;
 }) {
   return (
-    <div className="border-border p-8 md:border-r md:last:border-r-0">
+    <div className="border-border border-b px-4 py-8 last:border-b-0 md:border-b-0 md:border-r md:px-8 md:last:border-r-0">
       <div className="mb-6 text-[13px] text-muted-foreground">{title}</div>
       <div className="flex flex-col gap-3.5 text-[14.5px] text-foreground">{children}</div>
     </div>
@@ -26,7 +26,7 @@ export async function Footer() {
   return (
     <footer className="border-t border-border bg-background">
       <div className="w-full">
-        <div className="border-b border-border px-8 pb-6 pt-8">
+        <div className="border-b border-border px-4 pb-6 pt-8 md:px-8">
           <Logo height={28} />
           <p
             className="mt-4 max-w-[540px] text-sm leading-[1.55] text-muted-foreground [&_strong]:font-semibold [&_strong]:text-foreground"
@@ -82,7 +82,7 @@ export async function Footer() {
           </FooterCol>
         </div>
 
-        <div className="flex flex-wrap items-center justify-between gap-6 px-8 py-5 text-[13.5px] text-muted-foreground">
+        <div className="flex flex-wrap items-center justify-between gap-6 px-4 py-5 text-[13.5px] text-muted-foreground md:px-8">
           <div>
             © {year} {site("name")} Fleet Management. {t("rights")}
           </div>

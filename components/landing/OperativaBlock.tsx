@@ -19,9 +19,14 @@ export async function OperativaBlock() {
             <p className="mt-4 max-w-[480px] text-[17px] leading-relaxed text-muted-foreground">
               {t("body")}
             </p>
-            <div className="mt-8 grid grid-cols-2 gap-6 border-t border-border pt-6">
+            <div className="mt-8 grid gap-3 border-t border-border pt-6 sm:grid-cols-2 sm:gap-4">
               {specs.map((s) => (
-                <Spec key={s.label} value={s.value} label={s.label} />
+                <div
+                  key={s.label}
+                  className="border-border bg-muted rounded-xl border p-6"
+                >
+                  <Spec value={s.value} label={s.label} />
+                </div>
               ))}
             </div>
           </div>

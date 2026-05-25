@@ -32,16 +32,18 @@ export async function Hero() {
           <p className="mx-auto mt-6 max-w-[600px] text-[17px] leading-relaxed text-[#A6B1CD]">
             {t("subtitle")}
           </p>
-          <div className="mt-7 flex flex-wrap justify-center gap-3">
-            <Button variant="blue" size="lg" asChild>
-              <a href="#kontakt">{t("ctaPrimary")}</a>
-            </Button>
-            <Button variant="glass" size="lg" asChild>
-              <a href="#demo">
-                {t("ctaSecondary")}
-                <Icon name="arrow" size={15} />
-              </a>
-            </Button>
+          <div className="mt-7 flex justify-center">
+            <div className="inline-grid grid-cols-1 gap-3 sm:flex sm:flex-row sm:flex-wrap sm:justify-center">
+              <Button variant="blue" size="lg" asChild>
+                <a href="#kontakt">{t("ctaPrimary")}</a>
+              </Button>
+              <Button variant="glass" size="lg" asChild>
+                <a href="#demo">
+                  {t("ctaSecondary")}
+                  <Icon name="arrow" size={15} />
+                </a>
+              </Button>
+            </div>
           </div>
           <div className="mt-5 flex flex-wrap justify-center gap-4 text-[12.5px] text-[#8C97B5]">
             <span className="inline-flex items-center gap-1.5">

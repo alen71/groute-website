@@ -20,8 +20,8 @@ export async function StatsTrio() {
                 <div className="text-[26px] font-semibold tracking-tight text-foreground">
                   {s.value}
                 </div>
-                <div className="mt-0.5 text-sm font-medium text-foreground">{s.label}</div>
-                <div className="mt-0.5 text-xs text-muted-foreground">{s.note}</div>
+                <div className="mt-1 text-[16px] font-medium text-foreground">{s.label}</div>
+                <div className="mt-1 text-[13.5px] leading-snug text-muted-foreground">{s.note}</div>
               </div>
             </Card>
           ))}
