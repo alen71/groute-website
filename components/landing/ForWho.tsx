@@ -39,27 +39,27 @@ export async function ForWho() {
             <br />
             {t("titleB")}
           </h2>
-          <p className="mt-4 max-w-[520px] text-[17px] leading-relaxed text-muted-foreground">
+          <p className="text-muted-foreground mt-4 max-w-[520px] text-[17px] leading-relaxed">
             {t("subtitle")}
           </p>
         </div>
 
         <div className="grid gap-5 lg:grid-cols-[1.4fr_1fr] lg:grid-rows-2">
-          <article className="relative flex min-h-[520px] items-end overflow-hidden rounded-2xl border border-border lg:row-span-2">
+          <article className="border-border relative flex min-h-[520px] items-end overflow-hidden rounded-2xl border lg:row-span-2">
             <PhotoPlaceholder
               label={featured.imageLabel}
               className="absolute inset-0 rounded-none"
             />
             <div
               aria-hidden
-              className="absolute inset-0 bg-gradient-to-b from-secondary-3/10 via-secondary-3/65 to-secondary-3/[0.92]"
+              className="from-secondary-3/10 via-secondary-3/65 to-secondary-3/[0.92] absolute inset-0 bg-gradient-to-b"
             />
             <div className="relative w-full p-9 text-white">
               <div className="mb-3.5 font-mono text-sm font-semibold tracking-wide text-[#9DB7F2]">
                 {featured.num}
               </div>
               <Badge variant="glass">{featured.badge}</Badge>
-              <h3 className="mt-4 text-[30px] font-semibold leading-[1.15] tracking-tight text-white">
+              <h3 className="mt-4 text-[30px] leading-[1.15] font-semibold tracking-tight text-white">
                 {featured.title}
               </h3>
               <p className="mt-3 max-w-[480px] text-[15.5px] leading-[1.55] text-[#D6DEEC]">
@@ -79,7 +79,7 @@ export async function ForWho() {
               </div>
 
               <div className="mt-7 border-t border-white/12 pt-5">
-                <div className="text-[11px] font-semibold uppercase tracking-[0.06em] text-[#A6B1CD]">
+                <div className="text-[11px] font-semibold tracking-[0.06em] text-[#A6B1CD] uppercase">
                   {featured.footerTitle}
                 </div>
                 <div className="mt-1 text-sm font-medium text-white">
@@ -92,21 +92,25 @@ export async function ForWho() {
           {small.map((c) => (
             <article
               key={c.num}
-              className="flex flex-col rounded-2xl border border-border bg-background p-7 transition-all hover:-translate-y-0.5 hover:border-[#D6E2FB] hover:shadow-[0_18px_36px_-18px_rgba(16,27,49,0.15)]"
+              className="border-border bg-background flex flex-col rounded-2xl border p-7 transition-all hover:-translate-y-0.5 hover:border-[#D6E2FB] hover:shadow-[0_18px_36px_-18px_rgba(16,27,49,0.15)]"
             >
               <div className="flex items-center justify-between">
-                <span className="font-mono text-xs font-semibold tracking-wide text-muted-foreground">
+                <span className="text-muted-foreground font-mono text-xs font-semibold tracking-wide">
                   {c.num}
                 </span>
-                <span className="flex size-10 items-center justify-center rounded-xl border border-[#D6E2FB] bg-gradient-to-b from-primary-soft to-[#DCE7FD] text-primary-strong">
+                <span className="from-primary-soft text-primary-strong flex size-10 items-center justify-center rounded-xl border border-[#D6E2FB] bg-gradient-to-b to-[#DCE7FD]">
                   <Icon name={c.icon} size={20} />
                 </span>
               </div>
-              <h3 className="mt-4 text-[20px] font-semibold tracking-tight">{c.title}</h3>
-              <p className="mt-2.5 text-sm leading-[1.55] text-muted-foreground">{c.body}</p>
-              <div className="mt-auto flex items-center justify-between border-t border-border-2 pt-4 text-[13px] text-muted-foreground">
+              <h3 className="mt-4 text-[20px] font-semibold tracking-tight">
+                {c.title}
+              </h3>
+              <p className="text-muted-foreground mt-2.5 mb-6 text-sm leading-[1.55]">
+                {c.body}
+              </p>
+              <div className="border-border-2 text-muted-foreground mt-auto flex items-center justify-between border-t pt-4 text-[13px]">
                 <span>{c.metaA}</span>
-                <span className="font-semibold text-primary">{c.metaB}</span>
+                <span className="text-primary font-semibold">{c.metaB}</span>
               </div>
             </article>
           ))}

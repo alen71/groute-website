@@ -5,8 +5,13 @@ import { Eyebrow, Icon } from "./_shared";
 function BenefitRow({ text }: { text: string }) {
   return (
     <div className="flex items-center gap-3.5 rounded-lg border border-white/8 bg-white/5 px-4 py-3.5">
-      <span className="flex size-[30px] shrink-0 items-center justify-center rounded-full bg-primary/18 text-[#9DB7F2]">
-        <Icon name="check" size={14} strokeWidth={2.4} className="text-[#9DB7F2]" />
+      <span className="bg-primary/18 flex size-[30px] shrink-0 items-center justify-center rounded-full text-[#9DB7F2]">
+        <Icon
+          name="check"
+          size={14}
+          strokeWidth={2.4}
+          className="text-[#9DB7F2]"
+        />
       </span>
       <span className="text-[14.5px] font-medium text-white">{text}</span>
     </div>
@@ -18,10 +23,10 @@ export async function PilotBanner() {
   const benefits = t.raw("benefits") as string[];
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-secondary-2 to-secondary-3 py-24 text-white">
+    <section className="from-secondary-2 to-secondary-3 relative overflow-hidden bg-gradient-to-b py-24 text-white">
       <div
         aria-hidden
-        className="absolute inset-0 opacity-[0.18] [background-image:radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.4)_1px,transparent_0)] [background-size:32px_32px]"
+        className="absolute inset-0 [background-image:radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.4)_1px,transparent_0)] [background-size:32px_32px] opacity-[0.18]"
       />
       <div className="container-page relative">
         <div className="grid items-center gap-12 lg:grid-cols-[1.2fr_1fr]">

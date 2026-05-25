@@ -55,11 +55,22 @@ export function ContactForm() {
       </div>
       <div className="grid gap-2">
         <Label htmlFor="email">{t("email")}</Label>
-        <Input id="email" name="email" type="email" required autoComplete="email" />
+        <Input
+          id="email"
+          name="email"
+          type="email"
+          required
+          autoComplete="email"
+        />
       </div>
       <div className="grid gap-2">
         <Label htmlFor="company">{t("company")}</Label>
-        <Input id="company" name="company" required autoComplete="organization" />
+        <Input
+          id="company"
+          name="company"
+          required
+          autoComplete="organization"
+        />
       </div>
       <div className="grid gap-2">
         <Label htmlFor="fleetSize">{t("fleetSize")}</Label>

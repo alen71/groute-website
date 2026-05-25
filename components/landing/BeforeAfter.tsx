@@ -20,21 +20,24 @@ function CompareCol({
       className={cn(
         "relative rounded-2xl p-8",
         isAfter
-          ? "border border-[#D6E2FB] bg-gradient-to-b from-white to-[#F4F8FF]"
+          ? "border-primary-edge to-primary-tint border bg-gradient-to-b from-white"
           : "border-border bg-muted border",
       )}
     >
       <div className="mb-6 flex items-center justify-between">
         <span
           className={cn(
-            "text-[13px] font-semibold uppercase tracking-[0.04em]",
+            "text-[13px] font-semibold tracking-[0.04em] uppercase",
             isAfter ? "text-primary-strong" : "text-muted-foreground",
           )}
         >
           {title}
         </span>
         {isAfter && (
-          <Badge variant="default" className="bg-primary border-primary text-white">
+          <Badge
+            variant="default"
+            className="bg-primary border-primary text-white"
+          >
             {groute}
           </Badge>
         )}
@@ -44,7 +47,7 @@ function CompareCol({
           <li
             key={it}
             className={cn(
-              "flex items-start gap-3.5 py-3.5 border-b",
+              "flex items-start gap-3.5 border-b py-3.5 last:border-b-0",
               i === 0 && "border-t",
               isAfter
                 ? "text-foreground border-[#E1ECFD] font-medium"

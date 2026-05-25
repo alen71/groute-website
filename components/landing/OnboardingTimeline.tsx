@@ -11,7 +11,7 @@ export async function OnboardingTimeline() {
   return (
     <section className="bg-muted py-24">
       <div className="container-page">
-        <div className="mb-16 grid grid-cols-[60fr_40fr] items-end gap-8 md:grid-cols-2">
+        <div className="mb-16 grid items-end gap-5 md:grid-cols-2 md:gap-8">
           <div>
             <Eyebrow>{t("eyebrow")}</Eyebrow>
             <h2 className="mt-3.5 text-[clamp(32px,4.8vw,50px)] leading-none tracking-[-0.03em]">
@@ -92,7 +92,7 @@ export async function OnboardingTimeline() {
                   </ul>
                 </div>
 
-                <div className="border-border bg-background text-foreground relative z-10 col-start-1 row-start-1 flex size-[54px] items-center justify-center self-center rounded-full border text-lg font-semibold tracking-tight md:col-start-2 md:row-start-auto md:justify-self-center">
+                <div className="border-border bg-background text-foreground relative z-10 col-start-1 row-start-1 flex size-[54px] items-center justify-center self-center rounded-full border text-lg font-semibold tracking-tight md:col-start-2 md:justify-self-center">
                   {i + 1}
                 </div>
               </div>

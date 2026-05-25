@@ -50,12 +50,14 @@ Node's bundled ICU lacks data for some locales (e.g. `bs-BA`) → `Intl.NumberFo
 **Every color must come from the theme.** Never use raw hex in class names (`text-[#XXXXXX]`, `bg-[#XXXXXX]`, `border-[#XXXXXX]`, `from-[#XXXXXX]`, `to-[#XXXXXX]`, etc.) or in inline styles.
 
 If you need a color that isn't in the theme:
+
 1. Add it to **both** blocks in `app/globals.css`:
    - `:root` — raw value: `--my-color: #abcdef;`
    - `@theme inline` — Tailwind alias: `--color-my-color: var(--my-color);`
 2. Then use the semantic class: `text-my-color`, `bg-my-color`, etc.
 
 Existing palette includes:
+
 - Primary scale: `primary`, `primary-strong`, `primary-light` (#6BA0FF), `primary-accent` (#9DB7F2, on-dark), `primary-edge` (#D6E2FB, border), `primary-tint` (#F4F8FF, lightest bg), `primary-soft` (#EEF3FE)
 - Secondary (dark) + on-dark text scale: `secondary-foreground` (white), `secondary-foreground-2` (#D6DEEC) … `secondary-foreground-6` (#7B89A8) — increasing dimness
 - Standard: `background`, `foreground`, `muted`, `muted-foreground`, `muted-2`, `border`, `border-2`, `card`, `destructive`, `success`, `warning`, `paper`

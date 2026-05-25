@@ -104,7 +104,14 @@ export function Icon({
 }: { name: IconName } & LucideProps) {
   const Comp = iconMap[name];
   if (!Comp) return null;
-  return <Comp size={size} strokeWidth={strokeWidth} className={className} {...rest} />;
+  return (
+    <Comp
+      size={size}
+      strokeWidth={strokeWidth}
+      className={className}
+      {...rest}
+    />
+  );
 }
 
 export function Logo({
@@ -199,5 +206,10 @@ export function PhotoPlaceholder({
   dark?: boolean;
   className?: string;
 }) {
-  return <div data-label={label} className={cn("ph", dark && "is-dark", className)} />;
+  return (
+    <div
+      data-label={label}
+      className={cn("ph", dark && "is-dark", className)}
+    />
+  );
 }

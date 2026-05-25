@@ -79,18 +79,18 @@ export function LanguageSwitcher({
             >
               <span className="flex items-center gap-2.5">
                 {active && (
-                  <span className="size-1.5 rounded-full bg-primary" />
+                  <span className="bg-primary size-1.5 rounded-full" />
                 )}
                 <span
                   className={cn(
-                    "text-[14.5px] text-foreground",
+                    "text-foreground text-[14.5px]",
                     active ? "font-semibold" : "font-medium",
                   )}
                 >
                   {lang.full}
                 </span>
               </span>
-              <span className="text-[12px] font-medium tracking-[0.04em] text-muted-foreground">
+              <span className="text-muted-foreground text-[12px] font-medium tracking-[0.04em]">
                 {lang.code}
                 {soon ? SOON_SUFFIX : ""}
               </span>
@@ -103,7 +103,12 @@ export function LanguageSwitcher({
 
   if (!compact) {
     return (
-      <div className={cn("rounded-2xl border border-border bg-background p-2", className)}>
+      <div
+        className={cn(
+          "border-border bg-background rounded-2xl border p-2",
+          className,
+        )}
+      >
         {list}
       </div>
     );
@@ -118,18 +123,18 @@ export function LanguageSwitcher({
         onClick={() => setOpen((o) => !o)}
         disabled={pending}
         className={cn(
-          "inline-flex h-9 items-center gap-2 rounded-full border border-border bg-background px-2.5 text-[13px] font-semibold text-foreground transition-colors",
-          "hover:border-[#D6E2FB] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/25",
-          open && "border-[#D6E2FB] bg-muted",
+          "border-border bg-background text-foreground inline-flex h-9 items-center gap-2 rounded-full border px-2.5 text-[13px] font-semibold transition-colors",
+          "focus-visible:ring-ring/25 hover:border-[#D6E2FB] focus-visible:ring-2 focus-visible:outline-none",
+          open && "bg-muted border-[#D6E2FB]",
         )}
       >
-        <span className="size-1.5 rounded-full bg-primary" />
+        <span className="bg-primary size-1.5 rounded-full" />
         <span className="tracking-[0.04em]">{current.code}</span>
         <svg
           aria-hidden
           viewBox="0 0 10 6"
           className={cn(
-            "size-2.5 text-muted-foreground transition-transform",
+            "text-muted-foreground size-2.5 transition-transform",
             open && "rotate-180",
           )}
           fill="none"
@@ -145,7 +150,7 @@ export function LanguageSwitcher({
       {open && (
         <div
           role="menu"
-          className="absolute right-0 top-full z-50 mt-2 w-[240px] rounded-2xl border border-border bg-background p-2 shadow-[0_24px_48px_-20px_rgba(16,27,49,0.18)]"
+          className="border-border bg-background absolute top-full right-0 z-50 mt-2 w-[240px] rounded-2xl border p-2 shadow-[0_24px_48px_-20px_rgba(16,27,49,0.18)]"
         >
           {list}
         </div>

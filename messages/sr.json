@@ -65,6 +65,40 @@
       "Vozač vidi izmene rute u aplikaciji odmah"
     ]
   },
+  "AboutGroute": {
+    "eyebrow": "Ukratko o Groute",
+    "titleA": "Domaća platforma za",
+    "titleB": "upravljanje flotom.",
+    "body1": "Groute je nastao iz potrebe stvarnih prevoznika sa Balkana. Spojili smo GPS praćenje, tahograf i upravljanje dokumentima u jednu jednostavnu komandnu tablu, bez ručnog rada i bez stranih sistema koji ne razumeju naše propise.",
+    "body2": "Sve što vidite u platformi je rezultat razgovora sa vozačima, dispečerima i vlasnicima flota koji svakodnevno prolaze kroz iste probleme, na istim putevima.",
+    "ctaPrimary": "Zakažite razgovor",
+    "ctaSecondary": "Pogledajte šta nudimo",
+    "imageLabel": "[ FOTO — Groute tim ili kamion u operaciji ]",
+    "reasonsEyebrow": "Zašto Groute",
+    "reasonsTitle": "Razlozi zbog kojih nas prevoznici biraju",
+    "reasons": [
+      {
+        "num": "01",
+        "title": "Sve na jednom mestu",
+        "body": "Praćenje vozila, tahograf, dokumenti, rute i troškovi — u istoj tabli. Bez prebacivanja između pet alata i bez Excel tabela koje niko ne ažurira."
+      },
+      {
+        "num": "02",
+        "title": "Pravljeno za naše propise",
+        "body": "Tahograf po EU 561/2006, dokumenti po lokalnom zakonu, izveštaji koje inspektor priznaje. Sve već uračunato — nema dodatnih modula koji se kupuju."
+      },
+      {
+        "num": "03",
+        "title": "Podrška sa kojom razgovarate",
+        "body": "Pišete na WhatsApp ili Viber i odgovara osoba koja zna vašu flotu. Bez automatskih poruka, bez ticket sistema, bez prebacivanja kroz tri nivoa."
+      },
+      {
+        "num": "04",
+        "title": "Vidljiv rezultat za par nedelja",
+        "body": "Već prvi mesec pokazuje gde gubite gorivo, vreme i novac. Brojke koje možete pokazati na sastanku — ne marketinška obećanja."
+      }
+    ]
+  },
   "HowItWorks": {
     "eyebrow": "Sve funkcije",
     "title": "Šest modula. Jedan sistem.",

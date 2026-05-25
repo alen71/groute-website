@@ -28,7 +28,7 @@ export async function HowItWorks() {
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-2">
             <Badge variant="outline" className="bg-background">
-              <span className="size-1.5 rounded-full bg-primary" />
+              <span className="bg-primary size-1.5 rounded-full" />
               {t("starter")}
             </Badge>
             <Badge variant="dark">
@@ -46,26 +46,26 @@ export async function HowItWorks() {
               <div
                 key={s.num}
                 className={cn(
-                  "grid items-center gap-10 lg:gap-16 lg:grid-cols-[1fr_1.1fr]",
+                  "grid items-center gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-16",
                   reverse && "lg:[&>*:first-child]:order-2",
                 )}
               >
                 <div>
                   <div className="mb-4 flex flex-wrap items-center gap-3.5">
-                    <span className="flex size-[54px] items-center justify-center rounded-full bg-gradient-to-b from-secondary-2 to-secondary text-[18px] font-semibold tracking-tight text-white shadow-[0_10px_22px_-10px_rgba(16,27,49,0.5)]">
+                    <span className="from-secondary-2 to-secondary flex size-[54px] items-center justify-center rounded-full bg-gradient-to-b text-[18px] font-semibold tracking-tight text-white shadow-[0_10px_22px_-10px_rgba(16,27,49,0.5)]">
                       {s.num}
                     </span>
                     <Badge variant={isPro ? "dark" : "outline"}>{s.tag}</Badge>
                     {s.accent && (
-                      <span className="font-mono text-[11px] tracking-wide text-primary-strong">
+                      <span className="text-primary-strong font-mono text-[11px] tracking-wide">
                         {s.accent}
                       </span>
                     )}
                   </div>
-                  <h2 className="text-[34px] font-semibold leading-[1.15] tracking-tight">
+                  <h2 className="text-[34px] leading-[1.15] font-semibold tracking-tight">
                     {s.title}
                   </h2>
-                  <p className="mt-3.5 max-w-[480px] text-[17px] leading-relaxed text-muted-foreground">
+                  <p className="text-muted-foreground mt-3.5 max-w-[480px] text-[17px] leading-relaxed">
                     {s.body}
                   </p>
                   <ul className="mt-5">
@@ -73,11 +73,11 @@ export async function HowItWorks() {
                       <li
                         key={b}
                         className={cn(
-                          "flex items-start gap-3 border-b border-border py-3 text-sm text-foreground",
+                          "border-border text-foreground flex items-start gap-3 border-b py-3 text-sm",
                           bi === 0 && "border-t",
                         )}
                       >
-                        <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-primary/12 text-primary">
+                        <span className="bg-primary/12 text-primary mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full">
                           <Icon name="check" size={12} strokeWidth={2.5} />
                         </span>
                         <span>{b}</span>
@@ -85,7 +85,10 @@ export async function HowItWorks() {
                     ))}
                   </ul>
                 </div>
-                <PhotoPlaceholder label={s.image} className="min-h-[440px] rounded-2xl" />
+                <PhotoPlaceholder
+                  label={s.image}
+                  className="min-h-[440px] rounded-2xl"
+                />
               </div>
             );
           })}

@@ -67,7 +67,7 @@ export function FinalCTA() {
             />
             <div
               aria-hidden
-              className="absolute inset-0 bg-gradient-to-b from-secondary-3/15 via-secondary-3/60 to-secondary-3/90"
+              className="from-secondary-3/15 via-secondary-3/60 to-secondary-3/90 absolute inset-0 bg-gradient-to-b"
             />
             <div className="relative p-9 text-white">
               <Eyebrow light>{t("eyebrow")}</Eyebrow>
@@ -85,28 +85,39 @@ export function FinalCTA() {
                     <div className="text-lg font-semibold tracking-tight text-white">
                       {tg.value}
                     </div>
-                    <div className="mt-0.5 text-[11.5px] text-[#A6B1CD]">{tg.label}</div>
+                    <div className="mt-0.5 text-[11.5px] text-[#A6B1CD]">
+                      {tg.label}
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
           </div>
 
-          <Card className="rounded-2xl p-10 shadow-[0_1px_2px_rgba(16,27,49,0.04)]">
+          <Card className="rounded-2xl p-6 shadow-[0_1px_2px_rgba(16,27,49,0.04)] md:p-10">
             {status === "success" ? (
               <div className="px-3 py-14 text-center">
-                <div className="mx-auto flex size-16 items-center justify-center rounded-full bg-success/12 text-success">
-                  <Icon name="check" size={28} strokeWidth={2.5} className="text-success" />
+                <div className="bg-success/12 text-success mx-auto flex size-16 items-center justify-center rounded-full">
+                  <Icon
+                    name="check"
+                    size={28}
+                    strokeWidth={2.5}
+                    className="text-success"
+                  />
                 </div>
-                <h3 className="mt-4 text-xl font-semibold">{t("successTitle")}</h3>
-                <p className="mx-auto mt-2.5 max-w-[380px] text-sm text-muted-foreground">
+                <h3 className="mt-4 text-xl font-semibold">
+                  {t("successTitle")}
+                </h3>
+                <p className="text-muted-foreground mx-auto mt-2.5 max-w-[380px] text-sm">
                   {t("successBody")}
                 </p>
               </div>
             ) : (
               <form onSubmit={onSubmit}>
-                <h3 className="text-[26px] font-semibold tracking-tight">{t("formTitle")}</h3>
-                <p className="mt-2.5 max-w-[440px] text-sm text-muted-foreground">
+                <h3 className="text-[26px] font-semibold tracking-tight">
+                  {t("formTitle")}
+                </h3>
+                <p className="text-muted-foreground mt-2.5 max-w-[440px] text-sm">
                   {t("formSubtitle")}
                 </p>
 
@@ -114,7 +125,12 @@ export function FinalCTA() {
                   <div className="grid gap-3 sm:grid-cols-2">
                     <div className="flex flex-col gap-1.5">
                       <Label htmlFor="name">{t("name")}</Label>
-                      <Input id="name" name="name" required placeholder={t("namePh")} />
+                      <Input
+                        id="name"
+                        name="name"
+                        required
+                        placeholder={t("namePh")}
+                      />
                     </div>
                     <div className="flex flex-col gap-1.5">
                       <Label htmlFor="company">{t("company")}</Label>
@@ -139,12 +155,22 @@ export function FinalCTA() {
                     </div>
                     <div className="flex flex-col gap-1.5">
                       <Label htmlFor="phone">{t("phone")}</Label>
-                      <Input id="phone" name="phone" required placeholder={t("phonePh")} />
+                      <Input
+                        id="phone"
+                        name="phone"
+                        required
+                        placeholder={t("phonePh")}
+                      />
                     </div>
                   </div>
                   <div className="flex flex-col gap-1.5">
                     <Label htmlFor="fleet">{t("fleet")}</Label>
-                    <Select value={fleet} onValueChange={setFleet} name="fleetSize" required>
+                    <Select
+                      value={fleet}
+                      onValueChange={setFleet}
+                      name="fleetSize"
+                      required
+                    >
                       <SelectTrigger id="fleet">
                         <SelectValue placeholder={t("fleetPh")} />
                       </SelectTrigger>
@@ -158,12 +184,16 @@ export function FinalCTA() {
                   </div>
                   <div className="flex flex-col gap-1.5">
                     <Label htmlFor="message">{t("message")}</Label>
-                    <Textarea id="message" name="message" placeholder={t("messagePh")} />
+                    <Textarea
+                      id="message"
+                      name="message"
+                      placeholder={t("messagePh")}
+                    />
                   </div>
                 </div>
 
                 {status === "error" && (
-                  <p role="alert" className="mt-4 text-sm text-destructive">
+                  <p role="alert" className="text-destructive mt-4 text-sm">
                     {t("error")}
                   </p>
                 )}
@@ -177,7 +207,7 @@ export function FinalCTA() {
                 >
                   {status === "submitting" ? t("submitting") : t("submit")}
                 </Button>
-                <div className="mt-3.5 flex items-center gap-2 text-xs text-muted-foreground">
+                <div className="text-muted-foreground mt-3.5 flex items-center gap-2 text-xs">
                   <Icon name="lock" size={13} />
                   <span>{t("privacy")}</span>
                 </div>

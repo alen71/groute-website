@@ -65,6 +65,40 @@
       "Fahrer sieht Routenänderungen sofort in der App"
     ]
   },
+  "AboutGroute": {
+    "eyebrow": "Über Groute",
+    "titleA": "Eine lokale Plattform für",
+    "titleB": "Flottenmanagement.",
+    "body1": "Groute entstand aus dem Bedarf echter Transportunternehmen vom Balkan. Wir haben GPS-Tracking, Tachograph und Dokumentenverwaltung zu einer einfachen Kommandozentrale zusammengeführt — ohne manuelle Arbeit und ohne fremde Systeme, die unsere Vorschriften nicht verstehen.",
+    "body2": "Alles, was Sie in der Plattform sehen, ist das Ergebnis von Gesprächen mit Fahrern, Disponenten und Flottenbesitzern, die täglich dieselben Probleme auf denselben Straßen erleben.",
+    "ctaPrimary": "Gespräch vereinbaren",
+    "ctaSecondary": "Sehen Sie, was wir bieten",
+    "imageLabel": "[ FOTO — Groute-Team oder LKW im Einsatz ]",
+    "reasonsEyebrow": "Warum Groute",
+    "reasonsTitle": "Gründe, warum Transporteure uns wählen",
+    "reasons": [
+      {
+        "num": "01",
+        "title": "Alles an einem Ort",
+        "body": "Fahrzeugverfolgung, Tachograph, Dokumente, Routen und Kosten — in einer Oberfläche. Kein Wechsel zwischen fünf Tools und keine Excel-Tabellen, die niemand pflegt."
+      },
+      {
+        "num": "02",
+        "title": "Für unsere Vorschriften gemacht",
+        "body": "Tachograph nach EU 561/2006, Dokumente nach lokalem Recht, Berichte, die der Inspektor anerkennt. Alles inklusive — keine Zusatzmodule zum Kaufen."
+      },
+      {
+        "num": "03",
+        "title": "Support, mit dem Sie sprechen",
+        "body": "Schreiben Sie auf WhatsApp oder Viber und es antwortet eine Person, die Ihre Flotte kennt. Keine automatischen Nachrichten, kein Ticketsystem, keine drei Eskalationsstufen."
+      },
+      {
+        "num": "04",
+        "title": "Sichtbare Ergebnisse in wenigen Wochen",
+        "body": "Bereits der erste Monat zeigt, wo Sie Kraftstoff, Zeit und Geld verlieren. Zahlen, die Sie im Meeting zeigen können — keine Marketingversprechen."
+      }
+    ]
+  },
   "HowItWorks": {
     "eyebrow": "Alle Funktionen",
     "title": "Sechs Module. Ein System.",

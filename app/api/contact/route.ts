@@ -31,10 +31,14 @@ export async function POST(req: Request) {
   const d = parsed.data;
   const to = process.env.CONTACT_EMAIL_TO;
   if (!to) {
-    return NextResponse.json({ error: "server_misconfigured" }, { status: 500 });
+    return NextResponse.json(
+      { error: "server_misconfigured" },
+      { status: 500 },
+    );
   }
 
-  const from = process.env.CONTACT_EMAIL_FROM ?? "groute <onboarding@resend.dev>";
+  const from =
+    process.env.CONTACT_EMAIL_FROM ?? "groute <onboarding@resend.dev>";
 
   try {
     const resend = getResend();

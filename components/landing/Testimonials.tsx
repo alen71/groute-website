@@ -57,9 +57,9 @@ export function Testimonials() {
               <br />
               svaki dan.
             </h2>
-            <p className="mt-4 text-[17px] leading-relaxed text-muted-foreground">
-              Razgovaramo direktno sa vlasnicima i fleet managerima. Ako vam treba referenca u
-              vašem regionu, povezujemo vas.
+            <p className="text-muted-foreground mt-4 text-[17px] leading-relaxed">
+              Razgovaramo direktno sa vlasnicima i fleet managerima. Ako vam
+              treba referenca u vašem regionu, povezujemo vas.
             </p>
           </div>
           <div className="hidden shrink-0 items-center gap-4 md:flex">
@@ -67,7 +67,7 @@ export function Testimonials() {
               {["MĐ", "AH", "SP", "DK"].map((ini, i) => (
                 <span
                   key={ini}
-                  className="flex size-[42px] items-center justify-center rounded-full border-[3px] border-background bg-gradient-to-br from-[#C9D6F0] to-[#94A8D3] text-[13px] font-semibold text-white shadow-[0_2px_6px_rgba(16,27,49,0.12)]"
+                  className="border-background flex size-[42px] items-center justify-center rounded-full border-[3px] bg-gradient-to-br from-[#C9D6F0] to-[#94A8D3] text-[13px] font-semibold text-white shadow-[0_2px_6px_rgba(16,27,49,0.12)]"
                   style={{ marginLeft: i === 0 ? 0 : -10 }}
                 >
                   {ini}
@@ -77,51 +77,62 @@ export function Testimonials() {
             <div>
               <div className="flex gap-0.5">
                 {[0, 1, 2, 3, 4].map((i) => (
-                  <Icon key={i} name="star" size={13} className="text-[#F59E0B] fill-[#F59E0B]" />
+                  <Icon
+                    key={i}
+                    name="star"
+                    size={13}
+                    className="fill-[#F59E0B] text-[#F59E0B]"
+                  />
                 ))}
               </div>
-              <div className="mt-0.5 text-[12.5px] text-muted-foreground">
-                <span className="font-semibold text-foreground">4.9 / 5</span> · 4 flote · 244 vozila
+              <div className="text-muted-foreground mt-0.5 text-[12.5px]">
+                <span className="text-foreground font-semibold">4.9 / 5</span> ·
+                4 flote · 244 vozila
               </div>
             </div>
           </div>
         </div>
 
         <div className="grid items-stretch gap-6 lg:grid-cols-[1.5fr_1fr]">
-          <article className="relative flex flex-col overflow-hidden rounded-2xl border border-border bg-gradient-to-b from-white to-[#F6F9FF] p-9 pb-7 shadow-[0_24px_48px_-28px_rgba(16,27,49,0.18)]">
+          <article className="border-border relative flex flex-col overflow-hidden rounded-2xl border bg-gradient-to-b from-white to-[#F6F9FF] p-9 pb-7 shadow-[0_24px_48px_-28px_rgba(16,27,49,0.18)]">
             <div className="mb-6 flex items-center justify-between">
-              <span className="text-[13px] font-semibold tracking-[0.18em] text-muted-foreground">
+              <span className="text-muted-foreground text-[13px] font-semibold tracking-[0.18em]">
                 {featured.company}
               </span>
-              <span className="text-xs text-muted-2">{featured.date}</span>
+              <span className="text-muted-2 text-xs">{featured.date}</span>
             </div>
             <div className="mb-4 flex gap-1">
               {[0, 1, 2, 3, 4].map((i) => (
-                <Icon key={i} name="star" size={16} className="text-[#F59E0B] fill-[#F59E0B]" />
+                <Icon
+                  key={i}
+                  name="star"
+                  size={16}
+                  className="fill-[#F59E0B] text-[#F59E0B]"
+                />
               ))}
             </div>
-            <p className="max-w-[540px] text-[clamp(22px,2.2vw,28px)] font-medium leading-[1.4] tracking-tight text-foreground">
+            <p className="text-foreground max-w-[540px] text-[clamp(22px,2.2vw,28px)] leading-[1.4] font-medium tracking-tight">
               "{featured.quote}"
             </p>
             <div className="mt-auto flex flex-wrap items-center justify-between gap-6 pt-7">
               <div className="flex items-center gap-3.5">
-                <span className="flex size-[52px] items-center justify-center rounded-full bg-gradient-to-br from-primary-strong to-secondary-2 text-base font-semibold text-white">
+                <span className="from-primary-strong to-secondary-2 flex size-[52px] items-center justify-center rounded-full bg-gradient-to-br text-base font-semibold text-white">
                   {featured.initials}
                 </span>
                 <div>
-                  <div className="text-[15px] font-semibold text-foreground">
+                  <div className="text-foreground text-[15px] font-semibold">
                     {featured.name}
                   </div>
-                  <div className="mt-0.5 text-[13px] text-muted-foreground">
+                  <div className="text-muted-foreground mt-0.5 text-[13px]">
                     {featured.role} · {featured.fleet}
                   </div>
                 </div>
               </div>
-              <div className="flex items-center gap-3.5 rounded-lg border border-border bg-background px-4 py-3">
-                <div className="text-[22px] font-semibold tracking-tight text-primary">
+              <div className="border-border bg-background flex items-center gap-3.5 rounded-lg border px-4 py-3">
+                <div className="text-primary text-[22px] font-semibold tracking-tight">
                   {featured.stat.value}
                 </div>
-                <div className="max-w-[140px] text-[11.5px] leading-[1.35] text-muted-foreground">
+                <div className="text-muted-foreground max-w-[140px] text-[11.5px] leading-[1.35]">
                   {featured.stat.label}
                 </div>
               </div>
@@ -132,10 +143,10 @@ export function Testimonials() {
             {others.map((t) => (
               <article
                 key={t.name}
-                className="flex flex-col gap-3.5 rounded-2xl border border-border bg-background p-6"
+                className="border-border bg-background flex flex-col gap-3.5 rounded-2xl border p-6"
               >
                 <div className="flex items-center justify-between">
-                  <span className="text-[10.5px] font-semibold tracking-[0.18em] text-muted-foreground">
+                  <span className="text-muted-foreground text-[10.5px] font-semibold tracking-[0.18em]">
                     {t.company}
                   </span>
                   <div className="flex gap-0.5">
@@ -144,21 +155,27 @@ export function Testimonials() {
                         key={i}
                         name="star"
                         size={11}
-                        className="text-[#F59E0B] fill-[#F59E0B]"
+                        className="fill-[#F59E0B] text-[#F59E0B]"
                       />
                     ))}
                   </div>
                 </div>
-                <p className="text-[14.5px] leading-[1.55] text-foreground">"{t.quote}"</p>
-                <div className="mt-auto flex items-center gap-3 border-t border-border-2 pt-3.5">
+                <p className="text-foreground text-[14.5px] leading-[1.55]">
+                  "{t.quote}"
+                </p>
+                <div className="border-border-2 mt-auto flex items-center gap-3 border-t pt-3.5">
                   <span className="flex size-9 items-center justify-center rounded-full bg-gradient-to-br from-[#C9D6F0] to-[#94A8D3] text-xs font-semibold text-white">
                     {t.initials}
                   </span>
                   <div className="min-w-0 flex-1">
-                    <div className="text-[13.5px] font-semibold text-foreground">{t.name}</div>
-                    <div className="mt-0.5 text-[11.5px] text-muted-foreground">{t.role}</div>
+                    <div className="text-foreground text-[13.5px] font-semibold">
+                      {t.name}
+                    </div>
+                    <div className="text-muted-foreground mt-0.5 text-[11.5px]">
+                      {t.role}
+                    </div>
                   </div>
-                  <span className="text-[11px] text-muted-2">{t.fleet}</span>
+                  <span className="text-muted-2 text-[11px]">{t.fleet}</span>
                 </div>
               </article>
             ))}

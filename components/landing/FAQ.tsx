@@ -31,7 +31,7 @@ export function FAQ() {
             type="single"
             collapsible
             defaultValue="item-0"
-            className="border-t border-border"
+            className="border-border border-t"
           >
             {items.map((it, i) => (
               <AccordionItem key={it.q} value={`item-${i}`}>
